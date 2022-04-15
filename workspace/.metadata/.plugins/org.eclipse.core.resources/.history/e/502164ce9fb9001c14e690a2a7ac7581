@@ -1,0 +1,31 @@
+
+// SGTL5000 I2C Address
+#define	SGTL5000_ADDR		0x0A
+
+// SGTL5000 Register Addresses
+#define	ID				0x0000
+#define	DIG_POWER		0x0002
+#define	CLK_CTRL		0x0004
+#define	I2S_CTRL		0x0006
+#define	SSS_CTRL		0x000A
+#define	ADCDAC_CTRL		0x000E
+#define	DAC_VOL			0x0010
+#define	PAD_STRENGTH	0x0014
+#define	ANA_ADC_CTRL	0x0020
+#define	ANA_HP_CTRL		0x0022
+#define	ANA_CTRL		0x0024
+#define	LINREG_CTRL		0x0026
+#define	REF_CTRL		0x0028
+#define	MIC_CTRL		0x002A
+#define	LINE_OUT_CTRL	0x002C
+#define	LINE_OUT_VOL	0x002E
+#define	ANA_POWER		0x0030
+#define	PLL_CTRL		0x0032
+#define	CLK_TOP_CTRL	0x0034
+#define	ANA_STATUS		0x0036
+#define	ANA_TEST1		0x0038
+#define	ANA_TEST2		0x003A
+#define	SHORT_CTRL		0x003C
+
+
+void SGTL5000init(void);

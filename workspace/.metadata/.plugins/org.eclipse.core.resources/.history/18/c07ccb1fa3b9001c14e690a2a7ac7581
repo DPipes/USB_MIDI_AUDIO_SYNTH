@@ -1,0 +1,53 @@
+
+#define _SGTL5000_C_
+
+#include "system.h"
+#include "stdlib.h"
+#include "stdio.h"
+#include "string.h"
+#include "SGTL5000.h"
+#include "altera_avalon_i2c.h"
+#include "altera_avalon_i2c_regs.h"
+#include <sys/alt_stdio.h>
+#include <unistd.h>
+
+// Writes to I2C register
+// The SGTL5000 only uses first byte to define register addresses
+// so function only takes 1 byte of register data
+void I2Creg_wr(ALT_AVALON_I2C_DEV_t *dev, alt_u8 reg, alt_u8 val1, alt_u8 val2) {
+	alt_u8 txbuffer[4] = {0x00, reg, val1, val2};
+	if(alt_avalon_i2c_master_tx(dev, txbuffer, 2, ALT_AVALON_I2C_NO_INTERRUPTS) != ALT_AVALON_I2C_SUCCESS){
+		printf("I2C Write Error");
+	}
+	return;
+}
+
+void SGTL5000init(void) {
+	ALT_AVALON_I2C_DEV_t *i2c_dev; //pointer to instance structure
+	alt_u8 txbuffer[0x200];
+	alt_u8 rxbuffer[0x200];
+	ALT_AVALON_I2C_STATUS_CODE status;
+	//get a pointer to the avalon i2c instance
+	i2c_dev = alt_avalon_i2c_open("/dev/i2c_0");
+	if (NULL==i2c_dev)
+	{
+	printf("Error: Cannot find /dev/i2c_0\n");
+	}
+
+	//Sets address of SGTL5000 which is 0x0A
+	alt_avalon_i2c_master_target_set(i2c_dev, SGTL5000_ADDR);
+
+	// Reads ID from SGTL5000 register 0x00
+	txbuffer[0] = 0;
+	txbuffer[1] = ID;
+	status=alt_avalon_i2c_master_tx_rx(i2c_dev, txbuffer, 2, rxbuffer, 2, ALT_AVALON_I2C_NO_INTERRUPTS);
+	printf("%X%X\n", rxbuffer[0], rxbuffer[1]);
+
+	// Reads, writes, and rereads from register 0x02
+	txbuffer[1] = DIG_POWER;
+	status=alt_avalon_i2c_master_tx_rx(i2c_dev, txbuffer, 2, rxbuffer, 2, ALT_AVALON_I2C_NO_INTERRUPTS);
+	printf("%X%X\n", rxbuffer[0], rxbuffer[1]);
+	I2Creg_wr(i2c_dev, DIG_POWER, 0x00, 0xAA);
+	status=alt_avalon_i2c_master_tx_rx(i2c_dev, txbuffer, 2, rxbuffer, 2, ALT_AVALON_I2C_NO_INTERRUPTS);
+	printf("%X%X\n", rxbuffer[0], rxbuffer[1]);
+}

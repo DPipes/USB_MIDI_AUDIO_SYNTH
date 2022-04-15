@@ -1,0 +1,20 @@
+// I2S Module for 44.1 kHz sample rate
+// Takes input of 256 * 44.1 kHz MCLK
+// Generates 64 * 44.1 kHz SCLK and 44.1 kHz LRCLK
+
+module I2S (input logic MCLK, RESET, 
+				output logic LRCLK, SCLK,
+				);
+
+logic [8:0] counter;
+
+always_ff @ (posedge MCLK) begin
+	
+	counter ++;
+	
+	SCLK <= counter[2];	// SCLK changes every 4 MCLK pulses
+	LRCLK <= counter[8]; // LRCLK changes every 256 MCLK pulses
+	
+end
+
+endmodule

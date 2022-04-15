@@ -1,0 +1,80 @@
+
+#define _SGTL5000_C_
+
+#include "system.h"
+#include "stdlib.h"
+#include "stdio.h"
+#include "string.h"
+#include "SGTL5000.h"
+#include "altera_avalon_i2c.h"
+#include "altera_avalon_i2c_regs.h"
+#include <sys/alt_stdio.h>
+#include <unistd.h>
+
+// Writes to I2C register
+// The SGTL5000 only uses first byte to define register addresses
+// so function only takes 1 byte of register data
+void I2Creg_wr(ALT_AVALON_I2C_DEV_t *dev, alt_u8 reg, alt_u16 val) {
+	alt_u8 val1, val2;
+	val1 = val >> 8;
+	val2 = val;
+	alt_u8 txbuffer[4] = {0x00, reg, val1, val2};
+	if(alt_avalon_i2c_master_tx(dev, txbuffer, 4, ALT_AVALON_I2C_NO_INTERRUPTS) != ALT_AVALON_I2C_SUCCESS){
+		printf("I2C Register Write Error");
+	}
+	return;
+}
+
+alt_u16* I2Cbytes_wr(ALT_AVALON_I2C_DEV_t* dev, alt_u8 reg, alt_u8 nwords, alt_u16* data) {
+	alt_u8 txbuffer[2*nwords+2];
+	txbuffer[0] = 0;
+	txbuffer[1] = reg;
+	int i = 0;
+	for (i = 0;i < nwords;i++) {
+		txbuffer[i+2] = data[i] >> 8;
+		txbuffer[i+3] = data[i];
+	}
+	if(alt_avalon_i2c_master_tx(dev, txbuffer, 2*nwords+2, ALT_AVALON_I2C_NO_INTERRUPTS) != ALT_AVALON_I2C_SUCCESS){
+		printf("I2C Bytes Write Error");
+	}
+	return (data+nwords);
+}
+
+//reads register from MAX3421E via SPI
+alt_u16 I2Creg_rd(ALT_AVALON_I2C_DEV_t* dev, alt_u8 reg) {
+	alt_u8 txbuffer[2] = {0x00, reg};
+	alt_u8 rxbuffer[2] = {0x00, 0x00};
+	alt_u16 rx;
+	if(alt_avalon_i2c_master_tx_rx(dev, txbuffer, 2, rxbuffer, 2, ALT_AVALON_I2C_NO_INTERRUPTS) != ALT_AVALON_I2C_SUCCESS){
+		printf("I2C Register Read Error");
+	}
+	rx = rxbuffer[0] << 8 | rxbuffer[1];
+	return rx;
+}
+
+/*alt_u16* I2Cbytes_rd(ALT_AVALON_I2C_DEV_t* dev, alt_u8 reg, alt_u8 nwords, alt_u16* data) {
+	alt_u8 txbuffer[2] = {0x00, reg};
+	if(alt_avalon_spi_command(SPI_0_BASE,0,1,write_p,nbytes,data,0) < 0) {
+		printf("ERROR!");
+	}
+	return (data+nbytes);
+}*/
+
+void SGTL5000init(void) {
+
+	ALT_AVALON_I2C_DEV_t *i2c_dev; //pointer to instance structure
+	alt_u16 txbuffer[0x200];
+	alt_u16 rxbuffer[0x200];
+	ALT_AVALON_I2C_STATUS_CODE status;
+
+	//get a pointer to the avalon i2c instance
+	i2c_dev = alt_avalon_i2c_open("/dev/i2c_0");
+	if (NULL==i2c_dev) printf("Error: Cannot find /dev/i2c_0\n");
+
+	//Sets address of SGTL5000 which is 0x0A
+	alt_avalon_i2c_master_target_set(i2c_dev, SGTL5000_ADDR);
+
+	printf("%X\n", I2Creg_rd(i2c_dev, ID));
+	I2Creg_wr(i2c_dev, DIG_POWER, 0xFFFF);
+
+}
