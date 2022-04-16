@@ -178,10 +178,13 @@ logic Reset_h, vssig, blank, sync, VGA_Clk, CLK;
 		
 	 );
 
+	// Generates I2S SCLK and LRCLK and transmits data to audio codec
 	i2s I2S(.MCLK(I2S_MCLK), .RESET(Reset_h), .AUDIO(AUDIO_OUT), .FIFO_EMPTY(AUDIO_EMPTY), .LRCLK(I2S_LRCLK), .SCLK(I2S_SCLK), .FIFO_READ(AUDIO_READ), .DIN(I2S_DIN), .DOUT(I2S_DOUT));
-	 
-	synth SYNTH(.RESET(Reset_h), .CLK(CLK), .LRCLK(I2S_LRCLK), .SCLK(I2S_SCLK), .SW(SW[9:0]), .FIFO_FULL(AUDIO_FULL), .AUDIO_OUT(AUDIO_FIFO), .FIFO_WRITE(AUDIO_WRITE));
 	
+	// Generates audio samples and sends to FIFO
+	synth SYNTH(.RESET(Reset_h), .CLK(CLK), .LRCLK(I2S_LRCLK), .SCLK(I2S_SCLK), .SW(SW[9:0]), .KEYCODE(keycode), .FIFO_FULL(AUDIO_FULL), .AUDIO_OUT(AUDIO_FIFO), .FIFO_WRITE(AUDIO_WRITE));
+	
+	//	256 word FIFO to store samples. 256samples/44.1kHz means output delayed by 5.8ms
 	FIFO AUDIO_fifo(.data(AUDIO_FIFO), .rdclk(I2S_LRCLK), .rdreq(AUDIO_READ), .wrclk(CLK), .wrreq(AUDIO_WRITE), .q(AUDIO_OUT), .rdempty(AUDIO_EMPTY), .wrfull(AUDIO_FULL));
 
 	 

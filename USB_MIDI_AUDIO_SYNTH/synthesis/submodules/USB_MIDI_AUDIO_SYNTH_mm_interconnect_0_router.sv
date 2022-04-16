@@ -222,14 +222,14 @@ module USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router
 
     // ( 0x4001080 .. 0x40010c0 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 27'h4001080   ) begin
-            src_channel = 16'b0000000000000100;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
+            src_channel = 16'b0100000000000000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 12;
     end
 
     // ( 0x40010c0 .. 0x4001100 )
     if ( {address[RG:PAD3],{PAD3{1'b0}}} == 27'h40010c0   ) begin
-            src_channel = 16'b0100000000000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 12;
+            src_channel = 16'b0000000000000100;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end
 
     // ( 0x4001120 .. 0x4001140 )
@@ -282,26 +282,26 @@ module USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router
 
     // ( 0x4001240 .. 0x4001250 )
     if ( {address[RG:PAD12],{PAD12{1'b0}}} == 27'h4001240   ) begin
-            src_channel = 16'b0000000000010000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
-    end
-
-    // ( 0x4001250 .. 0x4001260 )
-    if ( {address[RG:PAD13],{PAD13{1'b0}}} == 27'h4001250   ) begin
             src_channel = 16'b0000000000100000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 
+    // ( 0x4001250 .. 0x4001260 )
+    if ( {address[RG:PAD13],{PAD13{1'b0}}} == 27'h4001250   ) begin
+            src_channel = 16'b0000000000010000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
+    end
+
     // ( 0x4001270 .. 0x4001278 )
-    if ( {address[RG:PAD14],{PAD14{1'b0}}} == 27'h4001270   ) begin
-            src_channel = 16'b0000000000000001;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
+    if ( {address[RG:PAD14],{PAD14{1'b0}}} == 27'h4001270  && read_transaction  ) begin
+            src_channel = 16'b0000000000000010;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 11;
     end
 
     // ( 0x4001278 .. 0x4001280 )
-    if ( {address[RG:PAD15],{PAD15{1'b0}}} == 27'h4001278  && read_transaction  ) begin
-            src_channel = 16'b0000000000000010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 11;
+    if ( {address[RG:PAD15],{PAD15{1'b0}}} == 27'h4001278   ) begin
+            src_channel = 16'b0000000000000001;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
     end
 
 end

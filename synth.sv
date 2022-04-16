@@ -2,21 +2,30 @@
 // Takes input from CPU and generates mono audio samples to send to I2S module
 
 module synth (input logic RESET, CLK, LRCLK, SCLK, FIFO_FULL,
+				  input logic [7:0] KEYCODE,
 				  input logic [9:0] SW,
-				  //input logic PHASE [11:0],			WILL COME FROM CPU
+				  //input logic PHASE [11:0],			WILL COME FROM CPU??
 				  output logic FIFO_WRITE,
 				  output logic [15:0] AUDIO_OUT
 				 );
 
 logic SAW;
-logic [3:0] KEY, MEM_WAIT;
-logic [15:0] SAMPLE;
-logic [15:0] TONE;
+logic [3:0] NOTE;
+logic [3:0] STATE;
+logic [11:0] ADDR;
 logic [19:0] SCALE_COUNTER; // Plays each note for ~1 second
-logic [23:0] PHASE, INC; // TEMPORARY
+logic [23:0] PHASE, PHASE_1, PHASE_3, PHASE_5, TONE, INC, SAMPLE, SUM; // TEMPORARY
 
 // Wavetable has sine and sawtooth data when SW[8] is high saw is selected
-wavetable WAVE(.CLK(CLK), .ADDR({SW[7], PHASE[23:12]}), .SAMPLE(SAMPLE));
+wavetable WAVE(.CLK(CLK), .ADDR({SW[7], ADDR}), .SAMPLE(SAMPLE[15:0]));
+
+
+always_comb begin
+
+	SAMPLE[23:16] = {SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15]};
+	SUM = TONE + SAMPLE;
+	
+end
 
 always_ff @ (posedge CLK) begin
 	
@@ -24,85 +33,52 @@ always_ff @ (posedge CLK) begin
 		SAW <= 1;
 		TONE <= 0;
 		AUDIO_OUT <= 0;
-		PHASE <= 0;
 		SCALE_COUNTER <= 0;
 		FIFO_WRITE <= 0;
-		MEM_WAIT <= 0;
+		STATE <= 0;
 	end
 	
 	FIFO_WRITE <= 0;
 	
-	// Generates rough saw wave
+	// Generates not too terrible saw wave
 	if (16'h7FFF - PHASE < (2 * INC)) SAW <= ~SAW;
 	
 	// Select frequency, A4 to A6 scale
-	case (KEY) 
-	
-		0: begin
-			INC <= 24'h28DD5;
-		end
+	case (NOTE) 
 
-		1: begin
-			INC <= 24'h2DDE6;
-		end
+		0: INC <= 24'h13491;
+
+		1: INC <= 24'h146EB;
+
+		2: INC <= 24'h16EF3;
+
+		3: INC <= 24'h19BE3;
+
+		4: INC <= 24'h1B461;
+
+		5: INC <= 24'h1E9D2;
+
+		6: INC <= 24'h225CE;
+
+		7: INC <= 24'h26923;
 		
-		2: begin
-			INC <= 24'h337C9;
-		end
+		8: INC <= 24'h28DD5;
+
+		9: INC <= 24'h2DDE7;
 		
-		3: begin
-			INC <= 24'h368C3;
-		end
-
-		4: begin
-			INC <= 24'h3D3A2;
-		end
-
-		5: begin
-			INC <= 24'h44B9D;
-		end
-
-		6: begin
-			INC <= 24'h4D245;
-		end
-
-		7: begin
-			INC <= 24'h51BAA;
-		end
-
-		8: begin
-			INC <= 24'h5BBCF;
-		end
-
-		9: begin
-			INC <= 24'h66F8E;
-		end
-
-		10: begin
-			INC <= 24'h6D186;
-		end
-
-		11: begin
-			INC <= 24'h7A748;
-		end
-
-		12: begin
-			INC <= 24'h89739;
-		end
-
-		13: begin
-			INC <= 24'h9A48B;
-		end
-
-		14: begin
-			INC <= 24'hA3754;
-		end
-
-		15: begin
-			INC <= 24'h146EB;
-		end
+		10: INC <= 24'h337C7;
 		
-		default: ;
+		11: INC <= 24'h368C3;
+
+		12: INC <= 24'h3D3A4;
+
+		13: INC <= 24'h44B9C;
+
+		14: INC <= 24'h4D245;
+
+		15: INC <= 24'h0;
+		
+		default: INC <= 24'h0;
 		
 	endcase
 	
@@ -123,42 +99,131 @@ always_ff @ (posedge CLK) begin
 		end
 		
 		3'b10: begin
-			AUDIO_OUT <= SAMPLE;
+			AUDIO_OUT <= TONE[15:0];
 		end
 		
 		3'b11: begin
-			AUDIO_OUT <= SAMPLE;
+			AUDIO_OUT <= TONE[15:0];
 		end
 			
 		default: ;
 	
 	endcase
 	
-	// Let user select notes or step through scale
-	case (SW[6]) 
-	
-		0: begin
-			KEY <= SW[3:0];
-			SCALE_COUNTER <= 20'b0;
-		end
-		
-		1: begin
-			KEY <= SCALE_COUNTER[19:16];
-		end
-	
-	endcase
-	
-	// Directly connected SAMPLE for testing, TONE will be sent as sum of SAMPLEs
-	//TONE <= SAMPLE;
-	
+	// Synthesis FSM
 	if (!FIFO_FULL) begin
-		MEM_WAIT <= (MEM_WAIT + 1);
-		if (MEM_WAIT == 0) begin
-			PHASE <= (PHASE + INC);
-			SCALE_COUNTER <= (SCALE_COUNTER + 1);
-			FIFO_WRITE <= 1;
-		end
+	
+		STATE <= (STATE + 1);
+		
+		case (STATE)
+		
+			4'h0: begin
+				ADDR <= PHASE[23:12];
+			end
+			
+			4'h1: begin
+				;
+			end
+			
+			4'h2: begin
+				;
+			end
+			
+			4'h3: begin
+			TONE <= SAMPLE;
+				ADDR <= PHASE_1[23:12];
+			end
+			
+			4'h4: begin
+				;
+			end
+			
+			4'h5: begin
+				;
+			end
+			
+			4'h6: begin
+				if (SW[5]) TONE <= {SUM[23], SUM[23:1]};
+				ADDR <= PHASE_3[23:12];
+			end
+			
+			4'h7: begin
+				;
+			end
+			
+			4'h8: begin
+				;
+			end
+			
+			4'h9: begin
+				if (SW[5]) TONE <= {SUM[23], SUM[23:1]};
+				ADDR <= PHASE_5[23:12];
+			end
+			
+			4'hA: begin
+				;
+			end
+			
+			4'hB: begin
+				;
+			end
+			
+			4'hC: begin
+				if (SW[4]) TONE <= SAMPLE;
+				if (SW[5]) TONE <= {SUM[23], SUM[23:1]};
+			end
+			
+			4'hD: begin
+			
+				PHASE   <= (PHASE + INC);						// Tonic
+				PHASE_1 <= (PHASE_1 + (2*INC));				// Second harmonic
+				PHASE_3 <= (PHASE_3 + ((5*INC) >> 2));		// Major third
+				PHASE_5 <= (PHASE_5 + ((3*INC) >> 1));		// Perfect fifth
+			
+				// Increment scale counter and write sample to FIFO
+				SCALE_COUNTER <= (SCALE_COUNTER + 1);
+				if (SCALE_COUNTER[19:16] == 15) SCALE_COUNTER <= 0;
+				FIFO_WRITE <= 1;
+			
+				// Translate keycode to note
+				case (KEYCODE)
+			
+					53: NOTE <= 0;
+				
+					30: NOTE <= 1;
+				
+					31: NOTE <= 2;
+
+					32: NOTE <= 3;
+				
+					33: NOTE <= 4;
+				
+					34: NOTE <= 5;
+				
+					35: NOTE <= 6;
+				
+					36: NOTE <= 7;
+				
+					37: NOTE <= 8;
+				
+					38: NOTE <= 9;
+				
+					39: NOTE <= 10;
+					
+					default: NOTE <= 15;
+				
+				endcase
+				
+			end
+			
+			default: ;
+			
+		endcase
+		
 	end
+	
+	// Select to automatically step through scale rather than take user input
+	if (SW[6]) NOTE <= SCALE_COUNTER[19:16];
 	
 end
 
