@@ -29,9 +29,7 @@ module USB_MIDI_AUDIO_SYNTH (
 	sw_wire_export,
 	usb_gpx_export,
 	usb_irq_export,
-	usb_rst_export,
-	clk_0_clk,
-	reset_0_reset_n);	
+	usb_rst_export);	
 
 	input		clk_clk;
 	output	[15:0]	hex_digits_export;
@@ -63,6 +61,4 @@ module USB_MIDI_AUDIO_SYNTH (
 	input		usb_gpx_export;
 	input		usb_irq_export;
 	output		usb_rst_export;
-	input		clk_0_clk;
-	input		reset_0_reset_n;
 endmodule

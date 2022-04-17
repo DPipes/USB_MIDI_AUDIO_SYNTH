@@ -28,8 +28,6 @@
 		.sw_wire_export                 (<connected-to-sw_wire_export>),                 //                 sw_wire.export
 		.usb_gpx_export                 (<connected-to-usb_gpx_export>),                 //                 usb_gpx.export
 		.usb_irq_export                 (<connected-to-usb_irq_export>),                 //                 usb_irq.export
-		.usb_rst_export                 (<connected-to-usb_rst_export>),                 //                 usb_rst.export
-		.clk_0_clk                      (<connected-to-clk_0_clk>),                      //                   clk_0.clk
-		.reset_0_reset_n                (<connected-to-reset_0_reset_n>)                 //                 reset_0.reset_n
+		.usb_rst_export                 (<connected-to-usb_rst_export>)                  //                 usb_rst.export
 	);
 

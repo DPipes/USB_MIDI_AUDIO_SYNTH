@@ -29,9 +29,7 @@
 			sw_wire_export                 : in    std_logic_vector(9 downto 0)  := (others => 'X'); -- export
 			usb_gpx_export                 : in    std_logic                     := 'X';             -- export
 			usb_irq_export                 : in    std_logic                     := 'X';             -- export
-			usb_rst_export                 : out   std_logic;                                        -- export
-			clk_0_clk                      : in    std_logic                     := 'X';             -- clk
-			reset_0_reset_n                : in    std_logic                     := 'X'              -- reset_n
+			usb_rst_export                 : out   std_logic                                         -- export
 		);
 	end component USB_MIDI_AUDIO_SYNTH;
 
@@ -66,8 +64,6 @@
 			sw_wire_export                 => CONNECTED_TO_sw_wire_export,                 --                 sw_wire.export
 			usb_gpx_export                 => CONNECTED_TO_usb_gpx_export,                 --                 usb_gpx.export
 			usb_irq_export                 => CONNECTED_TO_usb_irq_export,                 --                 usb_irq.export
-			usb_rst_export                 => CONNECTED_TO_usb_rst_export,                 --                 usb_rst.export
-			clk_0_clk                      => CONNECTED_TO_clk_0_clk,                      --                   clk_0.clk
-			reset_0_reset_n                => CONNECTED_TO_reset_0_reset_n                 --                 reset_0.reset_n
+			usb_rst_export                 => CONNECTED_TO_usb_rst_export                  --                 usb_rst.export
 		);
 
