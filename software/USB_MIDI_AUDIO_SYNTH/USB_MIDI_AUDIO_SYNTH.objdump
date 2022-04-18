@@ -1451,8 +1451,8 @@ void SGTL5000init(ALT_AVALON_I2C_DEV_t* dev) {
      744:	01400104 	movi	r5,4
      748:	e13fff17 	ldw	r4,-4(fp)
      74c:	000026c0 	call	26c <I2Creg_wr>
-	I2Creg_wr(dev, I2S_CTRL, DLEN_16);
-     750:	01800c04 	movi	r6,48
+	I2Creg_wr(dev, I2S_CTRL, DLEN_24);
+     750:	01800404 	movi	r6,16
      754:	01400184 	movi	r5,6
      758:	e13fff17 	ldw	r4,-4(fp)
      75c:	000026c0 	call	26c <I2Creg_wr>
@@ -1481,12 +1481,12 @@ void SGTL5000audio_on(ALT_AVALON_I2C_DEV_t* dev) {
 
 	//Unmute audio
 	I2Creg_wr(dev, ANA_HP_CTRL, HP_VOL_INIT);
-     79c:	018c0c04 	movi	r6,12336
+     79c:	01860604 	movi	r6,6168
      7a0:	01400884 	movi	r5,34
      7a4:	e13fff17 	ldw	r4,-4(fp)
      7a8:	000026c0 	call	26c <I2Creg_wr>
 	I2Creg_wr(dev, DAC_VOL, DAC_VOL_INIT);
-     7ac:	019c1c04 	movi	r6,28784
+     7ac:	01901004 	movi	r6,16448
      7b0:	01400404 	movi	r5,16
      7b4:	e13fff17 	ldw	r4,-4(fp)
      7b8:	000026c0 	call	26c <I2Creg_wr>

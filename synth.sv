@@ -6,7 +6,7 @@ module synth (input logic RESET, CLK, LRCLK, SCLK, FIFO_FULL,
 				  input logic [9:0] SW,
 				  //input logic PHASE [11:0],			WILL COME FROM CPU??
 				  output logic FIFO_WRITE,
-				  output logic [15:0] AUDIO_OUT
+				  output logic [23:0] AUDIO_OUT
 				 );
 
 logic SAW;
@@ -14,10 +14,10 @@ logic [3:0] NOTE;
 logic [3:0] STATE;
 logic [11:0] ADDR;
 logic [19:0] SCALE_COUNTER; // Plays each note for ~1 second
-logic [23:0] PHASE, PHASE_1, PHASE_3, PHASE_5, TONE, INC, SAMPLE, SUM; // TEMPORARY
+logic [23:0] PHASE, PHASE_2, PHASE_3, PHASE_4, TONE, INC, SAMPLE, SUM; // TEMPORARY
 
 // Wavetable has sine and sawtooth data when SW[8] is high saw is selected
-wavetable WAVE(.CLK(CLK), .ADDR({SW[7], ADDR}), .SAMPLE(SAMPLE[15:0]));
+wavetable WAVE(.CLK(CLK), .ADDR({SW[8], ADDR}), .SAMPLE(SAMPLE[15:0]));
 
 
 always_comb begin
@@ -83,27 +83,27 @@ always_ff @ (posedge CLK) begin
 	endcase
 	
 	// Select saw, ramp, or sine
-	case (SW[9:7])
+	case (SW[9:8])
 	
 		3'b00: begin
 			if (SAW) begin
-				AUDIO_OUT <= PHASE[23:8];
+				AUDIO_OUT <= PHASE;
 			end
 			else begin
-				AUDIO_OUT <= ~PHASE[23:8];
+				AUDIO_OUT <= ~PHASE;
 			end
 		end
 		
 		3'b01: begin
-			AUDIO_OUT <= PHASE[23:8];		
+			AUDIO_OUT <= PHASE;		
 		end
 		
 		3'b10: begin
-			AUDIO_OUT <= TONE[15:0];
+			AUDIO_OUT <= TONE;
 		end
 		
 		3'b11: begin
-			AUDIO_OUT <= TONE[15:0];
+			AUDIO_OUT <= TONE;
 		end
 			
 		default: ;
@@ -131,7 +131,7 @@ always_ff @ (posedge CLK) begin
 			
 			4'h3: begin
 			TONE <= SAMPLE;
-				ADDR <= PHASE_1[23:12];
+				ADDR <= PHASE_2[23:12];
 			end
 			
 			4'h4: begin
@@ -143,7 +143,7 @@ always_ff @ (posedge CLK) begin
 			end
 			
 			4'h6: begin
-				if (SW[5]) TONE <= {SUM[23], SUM[23:1]};
+				if (SW[6]) TONE <= SUM;
 				ADDR <= PHASE_3[23:12];
 			end
 			
@@ -156,8 +156,8 @@ always_ff @ (posedge CLK) begin
 			end
 			
 			4'h9: begin
-				if (SW[5]) TONE <= {SUM[23], SUM[23:1]};
-				ADDR <= PHASE_5[23:12];
+				if (SW[6]) TONE <= SUM;
+				ADDR <= PHASE_4[23:12];
 			end
 			
 			4'hA: begin
@@ -169,16 +169,16 @@ always_ff @ (posedge CLK) begin
 			end
 			
 			4'hC: begin
-				if (SW[4]) TONE <= SAMPLE;
-				if (SW[5]) TONE <= {SUM[23], SUM[23:1]};
+				if (SW[5]) TONE <= SAMPLE;
+				if (SW[6]) TONE <= SUM;
 			end
 			
 			4'hD: begin
 			
-				PHASE   <= (PHASE + INC);						// Tonic
-				PHASE_1 <= (PHASE_1 + (2*INC));				// Second harmonic
-				PHASE_3 <= (PHASE_3 + ((5*INC) >> 2));		// Major third
-				PHASE_5 <= (PHASE_5 + ((3*INC) >> 1));		// Perfect fifth
+				PHASE   <= (PHASE + INC);						// First harmonic
+				PHASE_2 <= (PHASE_2 + (INC << 1));			// Second harmonic
+				PHASE_3 <= (PHASE_3 + (3*INC));				// Third harmonic
+				PHASE_4 <= (PHASE_4 + (INC << 2));			// Fourth harmonic
 			
 				// Increment scale counter and write sample to FIFO
 				SCALE_COUNTER <= (SCALE_COUNTER + 1);
@@ -223,7 +223,8 @@ always_ff @ (posedge CLK) begin
 	end
 	
 	// Select to automatically step through scale rather than take user input
-	if (SW[6]) NOTE <= SCALE_COUNTER[19:16];
+	if (SW[7]) NOTE <= SCALE_COUNTER[19:16];
+	else SCALE_COUNTER <= 0;
 	
 end
 

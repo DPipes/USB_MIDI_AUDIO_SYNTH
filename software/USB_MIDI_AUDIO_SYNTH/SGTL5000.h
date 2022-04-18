@@ -54,7 +54,8 @@
 #define SCLKFREQ		0x0100	//N Set I2S_SCLK to 32*Fs
 #define MS				0x0080	//N Set I2S_LRCLK and I2S_SCLK to outputs
 #define SCLK_INV		0x0040	//N Set data valid on falling edge of I2S_SCLK
-#define DLEN_16			0x0030	//S Set I2S data length to 16 bits
+#define DLEN_16			0x0030	//S? Set I2S data length to 16 bits
+#define DLEN_24			0x0010	//S? Set I2S data length to 24 bits
 #define LRALIGN			0x0002	//N Set data word to start after I2S_LRCLK transition
 #define LRPOL			0x0001	//N Set I2S_LRCLK polarity to 0-Right, 1-Left
 
@@ -70,7 +71,7 @@
 #define DAC_MUTE_LEFT	0x0004	//DP Mute left DAC
 
 // DAC_VOL	0.5dB steps
-#define DAC_VOL_INIT	0x7070 	//S Initial DAC volume setting
+#define DAC_VOL_INIT	0x4040 	//S Initial DAC volume setting
 // [15:8] Sets right volume
 // [7:0] Sets left volume
 // Max 0x3C	0dB
@@ -78,7 +79,7 @@
 // Mute 0xFC or greater
 
 // ANA_HP_CTRL 0.5dB steps
-#define HP_VOL_INIT		0x3030	//S	Initial volume setting, quite low
+#define HP_VOL_INIT		0x1818	//S	Initial volume setting, quite low
 // [14:8] Sets right headphone volume
 // [6:0] Sets left headphone volume
 // Max 0x00	12dB

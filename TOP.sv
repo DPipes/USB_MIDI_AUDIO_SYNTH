@@ -65,7 +65,7 @@ logic Reset_h, vssig, blank, sync, VGA_Clk, CLK;
 	logic [9:0] drawxsig, drawysig, ballxsig, ballysig, ballsizesig;
 	logic [7:0] Red, Blue, Green;
 	logic [7:0] keycode;
-	logic [15:0] AUDIO_FIFO, AUDIO_OUT;	//Current sample to play
+	logic [23:0] AUDIO_FIFO, AUDIO_OUT;	//Current sample to play
 	logic AUDIO_EMPTY, AUDIO_FULL, AUDIO_READ, AUDIO_WRITE; //Audio FIFO signals
 
 //=======================================================
