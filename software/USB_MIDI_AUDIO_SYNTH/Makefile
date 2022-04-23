@@ -142,12 +142,19 @@ ACDS_VERSION := 18.1
 ELF := USB_MIDI_AUDIO_SYNTH.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS += main.c
-C_SRCS += usb_kb/HID.c
-C_SRCS += usb_kb/MAX3421E.c
-C_SRCS += usb_kb/transfer.c
-C_SRCS += SGTL5000.c
-CXX_SRCS :=
+C_SRCS :=
+CXX_SRCS += include/Port.cpp
+CXX_SRCS += include/SPI.cpp
+CXX_SRCS += include/Usb.cpp
+CXX_SRCS += include/XBOXONE.cpp
+CXX_SRCS += include/hidboot.cpp
+CXX_SRCS += include/message.cpp
+CXX_SRCS += include/parsetools.cpp
+CXX_SRCS += include/usbhid.cpp
+CXX_SRCS += include/usbhost.cpp
+CXX_SRCS += main.cpp
+CXX_SRCS += include/sgtl5000.cpp
+CXX_SRCS += include/usbh_midi.cpp
 ASM_SRCS :=
 
 

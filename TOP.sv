@@ -122,12 +122,15 @@ logic Reset_h, vssig, blank, sync, VGA_Clk, CLK;
 	
 	
 	//Assign one button to reset
-	assign {Reset_h}=~ (KEY[0]);
+	assign {Reset_h}= 1'b0;
 
 	//Our A/D converter is only 12 bit
 	assign VGA_R = Red[7:4];
 	assign VGA_B = Blue[7:4];
 	assign VGA_G = Green[7:4];
+	
+	
+	assign LEDR = keycode;
 	
 	
 	USB_MIDI_AUDIO_SYNTH u0 (
@@ -172,7 +175,7 @@ logic Reset_h, vssig, blank, sync, VGA_Clk, CLK;
 		
 		//LEDs, HEX, KEYCODE, and SWITCHES
 		.hex_digits_export({hex_num_4, hex_num_3, hex_num_1, hex_num_0}),
-		.leds_export({hundreds, signs, LEDR}),
+		//.leds_export({hundreds, signs, LEDR}),
 		.keycode_export(keycode)
 		//.sw_wire_export(SW)
 		

@@ -1,0 +1,120 @@
+
+#include <stdio.h>
+#include "system.h"
+#include "altera_avalon_spi.h"
+#include "altera_avalon_spi_regs.h"
+#include "altera_avalon_pio_regs.h"
+#include "altera_avalon_i2c.h"
+#include "altera_avalon_i2c_regs.h"
+#include "sys/alt_irq.h"
+#include "include/hidboot.h"
+#include "include/usbhub.h"
+#include "include/sgtl5000.h"
+#include "include/usbh_midi.h"
+
+// Satisfy the IDE, which needs to see the include statment in the ino too.
+#ifdef dobogusinclude
+#include <spi4teensy3.h>
+#endif
+#include "include/SPI.h"
+
+/*
+ *******************************************************************************
+ * USB-MIDI dump utility
+ * Copyright (C) 2013-2021 Yuuichi Akagawa
+ *
+ * for use with USB Host Shield 2.0 from Circuitsathome.com
+ * https://github.com/felis/USB_Host_Shield_2.0
+ *
+ * This is sample program. Do not expect perfect behavior.
+ *******************************************************************************
+ */
+
+
+USB Usb;
+USBHub Hub(&Usb);
+USBH_MIDI  Midi(&Usb);
+
+void MIDI_poll();
+
+void onInit()
+{
+  char buf[20];
+  uint16_t vid = Midi.idVendor();
+  uint16_t pid = Midi.idProduct();
+  sprintf(buf, "VID:%04X, PID:%04X", vid, pid);
+  printf("%s\n", buf);
+}
+
+void setup()
+{
+  if (Usb.Init() == -1) {
+    while (1); //halt
+  }//if (Usb.Init() == -1...
+  delay( 200 );
+
+  // Register onInit() function
+  Midi.attachOnInit(onInit);
+}
+
+// Poll USB MIDI Controller and send to serial MIDI
+void MIDI_poll()
+{
+  char buf[16];
+  uint8_t bufMidi[MIDI_EVENT_PACKET_SIZE];
+  uint16_t  rcvd;
+
+  if (Midi.RecvData( &rcvd,  bufMidi) == 0 ) {
+    uint32_t time = (uint32_t)millis();
+    sprintf(buf, "%04X%04X:%3d:", (uint16_t)(time >> 16), (uint16_t)(time & 0xFFFF), rcvd); // Split variable to prevent warnings on the ESP8266 platform
+    printf("%s\n", buf);
+
+    for (int i = 0; i < MIDI_EVENT_PACKET_SIZE; i++) {
+      sprintf(buf, " %02X", bufMidi[i]);
+      printf("%s\n", buf);
+    }
+    printf("\n");
+  }
+}
+
+int main() {
+	printf("Initializing SGTL5000...\n");
+	ALT_AVALON_I2C_DEV_t *i2c_dev; //pointer to instance structure
+
+	//get a pointer to the avalon i2c instance
+	i2c_dev = alt_avalon_i2c_open("/dev/i2c_0");
+	if (NULL==i2c_dev) printf("Error: Cannot find /dev/i2c_0\n");
+
+	//set up registers
+	SGTL5000init(i2c_dev);
+
+	printf("Starting audio...\n");
+	SGTL5000audio_on(i2c_dev);
+	//AUDIO TEST PATH MIC-ADC-DAC-HEADPHONE
+	/*
+	I2Creg_wr(i2c_dev, DIG_POWER, DAC_POWERUP_DIG | ADC_POWERUP_DIG);
+	I2Creg_wr(i2c_dev, SSS_CTRL, 0x0001);
+	I2Creg_wr(i2c_dev, ANA_CTRL, MUTE_LO | !MUTE_HP | !MUTE_ADC);
+	I2Creg_wr(i2c_dev, ANA_TEST1, TM_SELECT_MIC | TESTMODE);
+	I2Creg_wr(i2c_dev, ANA_POWER, DAC_MONO | LINREG_SIMPLE_POWERUP | STARTUP_POWERUP | VDDC_CHRGPMP_POWERUP | LINREG_D_POWERUP | ADC_MONO | REFTOP_POWERUP | HEADPHONE_POWERUP | VAG_POWERUP | DAC_POWERUP_ANA | CAPLESS_HEADPHONE_POWERUP | ADC_POWERUP_ANA);
+	I2Creg_wr(i2c_dev, ADCDAC_CTRL, VOL_RAMP_EN | !DAC_MUTE_RIGHT | !DAC_MUTE_LEFT);
+	*/
+
+	SGTL5000status(i2c_dev);
+
+	printf("Audio running\n");
+
+	setup();
+
+	  Usb.Task();
+	  if ( Midi ) {
+	    MIDI_poll();
+	  }
+
+	printf("Started");
+	/*
+        test_setup();
+        while (1) {
+        	test_loop();
+        }*/
+}
