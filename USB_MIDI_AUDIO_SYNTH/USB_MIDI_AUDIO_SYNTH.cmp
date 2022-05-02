@@ -9,7 +9,7 @@
 			i2s_clk_clk                    : out   std_logic;                                        -- clk
 			input_port_run                 : in    std_logic                     := 'X';             -- run
 			input_port_sw                  : in    std_logic                     := 'X';             -- sw
-			input_port_new_signal          : in    std_logic                     := 'X';             -- new_signal
+			input_port_fifo_full           : in    std_logic                     := 'X';             -- fifo_full
 			key_external_connection_export : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- export
 			keycode_export                 : out   std_logic_vector(7 downto 0);                     -- export
 			leds_export                    : out   std_logic_vector(13 downto 0);                    -- export

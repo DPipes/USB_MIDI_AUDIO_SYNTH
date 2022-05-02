@@ -9,11 +9,13 @@
 			i2s_clk_clk                    : out   std_logic;                                        -- clk
 			input_port_run                 : in    std_logic                     := 'X';             -- run
 			input_port_sw                  : in    std_logic                     := 'X';             -- sw
-			input_port_new_signal          : in    std_logic                     := 'X';             -- new_signal
+			input_port_fifo_full           : in    std_logic                     := 'X';             -- fifo_full
 			key_external_connection_export : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- export
 			keycode_export                 : out   std_logic_vector(7 downto 0);                     -- export
 			leds_export                    : out   std_logic_vector(13 downto 0);                    -- export
 			main_clk_clk                   : out   std_logic;                                        -- clk
+			output_port_ld_fifo            : out   std_logic;                                        -- ld_fifo
+			output_port_tone               : out   std_logic_vector(31 downto 0);                    -- tone
 			reset_reset_n                  : in    std_logic                     := 'X';             -- reset_n
 			sdram_clk_clk                  : out   std_logic;                                        -- clk
 			sdram_wire_addr                : out   std_logic_vector(12 downto 0);                    -- addr
@@ -32,9 +34,7 @@
 			sw_wire_export                 : in    std_logic_vector(9 downto 0)  := (others => 'X'); -- export
 			usb_gpx_export                 : in    std_logic                     := 'X';             -- export
 			usb_irq_export                 : in    std_logic                     := 'X';             -- export
-			usb_rst_export                 : out   std_logic;                                        -- export
-			output_port_ld_fifo            : out   std_logic;                                        -- ld_fifo
-			output_port_tone               : out   std_logic_vector(31 downto 0)                     -- tone
+			usb_rst_export                 : out   std_logic                                         -- export
 		);
 	end component USB_MIDI_AUDIO_SYNTH;
 
@@ -49,11 +49,13 @@
 			i2s_clk_clk                    => CONNECTED_TO_i2s_clk_clk,                    --                 i2s_clk.clk
 			input_port_run                 => CONNECTED_TO_input_port_run,                 --              input_port.run
 			input_port_sw                  => CONNECTED_TO_input_port_sw,                  --                        .sw
-			input_port_new_signal          => CONNECTED_TO_input_port_new_signal,          --                        .new_signal
+			input_port_fifo_full           => CONNECTED_TO_input_port_fifo_full,           --                        .fifo_full
 			key_external_connection_export => CONNECTED_TO_key_external_connection_export, -- key_external_connection.export
 			keycode_export                 => CONNECTED_TO_keycode_export,                 --                 keycode.export
 			leds_export                    => CONNECTED_TO_leds_export,                    --                    leds.export
 			main_clk_clk                   => CONNECTED_TO_main_clk_clk,                   --                main_clk.clk
+			output_port_ld_fifo            => CONNECTED_TO_output_port_ld_fifo,            --             output_port.ld_fifo
+			output_port_tone               => CONNECTED_TO_output_port_tone,               --                        .tone
 			reset_reset_n                  => CONNECTED_TO_reset_reset_n,                  --                   reset.reset_n
 			sdram_clk_clk                  => CONNECTED_TO_sdram_clk_clk,                  --               sdram_clk.clk
 			sdram_wire_addr                => CONNECTED_TO_sdram_wire_addr,                --              sdram_wire.addr
@@ -72,8 +74,6 @@
 			sw_wire_export                 => CONNECTED_TO_sw_wire_export,                 --                 sw_wire.export
 			usb_gpx_export                 => CONNECTED_TO_usb_gpx_export,                 --                 usb_gpx.export
 			usb_irq_export                 => CONNECTED_TO_usb_irq_export,                 --                 usb_irq.export
-			usb_rst_export                 => CONNECTED_TO_usb_rst_export,                 --                 usb_rst.export
-			output_port_ld_fifo            => CONNECTED_TO_output_port_ld_fifo,            --             output_port.ld_fifo
-			output_port_tone               => CONNECTED_TO_output_port_tone                --                        .tone
+			usb_rst_export                 => CONNECTED_TO_usb_rst_export                  --                 usb_rst.export
 		);
 

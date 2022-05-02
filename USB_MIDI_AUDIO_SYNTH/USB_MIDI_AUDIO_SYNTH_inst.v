@@ -8,11 +8,13 @@
 		.i2s_clk_clk                    (<connected-to-i2s_clk_clk>),                    //                 i2s_clk.clk
 		.input_port_run                 (<connected-to-input_port_run>),                 //              input_port.run
 		.input_port_sw                  (<connected-to-input_port_sw>),                  //                        .sw
-		.input_port_new_signal          (<connected-to-input_port_new_signal>),          //                        .new_signal
+		.input_port_fifo_full           (<connected-to-input_port_fifo_full>),           //                        .fifo_full
 		.key_external_connection_export (<connected-to-key_external_connection_export>), // key_external_connection.export
 		.keycode_export                 (<connected-to-keycode_export>),                 //                 keycode.export
 		.leds_export                    (<connected-to-leds_export>),                    //                    leds.export
 		.main_clk_clk                   (<connected-to-main_clk_clk>),                   //                main_clk.clk
+		.output_port_ld_fifo            (<connected-to-output_port_ld_fifo>),            //             output_port.ld_fifo
+		.output_port_tone               (<connected-to-output_port_tone>),               //                        .tone
 		.reset_reset_n                  (<connected-to-reset_reset_n>),                  //                   reset.reset_n
 		.sdram_clk_clk                  (<connected-to-sdram_clk_clk>),                  //               sdram_clk.clk
 		.sdram_wire_addr                (<connected-to-sdram_wire_addr>),                //              sdram_wire.addr
@@ -31,8 +33,6 @@
 		.sw_wire_export                 (<connected-to-sw_wire_export>),                 //                 sw_wire.export
 		.usb_gpx_export                 (<connected-to-usb_gpx_export>),                 //                 usb_gpx.export
 		.usb_irq_export                 (<connected-to-usb_irq_export>),                 //                 usb_irq.export
-		.usb_rst_export                 (<connected-to-usb_rst_export>),                 //                 usb_rst.export
-		.output_port_ld_fifo            (<connected-to-output_port_ld_fifo>),            //             output_port.ld_fifo
-		.output_port_tone               (<connected-to-output_port_tone>)                //                        .tone
+		.usb_rst_export                 (<connected-to-usb_rst_export>)                  //                 usb_rst.export
 	);
 

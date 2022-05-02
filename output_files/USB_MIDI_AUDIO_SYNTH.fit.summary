@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sun May 01 17:20:14 2022
+Fitter Status : Successful - Sun May 01 19:44:21 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : USB_MIDI_AUDIO_SYNTH
 Top-level Entity Name : TOP
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 5,390 / 49,760 ( 11 % )
-    Total combinational functions : 4,907 / 49,760 ( 10 % )
+Total logic elements : 5,323 / 49,760 ( 11 % )
+    Total combinational functions : 4,886 / 49,760 ( 10 % )
     Dedicated logic registers : 2,880 / 49,760 ( 6 % )
 Total registers : 2949
 Total pins : 143 / 360 ( 40 % )

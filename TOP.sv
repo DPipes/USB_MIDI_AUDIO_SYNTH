@@ -172,7 +172,7 @@ logic Reset_h, vssig, blank, sync, VGA_Clk, CLK;
 		//AUDIO SYNTHESIZER
 		.input_port_run(1'b1),
 		.input_port_sw(SW[0]),
-		.input_port_new_signal(AUDIO_FULL),
+		.input_port_fifo_full(AUDIO_FULL),
 		.output_port_ld_fifo(AUDIO_WRITE),
 		.output_port_tone(AUDIO_FIFO),
 		
