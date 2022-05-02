@@ -49,6 +49,8 @@ vlog -sv -work work +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final {C:/User
 vlog -sv -work work +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final {C:/Users/dpipe/OneDrive/School/ECE385/Final/HexDriver.sv}
 vlog -sv -work work +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final {C:/Users/dpipe/OneDrive/School/ECE385/Final/TOP.sv}
 vlog -sv -work work +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final {C:/Users/dpipe/OneDrive/School/ECE385/Final/I2S.sv}
+vlog -sv -work work +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final {C:/Users/dpipe/OneDrive/School/ECE385/Final/test_wave_table.sv}
+vlog -sv -work work +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final {C:/Users/dpipe/OneDrive/School/ECE385/Final/datapath.sv}
 vlog -sv -work USB_MIDI_AUDIO_SYNTH +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules {C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_irq_mapper.sv}
 vlog -sv -work USB_MIDI_AUDIO_SYNTH +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules {C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_007_error_adapter_0.sv}
 vlog -sv -work USB_MIDI_AUDIO_SYNTH +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules {C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv}
@@ -73,9 +75,6 @@ vlog -sv -work USB_MIDI_AUDIO_SYNTH +incdir+C:/Users/dpipe/OneDrive/School/ECE38
 vlog -sv -work USB_MIDI_AUDIO_SYNTH +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules {C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_slave_translator.sv}
 vlog -sv -work USB_MIDI_AUDIO_SYNTH +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules {C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_master_translator.sv}
 vlog -sv -work USB_MIDI_AUDIO_SYNTH +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules {C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/f_table.sv}
-vlog -sv -work USB_MIDI_AUDIO_SYNTH +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules {C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/wavetable.sv}
-vlog -sv -work work +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final {C:/Users/dpipe/OneDrive/School/ECE385/Final/wavetable.sv}
-vlog -sv -work work +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final {C:/Users/dpipe/OneDrive/School/ECE385/Final/datapath.sv}
 vlog -sv -work USB_MIDI_AUDIO_SYNTH +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules {C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/datapath.sv}
 vlog -sv -work USB_MIDI_AUDIO_SYNTH +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules {C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/synth_ip.sv}
 
@@ -86,4 +85,4 @@ vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lns
 add wave *
 view structure
 view signals
-run 10000 ns
+run 100000 ns

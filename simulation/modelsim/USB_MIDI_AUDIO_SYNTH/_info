@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/dpipe/OneDrive/School/ECE385/Final/simulation/modelsim
 valtera_avalon_i2c
-Z1 !s110 1651520153
+Z1 !s110 1651530975
 !i10b 1
 !s100 i;I80YB`l0<cOH0Mh0OXC2
 IoACS@5Jk2h_n0je?4hG;Y1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1651452007
+Z3 w1651528328
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_i2c.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_i2c.v
 Z4 L0 18
@@ -23,7 +23,7 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1651520153.000000
+Z6 !s108 1651530975.000000
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_i2c.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_i2c.v|
 !i113 1
@@ -31,7 +31,7 @@ Z7 o-vlog01compat -work USB_MIDI_AUDIO_SYNTH
 Z8 !s92 -vlog01compat -work USB_MIDI_AUDIO_SYNTH +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules
 Z9 tCvgOpt 0
 valtera_avalon_i2c_clk_cnt
-Z10 !s110 1651520154
+R1
 !i10b 1
 !s100 CAQU3PEJGHFhmUSJ9nV@02
 I5>BAf<TfX2Zdl@g]`UBH91
@@ -45,7 +45,7 @@ R5
 r1
 !s85 0
 31
-Z11 !s108 1651520154.000000
+R6
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_i2c_clk_cnt.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_i2c_clk_cnt.v|
 !i113 1
@@ -53,7 +53,7 @@ R7
 R8
 R9
 valtera_avalon_i2c_condt_det
-R10
+R1
 !i10b 1
 !s100 NWHS0:R1WP@@17W[f`AJI0
 I5A:3z`Z<Y>DL2SddSV>ch2
@@ -67,7 +67,7 @@ R5
 r1
 !s85 0
 31
-R11
+R6
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_i2c_condt_det.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_i2c_condt_det.v|
 !i113 1
@@ -75,7 +75,7 @@ R7
 R8
 R9
 valtera_avalon_i2c_condt_gen
-R10
+Z10 !s110 1651530976
 !i10b 1
 !s100 F?IU54?<EV_ITzfFeG@`Z2
 IRNSmbZWM2XGFAHIO=anS[0
@@ -89,7 +89,7 @@ R5
 r1
 !s85 0
 31
-R11
+Z11 !s108 1651530976.000000
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_i2c_condt_gen.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_i2c_condt_gen.v|
 !i113 1
@@ -163,7 +163,7 @@ R7
 R8
 R9
 valtera_avalon_i2c_rxshifter
-R10
+Z12 !s110 1651530977
 !i10b 1
 !s100 NH?j7@d_^5gIg43`l^N`W3
 ILMM]6QmQ=UcBW:QlnX;NM3
@@ -185,7 +185,7 @@ R7
 R8
 R9
 valtera_avalon_i2c_spksupp
-R10
+R12
 !i10b 1
 !s100 L4Jc3zDI^<U>:e]oA=kFJ0
 IS1:a@E0fAWcmDK@aSP2JW3
@@ -199,7 +199,7 @@ R5
 r1
 !s85 0
 31
-R11
+Z13 !s108 1651530977.000000
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_i2c_spksupp.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_i2c_spksupp.v|
 !i113 1
@@ -207,7 +207,7 @@ R7
 R8
 R9
 valtera_avalon_i2c_txout
-R10
+R12
 !i10b 1
 !s100 :0U7=ZbJ=6_9QSWgb9VmM1
 InP@7eFBGJN4GDYQbGHmG:0
@@ -221,7 +221,7 @@ R5
 r1
 !s85 0
 31
-R11
+R13
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_i2c_txout.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_i2c_txout.v|
 !i113 1
@@ -229,7 +229,7 @@ R7
 R8
 R9
 valtera_avalon_i2c_txshifter
-R10
+R12
 !i10b 1
 !s100 ceW5>`_l>2G>TjfE>=9`60
 I@UofUVfloKMD@A7E5oD9[2
@@ -243,7 +243,7 @@ R5
 r1
 !s85 0
 31
-R11
+R13
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_i2c_txshifter.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_i2c_txshifter.v|
 !i113 1
@@ -251,21 +251,21 @@ R7
 R8
 R9
 valtera_avalon_sc_fifo
-Z12 !s110 1651520152
+Z14 !s110 1651530970
 !i10b 1
 !s100 4mK@em][G=j]om3zJIhOc0
 IT[3eRYikWZ<VzaJF[Uaf>1
 R2
 R0
-Z13 w1651452027
+Z15 w1651528389
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_sc_fifo.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_sc_fifo.v
-Z14 L0 21
+Z16 L0 21
 R5
 r1
 !s85 0
 31
-Z15 !s108 1651520152.000000
+Z17 !s108 1651530970.000000
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_sc_fifo.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_sc_fifo.v|
 !i113 1
@@ -273,13 +273,13 @@ R7
 R8
 R9
 valtera_avalon_st_clock_crosser
-Z16 !s110 1651520155
+Z18 !s110 1651530979
 !i10b 1
 !s100 YbU`iK^TYJ_9Hz`CZekjQ3
 IYMiPh<W8S3Q5DJKhI;zRc2
 R2
 R0
-Z17 w1651452028
+Z19 w1651528390
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_st_clock_crosser.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_st_clock_crosser.v
 L0 22
@@ -287,7 +287,7 @@ R5
 r1
 !s85 0
 31
-Z18 !s108 1651520155.000000
+Z20 !s108 1651530979.000000
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_st_clock_crosser.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_st_clock_crosser.v|
 !i113 1
@@ -295,21 +295,21 @@ R7
 R8
 R9
 valtera_avalon_st_handshake_clock_crosser
-R16
+R18
 !i10b 1
 !s100 3f<J9K;e[9FU@JKn0^PK?0
 IVgATc?@f<2MX7a8G9=7_o0
 R2
 R0
-R17
+R19
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v
-Z19 L0 24
+Z21 L0 24
 R5
 r1
 !s85 0
 31
-R18
+R20
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v|
 !i113 1
@@ -317,58 +317,58 @@ R7
 R8
 R9
 valtera_merlin_arb_adder
-Z20 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-R16
+Z22 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R18
 !i10b 1
 !s100 1Jn[a;@5nZmTN?DFKQNzj2
 IVMf>;mNi><;EJ5fFWQh^Q1
 R2
-Z21 !s105 altera_merlin_arbitrator_sv_unit
+Z23 !s105 altera_merlin_arbitrator_sv_unit
 S1
 R0
-R17
-Z22 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_arbitrator.sv
-Z23 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_arbitrator.sv
+R15
+Z24 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_arbitrator.sv
+Z25 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_arbitrator.sv
 L0 228
 R5
 r1
 !s85 0
 31
-R18
-Z24 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_arbitrator.sv|
-Z25 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_arbitrator.sv|
+R20
+Z26 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_arbitrator.sv|
+Z27 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_arbitrator.sv|
 !i113 1
-Z26 o-sv -work USB_MIDI_AUDIO_SYNTH
-Z27 !s92 -sv -work USB_MIDI_AUDIO_SYNTH +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules
+Z28 o-sv -work USB_MIDI_AUDIO_SYNTH
+Z29 !s92 -sv -work USB_MIDI_AUDIO_SYNTH +incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules
 R9
 valtera_merlin_arbitrator
-R20
-R16
+R22
+R18
 !i10b 1
 !s100 NQTehjm2fNQROUMUzShGa1
 IX6Z?cdDa2VD:;Xa6HVWWO3
 R2
-R21
+R23
 S1
 R0
-R17
-R22
-R23
+R15
+R24
+R25
 L0 103
 R5
 r1
 !s85 0
 31
-R18
-R24
-R25
-!i113 1
+R20
 R26
 R27
+!i113 1
+R28
+R29
 R9
 valtera_merlin_burst_adapter
-R20
-Z28 !s110 1651520156
+R22
+Z30 !s110 1651530981
 !i10b 1
 !s100 OCc70X^k:B?GW6i71n`L_3
 IAPzBX2c:Xg]oXTRYIc0Y61
@@ -376,24 +376,24 @@ R2
 !s105 altera_merlin_burst_adapter_sv_unit
 S1
 R0
-R17
+R15
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_burst_adapter.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_burst_adapter.sv
-R14
+R16
 R5
 r1
 !s85 0
 31
-Z29 !s108 1651520156.000000
+Z31 !s108 1651530980.000000
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_burst_adapter.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_burst_adapter.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 valtera_merlin_burst_adapter_uncompressed_only
-R20
-Z30 !s110 1651520157
+R22
+R30
 !i10b 1
 !s100 STH]BdUM[JDMJZNJGXCd>0
 IPS4^]8CT6_8V>8ajL53D]2
@@ -401,7 +401,7 @@ R2
 !s105 altera_merlin_burst_adapter_uncmpr_sv_unit
 S1
 R0
-R17
+R15
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv
 L0 39
@@ -409,16 +409,16 @@ R5
 r1
 !s85 0
 31
-R29
+Z32 !s108 1651530981.000000
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 valtera_merlin_burst_uncompressor
-R20
-R16
+R22
+R18
 !i10b 1
 !s100 f1?Rb<=9U?R9LJoHl;7>T3
 I04F<e>G:iO`=Q_B9<:gkJ1
@@ -426,7 +426,7 @@ R2
 !s105 altera_merlin_burst_uncompressor_sv_unit
 S1
 R0
-R13
+R15
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_burst_uncompressor.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_burst_uncompressor.sv
 L0 40
@@ -434,16 +434,16 @@ R5
 r1
 !s85 0
 31
-R18
+R20
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_burst_uncompressor.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_burst_uncompressor.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 valtera_merlin_master_agent
-R20
-R30
+R22
+Z33 !s110 1651530982
 !i10b 1
 !s100 _CJm:YX=>U2LQKH;8=@cb0
 IRz32lB6A]1ET4F?SPSMan3
@@ -451,7 +451,7 @@ R2
 !s105 altera_merlin_master_agent_sv_unit
 S1
 R0
-R13
+R15
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_master_agent.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_master_agent.sv
 L0 28
@@ -459,16 +459,16 @@ R5
 r1
 !s85 0
 31
-Z31 !s108 1651520157.000000
+Z34 !s108 1651530982.000000
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_master_agent.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_master_agent.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 valtera_merlin_master_translator
-R20
-R30
+R22
+R33
 !i10b 1
 !s100 NdRk@]3fC2C@V7Rm;dQM31
 I>2YH:``<dL0?CSO4G0:W>1
@@ -476,7 +476,7 @@ R2
 !s105 altera_merlin_master_translator_sv_unit
 S1
 R0
-R13
+R15
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_master_translator.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_master_translator.sv
 L0 32
@@ -484,16 +484,16 @@ R5
 r1
 !s85 0
 31
-R31
+R34
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_master_translator.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_master_translator.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 valtera_merlin_slave_agent
-R20
-R30
+R22
+R33
 !i10b 1
 !s100 ePZN1d?B062J`OBb?blff3
 I>oIDUOOJ4Wz_6a1T]DFW>3
@@ -501,24 +501,24 @@ R2
 !s105 altera_merlin_slave_agent_sv_unit
 S1
 R0
-R13
+R15
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_slave_agent.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_slave_agent.sv
-Z32 L0 34
+Z35 L0 34
 R5
 r1
 !s85 0
 31
-R31
+R34
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_slave_agent.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_slave_agent.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 valtera_merlin_slave_translator
-R20
-R30
+R22
+R33
 !i10b 1
 !s100 k`9[YAn_dLTkg;GE`mOb61
 ILS<m]n;9C:<Mai32l_6_@2
@@ -526,7 +526,7 @@ R2
 !s105 altera_merlin_slave_translator_sv_unit
 S1
 R0
-R13
+R15
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_slave_translator.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_slave_translator.sv
 L0 35
@@ -534,16 +534,16 @@ R5
 r1
 !s85 0
 31
-R31
+R34
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_slave_translator.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_slave_translator.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 valtera_merlin_width_adapter
-R20
-R16
+R22
+R18
 !i10b 1
 !s100 QzdA5DP6CReOTH<9QzODa3
 IfdL]Vl>VIaKOYA=z=mXbb1
@@ -551,7 +551,7 @@ R2
 !s105 altera_merlin_width_adapter_sv_unit
 S1
 R0
-R17
+R15
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_width_adapter.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_width_adapter.sv
 L0 25
@@ -559,21 +559,21 @@ R5
 r1
 !s85 0
 31
-R18
+R20
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_width_adapter.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_merlin_width_adapter.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 valtera_reset_controller
-R12
+Z36 !s110 1651530969
 !i10b 1
 !s100 z[H_hRO9gO=:^2E3_jWH03
 Iz<VK`Ec:G`?3Co2[gKF9m2
 R2
 R0
-Z33 w1651452024
+Z37 w1651528384
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_reset_controller.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_reset_controller.v
 L0 42
@@ -581,7 +581,7 @@ R5
 r1
 !s85 0
 31
-R15
+Z38 !s108 1651530969.000000
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_reset_controller.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_reset_controller.v|
 !i113 1
@@ -589,21 +589,21 @@ R7
 R8
 R9
 valtera_reset_synchronizer
-R12
+R36
 !i10b 1
 !s100 oWLYmSO[EOX[G0PgQhZ2=0
 I_MKf]dzQ7o_g1V8Az[M2K0
 R2
 R0
-R33
+R37
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_reset_synchronizer.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_reset_synchronizer.v
-R19
+R21
 R5
 r1
 !s85 0
 31
-R15
+R38
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_reset_synchronizer.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_reset_synchronizer.v|
 !i113 1
@@ -611,13 +611,13 @@ R7
 R8
 R9
 valtera_std_synchronizer_nocut
-R16
+R18
 !i10b 1
 !s100 b8zV2<79GgkNg0GC<P[GJ2
 IRdTHKNHFZnWV0k]5XkPZ^2
 R2
 R0
-R17
+R19
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_std_synchronizer_nocut.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_std_synchronizer_nocut.v
 L0 44
@@ -625,7 +625,7 @@ R5
 r1
 !s85 0
 31
-R18
+R20
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_std_synchronizer_nocut.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/altera_std_synchronizer_nocut.v|
 !i113 1
@@ -633,16 +633,16 @@ R7
 R8
 R9
 vdata_path
-R20
-Z34 !s110 1651520158
+R22
+R33
 !i10b 1
-!s100 mMYJBSU>=Pz:9RT@dV8Yl1
-ILeSJ>Z3o;G@@z0Pc<ZBcT3
+!s100 E64^FHji9_FA27VE6a_a93
+IoR;GA?S<UcSl<]DLKJno^0
 R2
 !s105 datapath_sv_unit
 S1
 R0
-Z35 w1651453584
+R3
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/datapath.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/datapath.sv
 L0 3
@@ -650,16 +650,16 @@ R5
 r1
 !s85 0
 31
-Z36 !s108 1651520158.000000
+R34
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/datapath.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/datapath.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 vf_table
-R20
-R30
+R22
+R33
 !i10b 1
 !s100 gNZhNkPlRGzHz;GiVHRXG0
 I6hlU9cS=Ib16XN`@oJ10J3
@@ -667,7 +667,7 @@ R2
 !s105 f_table_sv_unit
 S1
 R0
-R35
+R3
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/f_table.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/f_table.sv
 L0 1
@@ -675,24 +675,24 @@ R5
 r1
 !s85 0
 31
-R31
+R34
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/f_table.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/f_table.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 vsynth_ip
-R20
-R34
+R22
+R33
 !i10b 1
-!s100 NYo9ok7kieSD<^D_XGQml2
-IdK<UMzWO9LZ:o^CPlY34K2
+!s100 ZXW;<Wi:;>3CgJ3WMdA_L1
+IcMNHQm@AXWl^lh2PV57UP2
 R2
 !s105 synth_ip_sv_unit
 S1
 R0
-R35
+R3
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/synth_ip.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/synth_ip.sv
 L0 3
@@ -700,21 +700,21 @@ R5
 r1
 !s85 0
 31
-R36
+R34
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/synth_ip.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/synth_ip.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 vUSB_MIDI_AUDIO_SYNTH
-!s110 1651520151
+R36
 !i10b 1
 !s100 ;hoXMVN8gg2dBWCcJ1Eff0
 IJaRgg<C_zVkB0JSa;HoQM0
 R2
 R0
-R35
+R3
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/USB_MIDI_AUDIO_SYNTH.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/USB_MIDI_AUDIO_SYNTH.v
 L0 6
@@ -722,7 +722,7 @@ R5
 r1
 !s85 0
 31
-!s108 1651520151.000000
+R38
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/USB_MIDI_AUDIO_SYNTH.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/USB_MIDI_AUDIO_SYNTH.v|
 !i113 1
@@ -731,7 +731,7 @@ R7
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h
 vUSB_MIDI_AUDIO_SYNTH_hex_digits_pio
-R10
+R12
 !i10b 1
 !s100 <YC=jiZZ?R9OeLmn6X5OG0
 Ic25g`zPo5JY76ANjIn0Nz0
@@ -740,12 +740,12 @@ R0
 R3
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_hex_digits_pio.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_hex_digits_pio.v
-R14
+R16
 R5
 r1
 !s85 0
 31
-R11
+R13
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_hex_digits_pio.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_hex_digits_pio.v|
 !i113 1
@@ -754,8 +754,8 @@ R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_hex_digits_pio
 vUSB_MIDI_AUDIO_SYNTH_irq_mapper
-R20
-R16
+R22
+!s110 1651530978
 !i10b 1
 !s100 jYCdFcGoOEh>FZAU8d0J`2
 I7aV7h_>kTUk=QR6z=LAcn0
@@ -763,7 +763,7 @@ R2
 !s105 USB_MIDI_AUDIO_SYNTH_irq_mapper_sv_unit
 S1
 R0
-R33
+R37
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_irq_mapper.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_irq_mapper.sv
 L0 31
@@ -771,12 +771,12 @@ R5
 r1
 !s85 0
 31
-R18
+Z39 !s108 1651530978.000000
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_irq_mapper.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_irq_mapper.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_irq_mapper
 vUSB_MIDI_AUDIO_SYNTH_jtag_uart_0
@@ -787,16 +787,16 @@ Il:m5X3V8WNFTz^NS<DE=a2
 R2
 R0
 R3
-Z37 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_jtag_uart_0.v
-Z38 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_jtag_uart_0.v
+Z40 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_jtag_uart_0.v
+Z41 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_jtag_uart_0.v
 L0 331
 R5
 r1
 !s85 0
 31
 R6
-Z39 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_jtag_uart_0.v|
-Z40 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_jtag_uart_0.v|
+Z42 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_jtag_uart_0.v|
+Z43 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_jtag_uart_0.v|
 !i113 1
 R7
 R8
@@ -810,16 +810,16 @@ I[ka9MDF^7zZARhQzIcPlb2
 R2
 R0
 R3
-R37
-R38
+R40
+R41
 L0 243
 R5
 r1
 !s85 0
 31
 R6
-R39
-R40
+R42
+R43
 !i113 1
 R7
 R8
@@ -833,16 +833,16 @@ IA:LDA54aP6z19NGHWd@<[0
 R2
 R0
 R3
-R37
-R38
+R40
+R41
 L0 78
 R5
 r1
 !s85 0
 31
 R6
-R39
-R40
+R42
+R43
 !i113 1
 R7
 R8
@@ -856,16 +856,16 @@ IiTFXcfb8^[lWN=PP^hi4c0
 R2
 R0
 R3
-R37
-R38
+R40
+R41
 L0 164
 R5
 r1
 !s85 0
 31
 R6
-R39
-R40
+R42
+R43
 !i113 1
 R7
 R8
@@ -879,16 +879,16 @@ IDPDHKiUKoK8;n>?[_RC^T3
 R2
 R0
 R3
-R37
-R38
-R14
+R40
+R41
+R16
 R5
 r1
 !s85 0
 31
 R6
-R39
-R40
+R42
+R43
 !i113 1
 R7
 R8
@@ -901,10 +901,10 @@ R1
 I76kjB[:0oHUfH48VfUM@Q1
 R2
 R0
-R3
+Z44 w1651528329
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_key.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_key.v
-R14
+R16
 R5
 r1
 !s85 0
@@ -924,10 +924,10 @@ R1
 ICQel20k4@i[5OUlUe_n^92
 R2
 R0
-Z41 w1651452008
+R44
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_keycode.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_keycode.v
-R14
+R16
 R5
 r1
 !s85 0
@@ -947,15 +947,15 @@ R1
 IGHhJlKK@5kRna>Rhh1^a^2
 R2
 R0
-R41
+R44
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_leds_pio.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_leds_pio.v
-R14
+R16
 R5
 r1
 !s85 0
 31
-R6
+Z45 !s108 1651530974.000000
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_leds_pio.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_leds_pio.v|
 !i113 1
@@ -964,13 +964,13 @@ R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_leds_pio
 vUSB_MIDI_AUDIO_SYNTH_mm_interconnect_0
-R12
+R36
 !i10b 1
 !s100 h?619aX;J0De?2lGElo0T2
 I6Q][3OI;zl6ell=_e0a<91
 R2
 R0
-R35
+R37
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0.v
 L0 9
@@ -978,7 +978,7 @@ R5
 r1
 !s85 0
 31
-R15
+R38
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0.v|
 !i113 1
@@ -987,13 +987,13 @@ R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_mm_interconnect_0
 vUSB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter
-R12
+R14
 !i10b 1
 !s100 4U0ZhRlzWWEl[Vd6h`Q;D2
 ID]AgV1^MS30P0:eGZ^eV53
 R2
 R0
-R17
+w1651528391
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter.v
 L0 9
@@ -1001,7 +1001,7 @@ R5
 r1
 !s85 0
 31
-R15
+R38
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter.v|
 !i113 1
@@ -1010,13 +1010,13 @@ R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_mm_interconnect_0_avalon_st_adapter
 vUSB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_007
-R12
+R36
 !i10b 1
 !s100 Ei<`O=jJK9W^b>hkhk7g50
 I>_A[H=j6?]0mG>4:U3AW:1
 R2
 R0
-R17
+Z46 w1651528393
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_007.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_007.v
 L0 9
@@ -1024,7 +1024,7 @@ R5
 r1
 !s85 0
 31
-R15
+R38
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_007.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_007.v|
 !i113 1
@@ -1033,8 +1033,8 @@ R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_mm_interconnect_0_avalon_st_adapter_007
 vUSB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_007_error_adapter_0
-R20
-R16
+R22
+R18
 !i10b 1
 !s100 >b97FbPb_jUIH2Q1Kmc;b1
 II8@Qe:AAiG>?Y^Ac>kUEd3
@@ -1042,25 +1042,25 @@ R2
 !s105 USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_007_error_adapter_0_sv_unit
 S1
 R0
-R17
+R46
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_007_error_adapter_0.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_007_error_adapter_0.sv
-Z42 L0 66
+Z47 L0 66
 R5
 r1
 !s85 0
 31
-R18
+R39
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_007_error_adapter_0.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_007_error_adapter_0.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_mm_interconnect_0_avalon_st_adapter_007_error_adapter_0
 vUSB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_error_adapter_0
-R20
-R16
+R22
+R18
 !i10b 1
 !s100 ?O32IV<mSFenB7:[@z=Y63
 I0X@`3a]B6Eb<`8f[[a6KA3
@@ -1068,25 +1068,25 @@ R2
 !s105 USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_error_adapter_0_sv_unit
 S1
 R0
-R17
+R46
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
-R42
+R47
 R5
 r1
 !s85 0
 31
-R18
+R20
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_mm_interconnect_0_avalon_st_adapter_error_adapter_0
 vUSB_MIDI_AUDIO_SYNTH_mm_interconnect_0_cmd_demux
-R20
-R28
+R22
+Z48 !s110 1651530980
 !i10b 1
 !s100 UoS`l=]iEjY>GokTHekWR3
 IgCKKg:SKeLWg7z?ZKo2XF1
@@ -1094,25 +1094,25 @@ R2
 !s105 USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_cmd_demux_sv_unit
 S1
 R0
-R35
+R15
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_cmd_demux.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_cmd_demux.sv
-Z43 L0 43
+Z49 L0 43
 R5
 r1
 !s85 0
 31
-R18
+R31
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_cmd_demux.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_cmd_demux.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_mm_interconnect_0_cmd_demux
 vUSB_MIDI_AUDIO_SYNTH_mm_interconnect_0_cmd_mux
-R20
-R16
+R22
+R48
 !i10b 1
 !s100 FleH6ZYVEEQ@QM_RdQW?R0
 Ik1[n5acOLk?;=b[HR]Zk30
@@ -1120,181 +1120,181 @@ R2
 !s105 USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_cmd_mux_sv_unit
 S1
 R0
-R35
+R15
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_cmd_mux.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_cmd_mux.sv
-Z44 L0 51
+Z50 L0 51
 R5
 r1
 !s85 0
 31
-R18
+R31
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_cmd_mux.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_cmd_mux.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_mm_interconnect_0_cmd_mux
 vUSB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router
-R20
-R30
+R22
+R33
 !i10b 1
 !s100 YQjhWE;mAj=[G6@]>TBMl1
 Il1f8LHQGIlYmCV]djN9WJ3
 R2
-Z45 !s105 USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_sv_unit
+Z51 !s105 USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_sv_unit
 S1
 R0
-R35
-Z46 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router.sv
-Z47 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router.sv
-Z48 L0 84
+R15
+Z52 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router.sv
+Z53 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router.sv
+Z54 L0 84
 R5
 r1
 !s85 0
 31
-R31
-Z49 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router.sv|
-Z50 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router.sv|
+R34
+Z55 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router.sv|
+Z56 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_mm_interconnect_0_router
 vUSB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_002
-R20
-R30
+R22
+R33
 !i10b 1
 !s100 ^_kILcb39iKlVe`Sgz1eF2
 IoEf1;a;dED63<11XJSEKL0
 R2
-Z51 !s105 USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_002_sv_unit
+Z57 !s105 USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_002_sv_unit
 S1
 R0
-R35
-Z52 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_002.sv
-Z53 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_002.sv
-R48
+R15
+Z58 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_002.sv
+Z59 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_002.sv
+R54
 R5
 r1
 !s85 0
 31
-R31
-Z54 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_002.sv|
-Z55 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_002.sv|
+R32
+Z60 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_002.sv|
+Z61 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_002.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_mm_interconnect_0_router_002
 vUSB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_002_default_decode
-R20
-R30
+R22
+R33
 !i10b 1
 !s100 j8^:1Q8fff4I:gWhbD=773
 IfIaDP<DDKBEUT83j8Qd>`3
 R2
-R51
+R57
 S1
 R0
-R35
-R52
-R53
-Z56 L0 45
+R15
+R58
+R59
+Z62 L0 45
 R5
 r1
 !s85 0
 31
-R31
-R54
-R55
+R32
+R60
+R61
 !i113 1
-R26
-R27
+R28
+R29
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_mm_interconnect_0_router_002_default_decode
 vUSB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_009
-R20
+R22
 R30
 !i10b 1
 !s100 _C8L8lR4DgScokFAi9e971
 I7EaX2cE[BTYelTzKRJ3]n0
 R2
-Z57 !s105 USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_009_sv_unit
+Z63 !s105 USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_009_sv_unit
 S1
 R0
-R35
-Z58 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_009.sv
-Z59 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_009.sv
-R48
+R15
+Z64 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_009.sv
+Z65 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_009.sv
+R54
 R5
 r1
 !s85 0
 31
-R31
-Z60 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_009.sv|
-Z61 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_009.sv|
+R32
+Z66 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_009.sv|
+Z67 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_009.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_mm_interconnect_0_router_009
 vUSB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_009_default_decode
-R20
+R22
 R30
 !i10b 1
 !s100 QlmD3l[7eC<4B7]Q=bc3W1
 I1;l30?:`DNjV460HQa9fE3
 R2
-R57
+R63
 S1
 R0
-R35
-R58
-R59
-R56
+R15
+R64
+R65
+R62
 R5
 r1
 !s85 0
 31
-R31
-R60
-R61
+R32
+R66
+R67
 !i113 1
-R26
-R27
+R28
+R29
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_mm_interconnect_0_router_009_default_decode
 vUSB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router_default_decode
-R20
-R30
+R22
+R33
 !i10b 1
 !s100 IZAlU=fo[E:eCP54PL`1U0
 IH?`KRkke6_FU9BJQWW2SO3
 R2
-R45
+R51
 S1
 R0
-R35
-R46
-R47
-R56
+R15
+R52
+R53
+R62
 R5
 r1
 !s85 0
 31
-R31
-R49
-R50
+R34
+R55
+R56
 !i113 1
-R26
-R27
+R28
+R29
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_mm_interconnect_0_router_default_decode
 vUSB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_demux
-R20
-R16
+R22
+R48
 !i10b 1
 !s100 5P5aDflX]Rm=@AK1gb90H2
 I80NhO_D4HI@QK4EGoFJZ[2
@@ -1302,25 +1302,25 @@ R2
 !s105 USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_demux_sv_unit
 S1
 R0
-R35
+R15
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_demux.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_demux.sv
-R43
+R49
 R5
 r1
 !s85 0
 31
-R18
+R31
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_demux.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_demux.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_mm_interconnect_0_rsp_demux
 vUSB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_demux_005
-R20
-R16
+R22
+R18
 !i10b 1
 !s100 =3a>WSAW3ioSYd;M:Y<Bz1
 IdT1T4P9<ac8n1?Q5B7^7^0
@@ -1328,25 +1328,25 @@ R2
 !s105 USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_demux_005_sv_unit
 S1
 R0
-R35
+R15
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_demux_005.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_demux_005.sv
-R43
+R49
 R5
 r1
 !s85 0
 31
-R18
+R20
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_demux_005.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_demux_005.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_mm_interconnect_0_rsp_demux_005
 vUSB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_mux
-R20
-R16
+R22
+R18
 !i10b 1
 !s100 IWN7^<EbKJgDOY>96OK`M1
 I8lf`Em1BozmNnSLdLiVS^1
@@ -1354,30 +1354,30 @@ R2
 !s105 USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_mux_sv_unit
 S1
 R0
-R35
+R15
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_mux.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_mux.sv
-R44
+R50
 R5
 r1
 !s85 0
 31
-R18
+R20
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_mux.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_rsp_mux.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_mm_interconnect_0_rsp_mux
 vUSB_MIDI_AUDIO_SYNTH_nios2
-R1
+Z68 !s110 1651530973
 !i10b 1
 !s100 C3fCoL3mcB9Jk;bKS<Uo>1
 I56aEPGDTdDja2gD>aX;OR1
 R2
 R0
-R41
+w1651528330
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2.v
 L0 9
@@ -1385,7 +1385,7 @@ R5
 r1
 !s85 0
 31
-R6
+Z69 !s108 1651530973.000000
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2.v|
 !i113 1
@@ -1394,44 +1394,44 @@ R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu
-R1
+R68
 !i10b 1
 !s100 G0=GGHadP3He^ok8zhDTc3
 I?Po[^_m>:e34Az2Tn>=oZ1
 R2
 R0
-R13
-Z62 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu.v
-Z63 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu.v
+R15
+Z70 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu.v
+Z71 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu.v
 L0 2834
 R5
 r1
 !s85 0
 31
-R6
-Z64 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu.v|
-Z65 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu.v|
+R69
+Z72 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu.v|
+Z73 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu.v|
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_debug_slave_sysclk
-R1
+R68
 !i10b 1
 !s100 <Ubf[jJ4enRiCTmb7>B9G1
 IiXXL=8>j;<COXEKiXlLNZ0
 R2
 R0
-R13
+R15
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu_debug_slave_sysclk.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu_debug_slave_sysclk.v
-R14
+R16
 R5
 r1
 !s85 0
 31
-R6
+R69
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu_debug_slave_sysclk.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu_debug_slave_sysclk.v|
 !i113 1
@@ -1440,21 +1440,21 @@ R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_debug_slave_sysclk
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_debug_slave_tck
-R1
+Z74 !s110 1651530974
 !i10b 1
 !s100 V0=F_l6NL8SB30kF5fBIE0
 IRndQH4ddTS8gAaiB7RNO92
 R2
 R0
-R13
+R15
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu_debug_slave_tck.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu_debug_slave_tck.v
-R14
+R16
 R5
 r1
 !s85 0
 31
-R6
+R69
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu_debug_slave_tck.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu_debug_slave_tck.v|
 !i113 1
@@ -1463,21 +1463,21 @@ R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_debug_slave_tck
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_debug_slave_wrapper
-R1
+R74
 !i10b 1
 !s100 >HW6OfFGNC:c=XHK;Qzk72
 I3?6c_l15MF?JRB=PRCJNO1
 R2
 R0
-R13
+R15
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu_debug_slave_wrapper.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu_debug_slave_wrapper.v
-R14
+R16
 R5
 r1
 !s85 0
 31
-R6
+R45
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu_debug_slave_wrapper.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu_debug_slave_wrapper.v|
 !i113 1
@@ -1486,481 +1486,481 @@ R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_debug_slave_wrapper
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_nios2_avalon_reg
-R1
+R68
 !i10b 1
 !s100 f[AG1Cn=;`[3IcVM><U[R3
 IoBgU_1^diR:^Ldf:;8:hf0
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 2023
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_nios2_avalon_reg
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_nios2_oci
-R1
+R68
 !i10b 1
 !s100 ioZ@CEfED;;^D;k:7eK?Z1
 IFdboQh`;4M9X?CF8>jKNY1
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 2362
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_nios2_oci
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_nios2_oci_break
-R1
+R68
 !i10b 1
 !s100 BK35IaHb:EI4Cnb9BSZW<0
 I^iP_aFe_;mzgZ82of9fM_3
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 295
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_nios2_oci_break
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_nios2_oci_compute_input_tm_cnt
-R1
+R68
 !i10b 1
 !s100 KY@O<mZ:]1g[G[9FUSUQ:1
 IoAO8f]4nBJ=7=?>^=RaVR2
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 1265
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_nios2_oci_compute_input_tm_cnt
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_nios2_oci_dbrk
-R1
+R68
 !i10b 1
 !s100 0he<CYFelTzafb[CgO_IB3
 IVao`RlmdSnO0349kdgZ[<0
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 795
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_nios2_oci_dbrk
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_nios2_oci_debug
-R1
+R68
 !i10b 1
 !s100 7KKPmjf:2HOba9V^j3LdP2
 IK`YgRzXTaU7V89hnUg:`Y2
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 153
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_nios2_oci_debug
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_nios2_oci_dtrace
-R1
+R68
 !i10b 1
 !s100 z;UAHldm[<B:AK]c8EAd11
 Imo`Z]3;c290D<GlD_5QPa0
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 1183
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_nios2_oci_dtrace
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_nios2_oci_fifo
-R1
+R68
 !i10b 1
 !s100 GaZbZOg`E>?VbWz?XSR3D3
 I^gP]2c5_5dYKi0RzgWWPM1
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 1427
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_nios2_oci_fifo
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_nios2_oci_fifo_cnt_inc
-R1
+R68
 !i10b 1
 !s100 nQ@U4:gCGKV4lmPln0Xll3
 I6zz7SJc<?KJNR^EWdVAIC3
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 1380
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_nios2_oci_fifo_cnt_inc
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_nios2_oci_fifo_wrptr_inc
-R1
+R68
 !i10b 1
 !s100 j?F^DKnZ_8W[o4CTGDnT<3
 In[Kl8QKbji:nSk4_QF>Db2
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 1337
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_nios2_oci_fifo_wrptr_inc
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_nios2_oci_im
-R1
+R68
 !i10b 1
 !s100 ^IGi_XPXVO>VDP36QfnCH2
 IF??FPBNW:NWHd0m85?Ag>2
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 1936
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_nios2_oci_im
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_nios2_oci_itrace
-R1
+R68
 !i10b 1
 !s100 QQ@j`X?eEV1W1:7V5@gei3
 I;JSkb<V7`B<Ri;SIfF<al0
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 982
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_nios2_oci_itrace
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_nios2_oci_pib
-R1
+R68
 !i10b 1
 !s100 ^X`F=<al1?0TB[H8AC`]X2
 Iz=i<;S^a0JSN>GeiH2_MI1
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 1913
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_nios2_oci_pib
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_nios2_oci_td_mode
-R1
+R68
 !i10b 1
 !s100 P@i<9Gh5cGD=>l=e[9a@B0
 I;ea12Mc?UaV_^B`7nh86g3
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 1115
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_nios2_oci_td_mode
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_nios2_oci_xbrk
-R1
+R68
 !i10b 1
 !s100 LlFcSiXD9IPTTN5aW5O`A3
 IO=mW^9D@TVh2m4RF9`4c81
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 588
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_nios2_oci_xbrk
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_nios2_ocimem
-R1
+R68
 !i10b 1
 !s100 h6]K1oFZ;a<GdR7G9ZaKd1
 I0JnzEbPkM:K[mE;Ha1GMn0
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 2181
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_nios2_ocimem
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_nios2_performance_monitors
-R1
+R68
 !i10b 1
 !s100 a=fk`=haR<2CPjGRjh4Td2
 I2`]a]_cl<]0R7:hgfP@z61
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 2006
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_nios2_performance_monitors
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_ociram_sp_ram_module
-R1
+R68
 !i10b 1
 !s100 B:kWEU7OOJNP<h@nTi9]@1
 Ie?>fAR0GOmCjeKdUGG><>3
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 2116
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_ociram_sp_ram_module
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_register_bank_a_module
-R1
+R68
 !i10b 1
 !s100 coC?XNP>Y2z`CY8MB:fXz3
 IQW`RNbWe58bf^T>ShENSS3
 R2
 R0
-R13
-R62
-R63
-R14
+R15
+R70
+R71
+R16
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_register_bank_a_module
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_register_bank_b_module
-R1
+R68
 !i10b 1
 !s100 noHGTi8>TI0CBVU2a@T=U1
 Im8YTJg8jOWg0jN7dLiJ<i0
 R2
 R0
-R13
-R62
-R63
+R15
+R70
+R71
 L0 87
 R5
 r1
 !s85 0
 31
-R6
-R64
-R65
+R69
+R72
+R73
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_register_bank_b_module
 vUSB_MIDI_AUDIO_SYNTH_nios2_cpu_test_bench
-R1
+R74
 !i10b 1
 !s100 24UelS1JV6NBPDb^3`1OX0
 IbiEY^L;5THY?mU>=`lAnB0
 R2
 R0
-R13
+R15
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu_test_bench.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu_test_bench.v
-R14
+R16
 R5
 r1
 !s85 0
 31
-R6
+R45
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu_test_bench.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_nios2_cpu_test_bench.v|
 !i113 1
@@ -1969,151 +1969,151 @@ R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_nios2_cpu_test_bench
 vUSB_MIDI_AUDIO_SYNTH_sdram
-R1
+R68
 !i10b 1
 !s100 U15Iml_EFV?67;Rb0XM0V2
 I>z:L]laf8Ga0QeEE=SQW02
 R2
 R0
-Z66 w1651452009
-Z67 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sdram.v
-Z68 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sdram.v
+Z75 w1651528331
+Z76 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sdram.v
+Z77 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sdram.v
 L0 159
 R5
 r1
 !s85 0
 31
-R6
-Z69 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sdram.v|
-Z70 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sdram.v|
+R69
+Z78 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sdram.v|
+Z79 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sdram.v|
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_sdram
 vUSB_MIDI_AUDIO_SYNTH_sdram_input_efifo_module
-R1
+R68
 !i10b 1
 !s100 aG5<IG8L?gd1b^V;io0mR3
 IIgCk04HcV1^4^FfY3bQ3H1
 R2
 R0
-R66
-R67
-R68
-R14
+R75
+R76
+R77
+R16
 R5
 r1
 !s85 0
 31
-R6
 R69
-R70
+R78
+R79
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_sdram_input_efifo_module
 vUSB_MIDI_AUDIO_SYNTH_sdram_pll
-R1
+R68
 !i10b 1
 !s100 Y1lb7J3oR05Gm=475iDC:0
 IQ2?z_I3ReDCSXhUW@SjHm0
 R2
 R0
-Z71 w1651452010
-Z72 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sdram_pll.v
-Z73 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sdram_pll.v
+Z80 w1651528332
+Z81 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sdram_pll.v
+Z82 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sdram_pll.v
 L0 225
 R5
 r1
 !s85 0
 31
-R6
-Z74 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sdram_pll.v|
-Z75 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sdram_pll.v|
+R69
+Z83 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sdram_pll.v|
+Z84 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sdram_pll.v|
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_sdram_pll
 vUSB_MIDI_AUDIO_SYNTH_sdram_pll_altpll_1vm2
-R1
+R68
 !i10b 1
 !s100 [ODDhgYfz86[AalKKX]i]0
 IdRNm1SjVSWB5GT76YVGoQ1
 R2
 R0
-R71
-R72
-R73
+R80
+R81
+R82
 L0 130
 R5
 r1
 !s85 0
 31
-R6
-R74
-R75
+R69
+R83
+R84
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_sdram_pll_altpll_1vm2
 vUSB_MIDI_AUDIO_SYNTH_sdram_pll_dffpipe_l2c
-R1
+R68
 !i10b 1
 !s100 Toge03hGdkCY6JcG4@E210
 I3faW8gGQ:]z]HVionPL=Y3
 R2
 R0
-R71
-R72
-R73
+R80
+R81
+R82
 L0 37
 R5
 r1
 !s85 0
 31
-R6
-R74
-R75
+R69
+R83
+R84
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_sdram_pll_dffpipe_l2c
 vUSB_MIDI_AUDIO_SYNTH_sdram_pll_stdsync_sv6
-R1
+R68
 !i10b 1
 !s100 Ui:KnK7l5BDngSnV_UMgf0
 Im<=4UT:OP[8I_Ri]6d12A3
 R2
 R0
-R71
-R72
-R73
+R80
+R81
+R82
 L0 98
 R5
 r1
 !s85 0
 31
-R6
-R74
-R75
+R69
+R83
+R84
 !i113 1
 R7
 R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_sdram_pll_stdsync_sv6
 vUSB_MIDI_AUDIO_SYNTH_spi_0
-R12
+!s110 1651530972
 !i10b 1
 !s100 i]j@fWZ:UZSiSZCi=F=P53
 IFUl;cZXaUb2Wz:6oeQ4kR3
 R2
 R0
-R71
+Z85 w1651528333
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_spi_0.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_spi_0.v
 L0 41
@@ -2121,7 +2121,7 @@ R5
 r1
 !s85 0
 31
-R15
+Z86 !s108 1651530971.000000
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_spi_0.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_spi_0.v|
 !i113 1
@@ -2130,21 +2130,21 @@ R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_spi_0
 vUSB_MIDI_AUDIO_SYNTH_sw
-R12
+Z87 !s110 1651530971
 !i10b 1
 !s100 PHe_lkKQAhOfo34@dR=BC3
 IYkQ4T?]`I>IgHIHYeMAG`1
 R2
 R0
-Z76 w1651452011
+R85
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sw.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sw.v
-R14
+R16
 R5
 r1
 !s85 0
 31
-R15
+R86
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sw.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sw.v|
 !i113 1
@@ -2153,21 +2153,21 @@ R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_sw
 vUSB_MIDI_AUDIO_SYNTH_sysid_qsys_0
-R12
+R87
 !i10b 1
-!s100 ?b_CmUJ;O6P^D>D]SH0e=3
-I0>bo]OPnS6C3JhSSg:nzF0
+!s100 8iIJDYK`i6=c94DR2VBc=3
+IQ@:g_?Y5HOLPbOzPF7R]02
 R2
 R0
-R35
+R85
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sysid_qsys_0.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sysid_qsys_0.v
-R32
+R35
 R5
 r1
 !s85 0
 31
-R15
+R86
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sysid_qsys_0.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_sysid_qsys_0.v|
 !i113 1
@@ -2176,21 +2176,21 @@ R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_sysid_qsys_0
 vUSB_MIDI_AUDIO_SYNTH_timer_0
-R12
+R14
 !i10b 1
 !s100 X4N=FGN<bSfPLTHQF_e2X2
 I_]E8zMM7WZ8NiSd_?M7BP1
 R2
 R0
-R76
+R85
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_timer_0.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_timer_0.v
-R14
+R16
 R5
 r1
 !s85 0
 31
-R15
+R17
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_timer_0.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_timer_0.v|
 !i113 1
@@ -2199,21 +2199,21 @@ R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_timer_0
 vUSB_MIDI_AUDIO_SYNTH_usb_gpx
-R12
+R14
 !i10b 1
 !s100 b^AYgz9]mY22h7gh2U`>S3
 IBV>7<aDHMle:PnHmP`VFa2
 R2
 R0
-R76
+Z88 w1651528334
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_usb_gpx.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_usb_gpx.v
-R14
+R16
 R5
 r1
 !s85 0
 31
-R15
+R17
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_usb_gpx.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_usb_gpx.v|
 !i113 1
@@ -2222,21 +2222,21 @@ R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_usb_gpx
 vUSB_MIDI_AUDIO_SYNTH_usb_rst
-R12
+R14
 !i10b 1
 !s100 [YTTQlE]Xo[416aS=A1LW2
 IjICJL^DEmgzz8_PGWL3l<3
 R2
 R0
-R76
+R88
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_usb_rst.v
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_usb_rst.v
-R14
+R16
 R5
 r1
 !s85 0
 31
-R15
+R17
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_usb_rst.v|
 !s90 -reportprogress|300|-vlog01compat|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/USB_MIDI_AUDIO_SYNTH_usb_rst.v|
 !i113 1
@@ -2245,8 +2245,8 @@ R8
 R9
 n@u@s@b_@m@i@d@i_@a@u@d@i@o_@s@y@n@t@h_usb_rst
 vwave_table
-R20
-R30
+R22
+!s110 1651526701
 !i10b 1
 !s100 7a1<6QX<To^`Eih7SAMAK1
 IWeU5l4XW?=@aebY^JYATc0
@@ -2254,7 +2254,7 @@ R2
 !s105 wavetable_sv_unit
 S1
 R0
-R35
+w1651453584
 8C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/wavetable.sv
 FC:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/wavetable.sv
 L0 3
@@ -2262,10 +2262,10 @@ R5
 r1
 !s85 0
 31
-R31
+!s108 1651526701.000000
 !s107 C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/wavetable.sv|
 !s90 -reportprogress|300|-sv|-work|USB_MIDI_AUDIO_SYNTH|+incdir+C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules|C:/Users/dpipe/OneDrive/School/ECE385/Final/USB_MIDI_AUDIO_SYNTH/synthesis/submodules/wavetable.sv|
 !i113 1
-R26
-R27
+R28
+R29
 R9

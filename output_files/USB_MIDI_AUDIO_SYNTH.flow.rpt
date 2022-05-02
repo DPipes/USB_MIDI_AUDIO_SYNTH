@@ -1,5 +1,5 @@
 Flow report for USB_MIDI_AUDIO_SYNTH
-Mon May 02 14:35:25 2022
+Mon May 02 17:35:50 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,20 +40,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon May 02 14:35:24 2022       ;
+; Flow Status                        ; Successful - Mon May 02 17:35:49 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; USB_MIDI_AUDIO_SYNTH                        ;
 ; Top-level Entity Name              ; TOP                                         ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 5,888                                       ;
-;     Total combinational functions  ; 4,875                                       ;
-;     Dedicated logic registers      ; 2,990                                       ;
-; Total registers                    ; 2990                                        ;
+; Total logic elements               ; 24,881                                      ;
+;     Total combinational functions  ; 17,062                                      ;
+;     Dedicated logic registers      ; 9,802                                       ;
+; Total registers                    ; 9802                                        ;
 ; Total pins                         ; 143                                         ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 158,408                                     ;
+; Total memory bits                  ; 19,528                                      ;
 ; Embedded Multiplier 9-bit elements ; 25                                          ;
 ; Total PLLs                         ; 1                                           ;
 ; UFM blocks                         ; 0                                           ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 05/02/2022 14:34:36  ;
+; Start date & time ; 05/02/2022 17:31:27  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; USB_MIDI_AUDIO_SYNTH ;
 +-------------------+----------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+------------------------------------------------------------------------+----------------------+-------------------+----------------+
 ; Assignment Name                      ; Value                                                                  ; Default Value        ; Entity Name       ; Section Id     ;
 +--------------------------------------+------------------------------------------------------------------------+----------------------+-------------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 119438745853114.165152007516524                                        ; --                   ; --                ; --             ;
+; COMPILER_SIGNATURE_ID                ; 119438745853114.165153068615436                                        ; --                   ; --                ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                                     ; --                   ; --                ; testbench      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                                                              ; --                   ; --                ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                                                      ; --                   ; --                ; eda_simulation ;
@@ -86,7 +86,7 @@ refer to the applicable agreement for further details.
 ; EDA_TEST_BENCH_FILE                  ; testbench.sv                                                           ; --                   ; --                ; testbench      ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; testbench                                                              ; --                   ; --                ; testbench      ;
 ; EDA_TEST_BENCH_NAME                  ; testbench                                                              ; --                   ; --                ; eda_simulation ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 10000 ns                                                               ; --                   ; --                ; testbench      ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100000 ns                                                              ; --                   ; --                ; testbench      ;
 ; EDA_TIME_SCALE                       ; 1 ps                                                                   ; --                   ; --                ; eda_simulation ;
 ; ENABLE_SIGNALTAP                     ; Off                                                                    ; --                   ; --                ; --             ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                                                     ; --                   ; --                ; --             ;
@@ -110,7 +110,7 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                                                           ; --                   ; --                ; --             ;
 ; SLD_FILE                             ; USB_MIDI_AUDIO_SYNTH/synthesis/USB_MIDI_AUDIO_SYNTH.regmap             ; --                   ; --                ; --             ;
 ; SLD_FILE                             ; USB_MIDI_AUDIO_SYNTH/synthesis/USB_MIDI_AUDIO_SYNTH.debuginfo          ; --                   ; --                ; --             ;
-; SLD_INFO                             ; QSYS_NAME USB_MIDI_AUDIO_SYNTH HAS_SOPCINFO 1 GENERATION_ID 1651451999 ; --                   ; --                ; --             ;
+; SLD_INFO                             ; QSYS_NAME USB_MIDI_AUDIO_SYNTH HAS_SOPCINFO 1 GENERATION_ID 1651528314 ; --                   ; --                ; --             ;
 ; SOPCINFO_FILE                        ; USB_MIDI_AUDIO_SYNTH/synthesis/../../USB_MIDI_AUDIO_SYNTH.sopcinfo     ; --                   ; --                ; --             ;
 ; SYNTHESIS_ONLY_QIP                   ; On                                                                     ; --                   ; --                ; --             ;
 ; TOP_LEVEL_ENTITY                     ; TOP                                                                    ; USB_MIDI_AUDIO_SYNTH ; --                ; --             ;
@@ -123,8 +123,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:45     ; 1.0                     ; 5016 MB             ; 00:01:05                           ;
-; Total                ; 00:00:45     ; --                      ; --                  ; 00:01:05                           ;
+; Analysis & Synthesis ; 00:04:16     ; 1.0                     ; 5079 MB             ; 00:04:47                           ;
+; Total                ; 00:04:16     ; --                      ; --                  ; 00:04:47                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

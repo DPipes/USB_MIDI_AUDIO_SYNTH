@@ -8,7 +8,18 @@ module data_path(input logic CLK, RESET, SW,
 					  input logic [19:0] PEAK_ATT, ATT_LEN, ATT_STEP, DEC_LEN, DEC_STEP, REL_LEN, REL_STEP,
 					  output logic NOTE_END,
 					  output logic [6:0] AVL_READVEL,
-					  output logic [31:0] TONE
+					  output logic [31:0] TONE,
+					  
+					  
+output logic [1:0]		AMP_MUX,
+output logic [6:0]		VELOCITY,
+output logic [15:0]	SAMPLE,
+output logic [19:0]	ATT_MULT, DEC_MULT, REL_MULT, AMP_MUX_O,
+output logic [20:0]	COUNTER, COUNTER_INC, COUNTER_MUX_O,
+output logic [23:0]	PHASE, PHASE_INC, PHASE_MUX_O, F,
+output logic [26:0]	AMP,
+output logic [30:0]	SEXT_SAMPLE, AMP_SAMPLE,
+output logic [31:0]	SEXT_AMP_SAMPLE, TONE_INC, TONE_MUX_O
 					 );
 
 // Registers to hold key velocity from NIOS II, current phase, amplitude, and play counter for each note
@@ -16,6 +27,7 @@ logic [6:0]		vel_reg [`numKeys];
 logic [20:0]	counter_reg [`numKeys];
 logic [23:0]	phase_reg [`numKeys];
 
+/* MOVED TO OUTPUTS FOR TESTING
 logic [1:0]		AMP_MUX;
 logic [6:0]		VELOCITY;
 logic [15:0]	SAMPLE;
@@ -23,23 +35,33 @@ logic [19:0]	ATT_MULT, DEC_MULT, REL_MULT, AMP_MUX_O;
 logic [20:0]	COUNTER, COUNTER_INC, COUNTER_MUX_O;
 logic [23:0]	PHASE, PHASE_INC, PHASE_MUX_O, F;
 logic [26:0]	AMP;
-logic [27:0]	SEXT_SAMPLE, AMP_SAMPLE;
-logic [31:0]	SEXT_AMP_SAMPLE, TONE_INC, TONE_MUX_O;
+logic [30:0]	SEXT_SAMPLE, AMP_SAMPLE;
+logic [31:0]	SEXT_AMP_SAMPLE, TONE_INC, TONE_MUX_O;*/
 
 // Tables that hold phase step for each note and wavetable to be played
 f_table F_TABLE(.*);
-wave_table WAVE_TABLE(.*, .ADDR({SW, PHASE_MUX_O[23:12]}));
+wave_table_test WAVE_TABLE(.*, .ADDR({SW, PHASE_MUX_O[23:12]})); //THIS IS THE TESTBENCH WAVETABLE IT DOES NOT USE MEMORY
 
 always_ff @ (posedge CLK) begin
 
-	if(LD_PHASE)	phase_reg[KEY] <= PHASE_INC;
-	if(LD_COUNT)	counter_reg[KEY] <= COUNTER_INC;
-	if(LD_TONE)		TONE <= TONE_MUX_O;
+	if(RESET) begin
+		TONE <= 0;
+		AVL_READVEL <= 0;
+		for (int i = 0; i < `numKeys; i++) begin
+			vel_reg[i] <= 0;
+			phase_reg[i] <= 0;
+			counter_reg[i] <= 0;
+		end
+	end
+	else begin
+		if(LD_PHASE)	phase_reg[KEY] <= PHASE_INC;
+		if(LD_COUNT)	counter_reg[KEY] <= COUNTER_INC;
+		if(LD_TONE)		TONE <= TONE_MUX_O;
 
-	if(LD_VEL)		vel_reg[AVL_KEY] <= AVL_VEL;
-	
-	AVL_READVEL = vel_reg[AVL_KEY];
-	
+		if(LD_VEL)		vel_reg[AVL_KEY] <= AVL_VEL;
+		
+		AVL_READVEL <= vel_reg[AVL_KEY];
+	end
 end
 
 always_comb begin
@@ -91,19 +113,19 @@ always_comb begin
 		2'b11: AMP_MUX_O = REL_MULT;
 	endcase
 	
-	SEXT_SAMPLE = {SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE};
-	if (!PHASE_MUX) SEXT_SAMPLE = 28'h0000000;
+	SEXT_SAMPLE = {SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE[15], SAMPLE};
+	if (!PHASE_MUX) SEXT_SAMPLE = 31'h0000000;
 	
 	AMP = AMP_MUX_O * {13'h000, VELOCITY};
 	
 	// Tell FSM to turn note off when volume becomes low enough
-	if((AMP <= 27'h0200000) && COUNTER[20]) NOTE_END = 1'b1;
+	if((AMP <= 27'h0001000) && COUNTER[20]) NOTE_END = 1'b1;
 	
-	// Multiplying by 12 bit amplification to leave headroom for summing
+	// Multiplying by 15 bit amplification to leave headroom for summing
 	//	Can extend up to ~16 bits
-	AMP_SAMPLE = SEXT_SAMPLE * {16'h0000, AMP[26:15]};
+	AMP_SAMPLE = SEXT_SAMPLE * {16'h0000, AMP[26:12]};
 	
-	SEXT_AMP_SAMPLE = {AMP_SAMPLE[27], AMP_SAMPLE[27], AMP_SAMPLE[27], AMP_SAMPLE[27], AMP_SAMPLE};
+	SEXT_AMP_SAMPLE = {AMP_SAMPLE[30], AMP_SAMPLE};
 	
 	TONE_INC = TONE + SEXT_AMP_SAMPLE;
 	

@@ -12,7 +12,17 @@ output logic				TONE_MUX, COUNTER_MUX, PHASE_MUX,
 output logic				NOTE_END, NOTE_ON,
 output logic [2:0]		PLAY, state_, next_state_,
 output logic [6:0]		KEY, NEXT_KEY, AVL_KEY, AVL_VEL, AVL_READVEL,
-output logic [19:0]		PEAK_ATT, ATT_LEN, ATT_STEP, DEC_LEN, DEC_STEP, REL_LEN, REL_STEP
+output logic [19:0]		PEAK_ATT, ATT_LEN, ATT_STEP, DEC_LEN, DEC_STEP, REL_LEN, REL_STEP,
+
+output logic [1:0]		AMP_MUX,
+output logic [6:0]		VELOCITY,
+output logic [15:0]	SAMPLE,
+output logic [19:0]	ATT_MULT, DEC_MULT, REL_MULT, AMP_MUX_O,
+output logic [20:0]	COUNTER, COUNTER_INC, COUNTER_MUX_O,
+output logic [23:0]	PHASE, PHASE_INC, PHASE_MUX_O, F,
+output logic [26:0]	AMP,
+output logic [30:0]	SEXT_SAMPLE, AMP_SAMPLE,
+output logic [31:0]	SEXT_AMP_SAMPLE, TONE_INC, TONE_MUX_O
 					);
 
 enum logic [2:0] {halted,
@@ -39,16 +49,16 @@ always_ff @ (posedge CLK or posedge RESET) begin
 	
 	if (RESET) begin
 		state <= halted;
-		PEAK_ATT <= 20'b0;
-		ATT_LEN <= 20'b0;
-		ATT_STEP <= 20'b0;
-		DEC_LEN <= 20'b0;
-		DEC_STEP <= 20'b0;
-		REL_LEN <= 20'b0;
-		REL_STEP <= 20'b0;
-		KEY <= 7'b0;
+		PEAK_ATT <= 0;
+		ATT_LEN <= 0;
+		ATT_STEP <= 0;
+		DEC_LEN <= 0;
+		DEC_STEP <= 0;
+		REL_LEN <= 0;
+		REL_STEP <= 0;
+		KEY <= 0;
 		for (int i = 0; i < `numKeys; i++) begin
-			play_reg[i] <= 3'b0;
+			play_reg[i] <= 0;
 		end
 	end
 	else begin
