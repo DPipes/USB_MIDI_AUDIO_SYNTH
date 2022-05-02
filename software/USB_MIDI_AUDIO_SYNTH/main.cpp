@@ -99,10 +99,10 @@ void control() {
 int main() {
 
 	uint8_t timer;
-	alt_u16 att_m_seconds = 250;
-	alt_u16 dec_m_seconds = 100;
-	alt_u16 rel_m_seconds = 300;
-	float peak_amp = 1.3;
+	alt_u16 att_m_seconds = 4000;
+	alt_u16 dec_m_seconds = 4000;
+	alt_u16 rel_m_seconds = 4000;
+	float peak_amp = 1.8;
 
 	printf("Initializing SGTL5000...\n");
 
@@ -150,11 +150,11 @@ int main() {
 		if ( Midi ) {
 			MIDI_poll();
 		}
-		//timer ++;
-		//if (timer & 0x70) {
-		//	control();
-		//	timer = 0;
-		//}
+		timer ++;
+		if (timer & 0x70) {
+			control();
+			timer = 0;
+		}
 	}
 
 	printf("Ended");

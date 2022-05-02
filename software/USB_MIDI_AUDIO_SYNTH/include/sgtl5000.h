@@ -57,6 +57,7 @@
 #define SCLK_INV		0x0040	//N Set data valid on falling edge of I2S_SCLK
 #define DLEN_16			0x0030	//S? Set I2S data length to 16 bits
 #define DLEN_24			0x0010	//S? Set I2S data length to 24 bits
+#define DLEN_32			0x0000
 #define LRALIGN			0x0002	//N Set data word to start after I2S_LRCLK transition
 #define LRPOL			0x0001	//N Set I2S_LRCLK polarity to 0-Right, 1-Left
 

@@ -9,7 +9,7 @@ module i2s (input logic MCLK, RESET, DOUT, FIFO_EMPTY,
 
 logic [7:0] COUNTER;
 logic [4:0] PHASE_COUNTER;
-logic FLAG, TRANSMIT;
+logic FLAG;
 
 // FIFO_READ is always high so the FIFO will put out a new value every LRCLK if it can
 assign FIFO_READ = 1;
@@ -19,44 +19,54 @@ always_ff @ (posedge MCLK) begin
 	if(RESET) begin
 	
 		COUNTER <= 0;
+		SCLK <= 0;
+		LRCLK <= 0;
 	
 	end
+	else begin
 	
-	COUNTER <= (COUNTER + 1);
-	
-	SCLK <= COUNTER[1];	// Counts MCLK/4
-	LRCLK <= COUNTER[7]; // Counts MCLK/256
+		COUNTER <= (COUNTER + 1);
+		
+		SCLK <= COUNTER[1];	// Counts MCLK/4
+		LRCLK <= COUNTER[7]; // Counts MCLK/256
+	end
 	
 end
 
-always_ff @ (posedge SCLK) begin
+always_ff @ (posedge SCLK or posedge RESET) begin
 	
 	if (RESET) begin
 	
 		PHASE_COUNTER <= 0;
+		FLAG <= 0;
 		
 	end
-	
-	FLAG <= LRCLK;
-	
-	// The read clock of the FIFO is LRCLK so its write bit can be held high
-	//FIFO_READ <= 0;
-	
-	PHASE_COUNTER <= PHASE_COUNTER + 1;
-	
-	if (LRCLK != FLAG) begin
+	else begin
+		FLAG <= LRCLK;
 		
-		PHASE_COUNTER <= 5'h00;
+		// The read clock of the FIFO is LRCLK so its write bit can be held high
+		//FIFO_READ <= 0;
 		
-		//if (!LRCLK && !FIFO_EMPTY) FIFO_READ <= 1;
+		PHASE_COUNTER <= PHASE_COUNTER + 1;
 		
+		if (LRCLK != FLAG) begin
+			
+			PHASE_COUNTER <= 5'h00;
+			
+			//if (!LRCLK && !FIFO_EMPTY) FIFO_READ <= 1;
+			
+		end
 	end
 end
 
-always_ff @ (negedge SCLK) begin
-
-	DIN <= AUDIO[~PHASE_COUNTER];
+always_ff @ (negedge SCLK or posedge RESET) begin
 	
+	if (RESET) begin
+		DIN <= 0;
+	end
+	else begin
+		DIN <= AUDIO[~PHASE_COUNTER];
+	end
 end
 
 endmodule

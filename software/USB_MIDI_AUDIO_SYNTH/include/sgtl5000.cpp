@@ -74,7 +74,7 @@ void SGTL5000init(ALT_AVALON_I2C_DEV_t* dev) {
 			DAC_POWERUP_DIG |
 			I2S_IN_POWERUP);
 	I2Creg_wr(dev, CLK_CTRL, SYS_FS_441);
-	I2Creg_wr(dev, I2S_CTRL, DLEN_24);
+	I2Creg_wr(dev, I2S_CTRL, DLEN_32);
 	I2Creg_wr(dev, SSS_CTRL, DAC_SELECT_I2S_IN);
 
 }

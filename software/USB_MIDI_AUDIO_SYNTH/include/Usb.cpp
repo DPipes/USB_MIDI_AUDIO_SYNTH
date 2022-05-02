@@ -746,7 +746,7 @@ uint8_t USB::Configuring(uint8_t parent, uint8_t port, bool lowspeed) {
         // VID/PID & class tests default to false for drivers not yet ported
         // subclass defaults to true, so you don't have to define it if you don't have to.
         //
-        for(devConfigIndex = 0; devConfigIndex < USB_NUMDEVICES; devConfigIndex++) {
+        /*for(devConfigIndex = 0; devConfigIndex < USB_NUMDEVICES; devConfigIndex++) {
             	printf("%d\n", devConfigIndex);
             	printf("%X\n", devConfig[devConfigIndex]);
                 if(!devConfig[devConfigIndex]) {
@@ -765,7 +765,17 @@ uint8_t USB::Configuring(uint8_t parent, uint8_t port, bool lowspeed) {
 
         if(devConfigIndex < USB_NUMDEVICES) {
                 return rcode;
-        }
+        }*/
+
+        printf("VID: %X\n", vid);
+        printf("PID: %X\n", pid);
+        printf("%X\n", devConfig[0]);
+        printf("%X\n", devConfig[0]->GetAddress());
+        printf("%X\n", devConfig[0]->DEVSUBCLASSOK(subklass));
+        //printf("%X\n", devConfig[0]->VIDPIDOK(vid, pid));
+        //printf("%X\n", devConfig[0]->DEVCLASSOK(klass));
+        rcode = AttemptConfig(0, parent, port, lowspeed);
+        return rcode;
 
 
         // blindly attempt to configure

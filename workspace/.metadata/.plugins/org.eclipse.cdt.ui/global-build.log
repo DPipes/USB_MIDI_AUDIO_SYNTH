@@ -16787,3 +16787,533 @@ Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
 [BSP build complete]
 [USB_MIDI_AUDIO_SYNTH build complete]
+20:08:05 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+Compiling alt_alarm_start.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_alarm_start.o HAL/src/alt_alarm_start.c
+Compiling alt_busy_sleep.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_busy_sleep.o HAL/src/alt_busy_sleep.c
+Compiling alt_close.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_close.o HAL/src/alt_close.c
+Compiling alt_dcache_flush.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush.o HAL/src/alt_dcache_flush.c
+Compiling alt_dcache_flush_all.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_all.o HAL/src/alt_dcache_flush_all.c
+Compiling alt_dcache_flush_no_writeback.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_no_writeback.o HAL/src/alt_dcache_flush_no_writeback.c
+Compiling alt_dev.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dev.o HAL/src/alt_dev.c
+Compiling alt_dma_rxchan_open.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_rxchan_open.o HAL/src/alt_dma_rxchan_open.c
+Compiling alt_dma_txchan_open.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_txchan_open.o HAL/src/alt_dma_txchan_open.c
+Compiling alt_ecc_fatal_exception.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_ecc_fatal_exception.o HAL/src/alt_ecc_fatal_exception.c
+Compiling alt_exception_entry.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_entry.o HAL/src/alt_exception_entry.S
+Compiling alt_exit.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_exit.o HAL/src/alt_exit.c
+Compiling alt_fcntl.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fcntl.o HAL/src/alt_fcntl.c
+Compiling alt_fd_lock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_lock.o HAL/src/alt_fd_lock.c
+Compiling alt_fd_unlock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_unlock.o HAL/src/alt_fd_unlock.c
+Compiling alt_find_dev.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_dev.o HAL/src/alt_find_dev.c
+Compiling alt_find_file.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_file.o HAL/src/alt_find_file.c
+Compiling alt_flash_dev.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_flash_dev.o HAL/src/alt_flash_dev.c
+Compiling alt_fs_reg.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fs_reg.o HAL/src/alt_fs_reg.c
+Compiling alt_fstat.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fstat.o HAL/src/alt_fstat.c
+Compiling alt_get_fd.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_get_fd.o HAL/src/alt_get_fd.c
+Compiling alt_gmon.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_gmon.o HAL/src/alt_gmon.c
+Compiling alt_icache_flush.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush.o HAL/src/alt_icache_flush.c
+Compiling alt_icache_flush_all.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush_all.o HAL/src/alt_icache_flush_all.c
+Compiling alt_iic.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic.o HAL/src/alt_iic.c
+Compiling alt_iic_isr_register.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic_isr_register.o HAL/src/alt_iic_isr_register.c
+Compiling alt_instruction_exception_entry.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_entry.o HAL/src/alt_instruction_exception_entry.c
+Compiling alt_instruction_exception_register.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_register.o HAL/src/alt_instruction_exception_register.c
+Compiling alt_io_redirect.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_io_redirect.o HAL/src/alt_io_redirect.c
+Compiling alt_ioctl.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_ioctl.o HAL/src/alt_ioctl.c
+Compiling alt_irq_entry.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_irq_entry.o HAL/src/alt_irq_entry.S
+Compiling alt_irq_handler.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_handler.o HAL/src/alt_irq_handler.c
+Compiling alt_irq_register.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_register.o HAL/src/alt_irq_register.c
+Compiling alt_irq_vars.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_vars.o HAL/src/alt_irq_vars.c
+Compiling alt_isatty.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_isatty.o HAL/src/alt_isatty.c
+Compiling alt_lseek.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_lseek.o HAL/src/alt_lseek.c
+Compiling alt_main.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_main.o HAL/src/alt_main.c
+Compiling alt_open.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_open.o HAL/src/alt_open.c
+Compiling alt_read.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_read.o HAL/src/alt_read.c
+Compiling alt_release_fd.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_release_fd.o HAL/src/alt_release_fd.c
+Compiling alt_remap_cached.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_cached.o HAL/src/alt_remap_cached.c
+Compiling alt_remap_uncached.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_uncached.o HAL/src/alt_remap_uncached.c
+Compiling alt_sbrk.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_sbrk.o HAL/src/alt_sbrk.c
+Compiling alt_software_exception.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_software_exception.o HAL/src/alt_software_exception.S
+Compiling alt_tick.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_tick.o HAL/src/alt_tick.c
+Compiling alt_uncached_free.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_free.o HAL/src/alt_uncached_free.c
+Compiling alt_uncached_malloc.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_malloc.o HAL/src/alt_uncached_malloc.c
+Compiling alt_write.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_write.o HAL/src/alt_write.c
+Compiling altera_nios2_gen2_irq.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/altera_nios2_gen2_irq.o HAL/src/altera_nios2_gen2_irq.c
+Compiling crt0.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/crt0.o HAL/src/crt0.S
+Compiling alt_sys_init.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/alt_sys_init.o alt_sys_init.c
+Compiling altera_avalon_i2c.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_i2c.o drivers/src/altera_avalon_i2c.c
+Compiling altera_avalon_jtag_uart_fd.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_fd.o drivers/src/altera_avalon_jtag_uart_fd.c
+Compiling altera_avalon_jtag_uart_init.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_init.o drivers/src/altera_avalon_jtag_uart_init.c
+Compiling altera_avalon_jtag_uart_ioctl.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o drivers/src/altera_avalon_jtag_uart_ioctl.c
+Compiling altera_avalon_jtag_uart_read.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_read.o drivers/src/altera_avalon_jtag_uart_read.c
+Compiling altera_avalon_jtag_uart_write.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_write.o drivers/src/altera_avalon_jtag_uart_write.c
+Compiling altera_avalon_sysid_qsys.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_sysid_qsys.o drivers/src/altera_avalon_sysid_qsys.c
+Compiling altera_avalon_timer_sc.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_sc.o drivers/src/altera_avalon_timer_sc.c
+Compiling altera_avalon_timer_ts.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_ts.o drivers/src/altera_avalon_timer_ts.c
+Compiling altera_avalon_timer_vars.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_vars.o drivers/src/altera_avalon_timer_vars.c
+Creating libhal_bsp.a...
+rm -f -f libhal_bsp.a
+nios2-elf-ar -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_busy_sleep.o obj/HAL/src/alt_close.o obj/HAL/src/alt_dcache_flush.o obj/HAL/src/alt_dcache_flush_all.o obj/HAL/src/alt_dcache_flush_no_writeback.o obj/HAL/src/alt_dev.o obj/HAL/src/alt_dev_llist_insert.o obj/HAL/src/alt_dma_rxchan_open.o obj/HAL/src/alt_dma_txchan_open.o obj/HAL/src/alt_do_ctors.o obj/HAL/src/alt_do_dtors.o obj/HAL/src/alt_ecc_fatal_entry.o obj/HAL/src/alt_ecc_fatal_exception.o obj/HAL/src/alt_env_lock.o obj/HAL/src/alt_environ.o obj/HAL/src/alt_errno.o obj/HAL/src/alt_exception_entry.o obj/HAL/src/alt_exception_muldiv.o obj/HAL/src/alt_exception_trap.o obj/HAL/src/alt_execve.o obj/HAL/src/alt_exit.o obj/HAL/src/alt_fcntl.o obj/HAL/src/alt_fd_lock.o obj/HAL/src/alt_fd_unlock.o obj/HAL/src/alt_find_dev.o obj/HAL/src/alt_find_file.o obj/HAL/src/alt_flash_dev.o obj/HAL/src/alt_fork.o obj/HAL/src/alt_fs_reg.o obj/HAL/src/alt_fstat.o obj/HAL/src/alt_get_fd.o obj/HAL/src/alt_getchar.o obj/HAL/src/alt_getpid.o obj/HAL/src/alt_gettod.o obj/HAL/src/alt_gmon.o obj/HAL/src/alt_icache_flush.o obj/HAL/src/alt_icache_flush_all.o obj/HAL/src/alt_iic.o obj/HAL/src/alt_iic_isr_register.o obj/HAL/src/alt_instruction_exception_entry.o obj/HAL/src/alt_instruction_exception_register.o obj/HAL/src/alt_io_redirect.o obj/HAL/src/alt_ioctl.o obj/HAL/src/alt_irq_entry.o obj/HAL/src/alt_irq_handler.o obj/HAL/src/alt_irq_register.o obj/HAL/src/alt_irq_vars.o obj/HAL/src/alt_isatty.o obj/HAL/src/alt_kill.o obj/HAL/src/alt_link.o obj/HAL/src/alt_load.o obj/HAL/src/alt_log_macro.o obj/HAL/src/alt_log_printf.o obj/HAL/src/alt_lseek.o obj/HAL/src/alt_main.o obj/HAL/src/alt_malloc_lock.o obj/HAL/src/alt_mcount.o obj/HAL/src/alt_open.o obj/HAL/src/alt_printf.o obj/HAL/src/alt_putchar.o obj/HAL/src/alt_putcharbuf.o obj/HAL/src/alt_putstr.o obj/HAL/src/alt_read.o obj/HAL/src/alt_release_fd.o obj/HAL/src/alt_remap_cached.o obj/HAL/src/alt_remap_uncached.o obj/HAL/src/alt_rename.o obj/HAL/src/alt_sbrk.o obj/HAL/src/alt_settod.o obj/HAL/src/alt_software_exception.o obj/HAL/src/alt_stat.o obj/HAL/src/alt_tick.o obj/HAL/src/alt_times.o obj/HAL/src/alt_uncached_free.o obj/HAL/src/alt_uncached_malloc.o obj/HAL/src/alt_unlink.o obj/HAL/src/alt_usleep.o obj/HAL/src/alt_wait.o obj/HAL/src/alt_write.o obj/HAL/src/altera_nios2_gen2_irq.o obj/HAL/src/crt0.o obj/alt_sys_init.o obj/drivers/src/altera_avalon_i2c.o obj/drivers/src/altera_avalon_jtag_uart_fd.o obj/drivers/src/altera_avalon_jtag_uart_init.o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o obj/drivers/src/altera_avalon_jtag_uart_read.o obj/drivers/src/altera_avalon_jtag_uart_write.o obj/drivers/src/altera_avalon_spi.o obj/drivers/src/altera_avalon_sysid_qsys.o obj/drivers/src/altera_avalon_timer_sc.o obj/drivers/src/altera_avalon_timer_ts.o obj/drivers/src/altera_avalon_timer_vars.o
+[BSP build complete]
+Info: Compiling include/SPI.cpp to obj/default/include/SPI.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/SPI.o include/SPI.cpp
+Info: Compiling include/Usb.cpp to obj/default/include/Usb.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/Usb.o include/Usb.cpp
+include/Usb.cpp: In member function 'uint8_t USB::Configuring(uint8_t, uint8_t, bool)':
+include/Usb.cpp:751:54: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'USBDeviceConfig*' [-Wformat=]
+              printf("%X\n", devConfig[devConfigIndex]);
+                                                      ^
+include/Usb.cpp:751:54: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'USBDeviceConfig*' [-Wformat=]
+Info: Compiling include/XBOXONE.cpp to obj/default/include/XBOXONE.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/XBOXONE.o include/XBOXONE.cpp
+Info: Compiling include/audio_synth.cpp to obj/default/include/audio_synth.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/audio_synth.o include/audio_synth.cpp
+include/audio_synth.cpp: In function 'void calc_adsr(alt_u16, alt_u16, alt_u16, float)':
+include/audio_synth.cpp:51:34: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32 {aka long unsigned int}' [-Wformat=]
+  printf("ATT_LEN:  %X\n", ATT_LEN);
+                                  ^
+include/audio_synth.cpp:51:34: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32 {aka long unsigned int}' [-Wformat=]
+include/audio_synth.cpp:52:35: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32 {aka long unsigned int}' [-Wformat=]
+  printf("ATT_STEP: %X\n", ATT_STEP);
+                                   ^
+include/audio_synth.cpp:52:35: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32 {aka long unsigned int}' [-Wformat=]
+include/audio_synth.cpp:53:35: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32 {aka long unsigned int}' [-Wformat=]
+  printf("PEAK_ATT: %X\n", PEAK_ATT);
+                                   ^
+include/audio_synth.cpp:53:35: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32 {aka long unsigned int}' [-Wformat=]
+include/audio_synth.cpp:54:34: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32 {aka long unsigned int}' [-Wformat=]
+  printf("DEC_LEN:  %X\n", DEC_LEN);
+                                  ^
+include/audio_synth.cpp:54:34: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32 {aka long unsigned int}' [-Wformat=]
+include/audio_synth.cpp:55:35: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32 {aka long unsigned int}' [-Wformat=]
+  printf("DEC_STEP: %X\n", DEC_STEP);
+                                   ^
+include/audio_synth.cpp:55:35: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32 {aka long unsigned int}' [-Wformat=]
+include/audio_synth.cpp:56:34: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32 {aka long unsigned int}' [-Wformat=]
+  printf("REL_LEN:  %X\n", REL_LEN);
+                                  ^
+include/audio_synth.cpp:56:34: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32 {aka long unsigned int}' [-Wformat=]
+include/audio_synth.cpp:57:35: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32 {aka long unsigned int}' [-Wformat=]
+  printf("REL_STEP: %X\n", REL_STEP);
+                                   ^
+include/audio_synth.cpp:57:35: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32 {aka long unsigned int}' [-Wformat=]
+Info: Compiling include/hidboot.cpp to obj/default/include/hidboot.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/hidboot.o include/hidboot.cpp
+Info: Compiling include/message.cpp to obj/default/include/message.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/message.o include/message.cpp
+Info: Compiling include/parsetools.cpp to obj/default/include/parsetools.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/parsetools.o include/parsetools.cpp
+Info: Compiling include/sgtl5000.cpp to obj/default/include/sgtl5000.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/sgtl5000.o include/sgtl5000.cpp
+Info: Compiling include/usbh_midi.cpp to obj/default/include/usbh_midi.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/usbh_midi.o include/usbh_midi.cpp
+In file included from include/usbh_midi.cpp:27:0:
+include/usbh_midi.h:141:37: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+         void (*pFuncOnInit)(void) = 0; // Pointer to function called in onInit()
+                                     ^
+Info: Compiling include/usbhid.cpp to obj/default/include/usbhid.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/usbhid.o include/usbhid.cpp
+Info: Compiling include/usbhost.cpp to obj/default/include/usbhost.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/usbhost.o include/usbhost.cpp
+include/usbhost.cpp: In member function 'uint8_t MAX3421e::Task()':
+include/usbhost.cpp:265:10: warning: variable 'pinvalue' set but not used [-Wunused-but-set-variable]
+  uint8_t pinvalue;
+          ^
+Info: Compiling main.cpp to obj/default/main.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.cpp
+In file included from main.cpp:13:0:
+include/usbh_midi.h:141:37: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+         void (*pFuncOnInit)(void) = 0; // Pointer to function called in onInit()
+                                     ^
+main.cpp: In function 'int main()':
+main.cpp:101:10: warning: unused variable 'timer' [-Wunused-variable]
+  uint8_t timer;
+          ^
+In file included from main.cpp:14:0:
+include/audio_synth.h: At global scope:
+include/audio_synth.h:27:44: warning: 'keys' defined but not used [-Wunused-variable]
+ static volatile struct AUDIO_SYNTH_STRUCT* keys = (AUDIO_SYNTH_STRUCT *) AUDIO_BASE;
+                                            ^
+include/audio_synth.h:28:37: warning: 'adsr' defined but not used [-Wunused-variable]
+ static volatile struct ADSR_STRUCT* adsr = (ADSR_STRUCT *) AUDIO_BASE + 0x80;
+                                     ^
+Info: Linking USB_MIDI_AUDIO_SYNTH.elf
+nios2-elf-g++  -T'../USB_MIDI_AUDIO_SYNTH_bsp//linker.x' -msys-crt0='../USB_MIDI_AUDIO_SYNTH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../USB_MIDI_AUDIO_SYNTH_bsp/   -Wl,-Map=USB_MIDI_AUDIO_SYNTH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o USB_MIDI_AUDIO_SYNTH.elf obj/default/include/Port.o obj/default/include/SPI.o obj/default/include/Usb.o obj/default/include/XBOXONE.o obj/default/include/audio_synth.o obj/default/include/hidboot.o obj/default/include/message.o obj/default/include/parsetools.o obj/default/include/sgtl5000.o obj/default/include/usbh_midi.o obj/default/include/usbhid.o obj/default/include/usbhost.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert USB_MIDI_AUDIO_SYNTH.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x4001270 --timestamp 1651451999 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name USB_MIDI_AUDIO_SYNTH --quartus_project_dir "C:/Users/dpipe/OneDrive/School/ECE385/Final" --jdi ../..//output_files/USB_MIDI_AUDIO_SYNTH.jdi --sopcinfo C:/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH_bsp/../../USB_MIDI_AUDIO_SYNTH.sopcinfo
+Info: (USB_MIDI_AUDIO_SYNTH.elf) 185 KBytes program size (code + initialized data).
+Info:                            65338 KBytes free for stack + heap.
+Info: Creating USB_MIDI_AUDIO_SYNTH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source USB_MIDI_AUDIO_SYNTH.elf >USB_MIDI_AUDIO_SYNTH.objdump
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:08:16 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+20:11:11 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+Info: Compiling include/Usb.cpp to obj/default/include/Usb.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/Usb.o include/Usb.cpp
+include/Usb.cpp: In member function 'uint8_t USB::Configuring(uint8_t, uint8_t, bool)':
+include/Usb.cpp:770:36: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'USBDeviceConfig*' [-Wformat=]
+         printf("%X\n", devConfig[0]);
+                                    ^
+include/Usb.cpp:770:36: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'USBDeviceConfig*' [-Wformat=]
+Info: Linking USB_MIDI_AUDIO_SYNTH.elf
+nios2-elf-g++  -T'../USB_MIDI_AUDIO_SYNTH_bsp//linker.x' -msys-crt0='../USB_MIDI_AUDIO_SYNTH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../USB_MIDI_AUDIO_SYNTH_bsp/   -Wl,-Map=USB_MIDI_AUDIO_SYNTH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o USB_MIDI_AUDIO_SYNTH.elf obj/default/include/Port.o obj/default/include/SPI.o obj/default/include/Usb.o obj/default/include/XBOXONE.o obj/default/include/audio_synth.o obj/default/include/hidboot.o obj/default/include/message.o obj/default/include/parsetools.o obj/default/include/sgtl5000.o obj/default/include/usbh_midi.o obj/default/include/usbhid.o obj/default/include/usbhost.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert USB_MIDI_AUDIO_SYNTH.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x4001270 --timestamp 1651451999 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name USB_MIDI_AUDIO_SYNTH --quartus_project_dir "C:/Users/dpipe/OneDrive/School/ECE385/Final" --jdi ../..//output_files/USB_MIDI_AUDIO_SYNTH.jdi --sopcinfo C:/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH_bsp/../../USB_MIDI_AUDIO_SYNTH.sopcinfo
+Info: (USB_MIDI_AUDIO_SYNTH.elf) 184 KBytes program size (code + initialized data).
+Info:                            65339 KBytes free for stack + heap.
+Info: Creating USB_MIDI_AUDIO_SYNTH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source USB_MIDI_AUDIO_SYNTH.elf >USB_MIDI_AUDIO_SYNTH.objdump
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:11:15 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+20:11:17 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:12:07 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+Info: Compiling include/Usb.cpp to obj/default/include/Usb.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/Usb.o include/Usb.cpp
+include/Usb.cpp: In member function 'uint8_t USB::Configuring(uint8_t, uint8_t, bool)':
+include/Usb.cpp:772:36: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'USBDeviceConfig*' [-Wformat=]
+         printf("%X\n", devConfig[0]);
+                                    ^
+include/Usb.cpp:772:36: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'USBDeviceConfig*' [-Wformat=]
+Info: Linking USB_MIDI_AUDIO_SYNTH.elf
+nios2-elf-g++  -T'../USB_MIDI_AUDIO_SYNTH_bsp//linker.x' -msys-crt0='../USB_MIDI_AUDIO_SYNTH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../USB_MIDI_AUDIO_SYNTH_bsp/   -Wl,-Map=USB_MIDI_AUDIO_SYNTH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o USB_MIDI_AUDIO_SYNTH.elf obj/default/include/Port.o obj/default/include/SPI.o obj/default/include/Usb.o obj/default/include/XBOXONE.o obj/default/include/audio_synth.o obj/default/include/hidboot.o obj/default/include/message.o obj/default/include/parsetools.o obj/default/include/sgtl5000.o obj/default/include/usbh_midi.o obj/default/include/usbhid.o obj/default/include/usbhost.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert USB_MIDI_AUDIO_SYNTH.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x4001270 --timestamp 1651451999 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name USB_MIDI_AUDIO_SYNTH --quartus_project_dir "C:/Users/dpipe/OneDrive/School/ECE385/Final" --jdi ../..//output_files/USB_MIDI_AUDIO_SYNTH.jdi --sopcinfo C:/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH_bsp/../../USB_MIDI_AUDIO_SYNTH.sopcinfo
+Info: (USB_MIDI_AUDIO_SYNTH.elf) 184 KBytes program size (code + initialized data).
+Info:                            65339 KBytes free for stack + heap.
+Info: Creating USB_MIDI_AUDIO_SYNTH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source USB_MIDI_AUDIO_SYNTH.elf >USB_MIDI_AUDIO_SYNTH.objdump
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:12:11 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+20:12:12 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:12:52 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+Info: Compiling include/Usb.cpp to obj/default/include/Usb.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/Usb.o include/Usb.cpp
+include/Usb.cpp: In member function 'uint8_t USB::Configuring(uint8_t, uint8_t, bool)':
+include/Usb.cpp:772:36: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'USBDeviceConfig*' [-Wformat=]
+         printf("%X\n", devConfig[0]);
+                                    ^
+include/Usb.cpp:772:36: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'USBDeviceConfig*' [-Wformat=]
+Info: Linking USB_MIDI_AUDIO_SYNTH.elf
+nios2-elf-g++  -T'../USB_MIDI_AUDIO_SYNTH_bsp//linker.x' -msys-crt0='../USB_MIDI_AUDIO_SYNTH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../USB_MIDI_AUDIO_SYNTH_bsp/   -Wl,-Map=USB_MIDI_AUDIO_SYNTH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o USB_MIDI_AUDIO_SYNTH.elf obj/default/include/Port.o obj/default/include/SPI.o obj/default/include/Usb.o obj/default/include/XBOXONE.o obj/default/include/audio_synth.o obj/default/include/hidboot.o obj/default/include/message.o obj/default/include/parsetools.o obj/default/include/sgtl5000.o obj/default/include/usbh_midi.o obj/default/include/usbhid.o obj/default/include/usbhost.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert USB_MIDI_AUDIO_SYNTH.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x4001270 --timestamp 1651451999 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name USB_MIDI_AUDIO_SYNTH --quartus_project_dir "C:/Users/dpipe/OneDrive/School/ECE385/Final" --jdi ../..//output_files/USB_MIDI_AUDIO_SYNTH.jdi --sopcinfo C:/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH_bsp/../../USB_MIDI_AUDIO_SYNTH.sopcinfo
+Info: (USB_MIDI_AUDIO_SYNTH.elf) 184 KBytes program size (code + initialized data).
+Info:                            65339 KBytes free for stack + heap.
+Info: Creating USB_MIDI_AUDIO_SYNTH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source USB_MIDI_AUDIO_SYNTH.elf >USB_MIDI_AUDIO_SYNTH.objdump
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:12:55 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+20:12:57 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:13:30 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+Info: Compiling include/Usb.cpp to obj/default/include/Usb.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/Usb.o include/Usb.cpp
+include/Usb.cpp: In member function 'uint8_t USB::Configuring(uint8_t, uint8_t, bool)':
+include/Usb.cpp:772:36: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'USBDeviceConfig*' [-Wformat=]
+         printf("%X\n", devConfig[0]);
+                                    ^
+include/Usb.cpp:772:36: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'USBDeviceConfig*' [-Wformat=]
+Info: Linking USB_MIDI_AUDIO_SYNTH.elf
+nios2-elf-g++  -T'../USB_MIDI_AUDIO_SYNTH_bsp//linker.x' -msys-crt0='../USB_MIDI_AUDIO_SYNTH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../USB_MIDI_AUDIO_SYNTH_bsp/   -Wl,-Map=USB_MIDI_AUDIO_SYNTH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o USB_MIDI_AUDIO_SYNTH.elf obj/default/include/Port.o obj/default/include/SPI.o obj/default/include/Usb.o obj/default/include/XBOXONE.o obj/default/include/audio_synth.o obj/default/include/hidboot.o obj/default/include/message.o obj/default/include/parsetools.o obj/default/include/sgtl5000.o obj/default/include/usbh_midi.o obj/default/include/usbhid.o obj/default/include/usbhost.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert USB_MIDI_AUDIO_SYNTH.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x4001270 --timestamp 1651451999 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name USB_MIDI_AUDIO_SYNTH --quartus_project_dir "C:/Users/dpipe/OneDrive/School/ECE385/Final" --jdi ../..//output_files/USB_MIDI_AUDIO_SYNTH.jdi --sopcinfo C:/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH_bsp/../../USB_MIDI_AUDIO_SYNTH.sopcinfo
+Info: (USB_MIDI_AUDIO_SYNTH.elf) 183 KBytes program size (code + initialized data).
+Info:                            65339 KBytes free for stack + heap.
+Info: Creating USB_MIDI_AUDIO_SYNTH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source USB_MIDI_AUDIO_SYNTH.elf >USB_MIDI_AUDIO_SYNTH.objdump
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:13:33 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+20:13:35 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:16:21 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+Info: Compiling include/sgtl5000.cpp to obj/default/include/sgtl5000.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/sgtl5000.o include/sgtl5000.cpp
+Info: Compiling main.cpp to obj/default/main.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.cpp
+In file included from main.cpp:13:0:
+include/usbh_midi.h:141:37: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+         void (*pFuncOnInit)(void) = 0; // Pointer to function called in onInit()
+                                     ^
+main.cpp: In function 'int main()':
+main.cpp:101:10: warning: unused variable 'timer' [-Wunused-variable]
+  uint8_t timer;
+          ^
+In file included from main.cpp:14:0:
+include/audio_synth.h: At global scope:
+include/audio_synth.h:27:44: warning: 'keys' defined but not used [-Wunused-variable]
+ static volatile struct AUDIO_SYNTH_STRUCT* keys = (AUDIO_SYNTH_STRUCT *) AUDIO_BASE;
+                                            ^
+include/audio_synth.h:28:37: warning: 'adsr' defined but not used [-Wunused-variable]
+ static volatile struct ADSR_STRUCT* adsr = (ADSR_STRUCT *) AUDIO_BASE + 0x80;
+                                     ^
+Info: Linking USB_MIDI_AUDIO_SYNTH.elf
+nios2-elf-g++  -T'../USB_MIDI_AUDIO_SYNTH_bsp//linker.x' -msys-crt0='../USB_MIDI_AUDIO_SYNTH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../USB_MIDI_AUDIO_SYNTH_bsp/   -Wl,-Map=USB_MIDI_AUDIO_SYNTH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o USB_MIDI_AUDIO_SYNTH.elf obj/default/include/Port.o obj/default/include/SPI.o obj/default/include/Usb.o obj/default/include/XBOXONE.o obj/default/include/audio_synth.o obj/default/include/hidboot.o obj/default/include/message.o obj/default/include/parsetools.o obj/default/include/sgtl5000.o obj/default/include/usbh_midi.o obj/default/include/usbhid.o obj/default/include/usbhost.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert USB_MIDI_AUDIO_SYNTH.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x4001270 --timestamp 1651451999 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name USB_MIDI_AUDIO_SYNTH --quartus_project_dir "C:/Users/dpipe/OneDrive/School/ECE385/Final" --jdi ../..//output_files/USB_MIDI_AUDIO_SYNTH.jdi --sopcinfo C:/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH_bsp/../../USB_MIDI_AUDIO_SYNTH.sopcinfo
+Info: (USB_MIDI_AUDIO_SYNTH.elf) 183 KBytes program size (code + initialized data).
+Info:                            65339 KBytes free for stack + heap.
+Info: Creating USB_MIDI_AUDIO_SYNTH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source USB_MIDI_AUDIO_SYNTH.elf >USB_MIDI_AUDIO_SYNTH.objdump
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:16:24 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+20:16:40 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:17:49 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:17:50 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+20:18:13 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:29:24 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+Info: Compiling main.cpp to obj/default/main.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.cpp
+In file included from main.cpp:13:0:
+include/usbh_midi.h:141:37: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+         void (*pFuncOnInit)(void) = 0; // Pointer to function called in onInit()
+                                     ^
+In file included from main.cpp:14:0:
+include/audio_synth.h:27:44: warning: 'keys' defined but not used [-Wunused-variable]
+ static volatile struct AUDIO_SYNTH_STRUCT* keys = (AUDIO_SYNTH_STRUCT *) AUDIO_BASE;
+                                            ^
+include/audio_synth.h:28:37: warning: 'adsr' defined but not used [-Wunused-variable]
+ static volatile struct ADSR_STRUCT* adsr = (ADSR_STRUCT *) AUDIO_BASE + 0x80;
+                                     ^
+Info: Linking USB_MIDI_AUDIO_SYNTH.elf
+nios2-elf-g++  -T'../USB_MIDI_AUDIO_SYNTH_bsp//linker.x' -msys-crt0='../USB_MIDI_AUDIO_SYNTH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../USB_MIDI_AUDIO_SYNTH_bsp/   -Wl,-Map=USB_MIDI_AUDIO_SYNTH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o USB_MIDI_AUDIO_SYNTH.elf obj/default/include/Port.o obj/default/include/SPI.o obj/default/include/Usb.o obj/default/include/XBOXONE.o obj/default/include/audio_synth.o obj/default/include/hidboot.o obj/default/include/message.o obj/default/include/parsetools.o obj/default/include/sgtl5000.o obj/default/include/usbh_midi.o obj/default/include/usbhid.o obj/default/include/usbhost.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert USB_MIDI_AUDIO_SYNTH.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x4001270 --timestamp 1651451999 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name USB_MIDI_AUDIO_SYNTH --quartus_project_dir "C:/Users/dpipe/OneDrive/School/ECE385/Final" --jdi ../..//output_files/USB_MIDI_AUDIO_SYNTH.jdi --sopcinfo C:/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH_bsp/../../USB_MIDI_AUDIO_SYNTH.sopcinfo
+Info: (USB_MIDI_AUDIO_SYNTH.elf) 184 KBytes program size (code + initialized data).
+Info:                            65339 KBytes free for stack + heap.
+Info: Creating USB_MIDI_AUDIO_SYNTH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source USB_MIDI_AUDIO_SYNTH.elf >USB_MIDI_AUDIO_SYNTH.objdump
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:29:26 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+20:29:28 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:32:54 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+Info: Compiling main.cpp to obj/default/main.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.cpp
+In file included from main.cpp:13:0:
+include/usbh_midi.h:141:37: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+         void (*pFuncOnInit)(void) = 0; // Pointer to function called in onInit()
+                                     ^
+In file included from main.cpp:14:0:
+include/audio_synth.h:27:44: warning: 'keys' defined but not used [-Wunused-variable]
+ static volatile struct AUDIO_SYNTH_STRUCT* keys = (AUDIO_SYNTH_STRUCT *) AUDIO_BASE;
+                                            ^
+include/audio_synth.h:28:37: warning: 'adsr' defined but not used [-Wunused-variable]
+ static volatile struct ADSR_STRUCT* adsr = (ADSR_STRUCT *) AUDIO_BASE + 0x80;
+                                     ^
+Info: Linking USB_MIDI_AUDIO_SYNTH.elf
+nios2-elf-g++  -T'../USB_MIDI_AUDIO_SYNTH_bsp//linker.x' -msys-crt0='../USB_MIDI_AUDIO_SYNTH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../USB_MIDI_AUDIO_SYNTH_bsp/   -Wl,-Map=USB_MIDI_AUDIO_SYNTH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o USB_MIDI_AUDIO_SYNTH.elf obj/default/include/Port.o obj/default/include/SPI.o obj/default/include/Usb.o obj/default/include/XBOXONE.o obj/default/include/audio_synth.o obj/default/include/hidboot.o obj/default/include/message.o obj/default/include/parsetools.o obj/default/include/sgtl5000.o obj/default/include/usbh_midi.o obj/default/include/usbhid.o obj/default/include/usbhost.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert USB_MIDI_AUDIO_SYNTH.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x4001270 --timestamp 1651451999 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name USB_MIDI_AUDIO_SYNTH --quartus_project_dir "C:/Users/dpipe/OneDrive/School/ECE385/Final" --jdi ../..//output_files/USB_MIDI_AUDIO_SYNTH.jdi --sopcinfo C:/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH_bsp/../../USB_MIDI_AUDIO_SYNTH.sopcinfo
+Info: (USB_MIDI_AUDIO_SYNTH.elf) 184 KBytes program size (code + initialized data).
+Info:                            65339 KBytes free for stack + heap.
+Info: Creating USB_MIDI_AUDIO_SYNTH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source USB_MIDI_AUDIO_SYNTH.elf >USB_MIDI_AUDIO_SYNTH.objdump
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:32:57 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+20:33:03 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+Info: Compiling main.cpp to obj/default/main.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.cpp
+In file included from main.cpp:13:0:
+include/usbh_midi.h:141:37: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+         void (*pFuncOnInit)(void) = 0; // Pointer to function called in onInit()
+                                     ^
+In file included from main.cpp:14:0:
+include/audio_synth.h:27:44: warning: 'keys' defined but not used [-Wunused-variable]
+ static volatile struct AUDIO_SYNTH_STRUCT* keys = (AUDIO_SYNTH_STRUCT *) AUDIO_BASE;
+                                            ^
+include/audio_synth.h:28:37: warning: 'adsr' defined but not used [-Wunused-variable]
+ static volatile struct ADSR_STRUCT* adsr = (ADSR_STRUCT *) AUDIO_BASE + 0x80;
+                                     ^
+Info: Linking USB_MIDI_AUDIO_SYNTH.elf
+nios2-elf-g++  -T'../USB_MIDI_AUDIO_SYNTH_bsp//linker.x' -msys-crt0='../USB_MIDI_AUDIO_SYNTH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../USB_MIDI_AUDIO_SYNTH_bsp/   -Wl,-Map=USB_MIDI_AUDIO_SYNTH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o USB_MIDI_AUDIO_SYNTH.elf obj/default/include/Port.o obj/default/include/SPI.o obj/default/include/Usb.o obj/default/include/XBOXONE.o obj/default/include/audio_synth.o obj/default/include/hidboot.o obj/default/include/message.o obj/default/include/parsetools.o obj/default/include/sgtl5000.o obj/default/include/usbh_midi.o obj/default/include/usbhid.o obj/default/include/usbhost.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert USB_MIDI_AUDIO_SYNTH.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x4001270 --timestamp 1651451999 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name USB_MIDI_AUDIO_SYNTH --quartus_project_dir "C:/Users/dpipe/OneDrive/School/ECE385/Final" --jdi ../..//output_files/USB_MIDI_AUDIO_SYNTH.jdi --sopcinfo C:/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH_bsp/../../USB_MIDI_AUDIO_SYNTH.sopcinfo
+Info: (USB_MIDI_AUDIO_SYNTH.elf) 184 KBytes program size (code + initialized data).
+Info:                            65339 KBytes free for stack + heap.
+Info: Creating USB_MIDI_AUDIO_SYNTH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source USB_MIDI_AUDIO_SYNTH.elf >USB_MIDI_AUDIO_SYNTH.objdump
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:33:07 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+20:33:08 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:34:25 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+Info: Compiling main.cpp to obj/default/main.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.cpp
+In file included from main.cpp:13:0:
+include/usbh_midi.h:141:37: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+         void (*pFuncOnInit)(void) = 0; // Pointer to function called in onInit()
+                                     ^
+In file included from main.cpp:14:0:
+include/audio_synth.h:27:44: warning: 'keys' defined but not used [-Wunused-variable]
+ static volatile struct AUDIO_SYNTH_STRUCT* keys = (AUDIO_SYNTH_STRUCT *) AUDIO_BASE;
+                                            ^
+include/audio_synth.h:28:37: warning: 'adsr' defined but not used [-Wunused-variable]
+ static volatile struct ADSR_STRUCT* adsr = (ADSR_STRUCT *) AUDIO_BASE + 0x80;
+                                     ^
+Info: Linking USB_MIDI_AUDIO_SYNTH.elf
+nios2-elf-g++  -T'../USB_MIDI_AUDIO_SYNTH_bsp//linker.x' -msys-crt0='../USB_MIDI_AUDIO_SYNTH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../USB_MIDI_AUDIO_SYNTH_bsp/   -Wl,-Map=USB_MIDI_AUDIO_SYNTH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o USB_MIDI_AUDIO_SYNTH.elf obj/default/include/Port.o obj/default/include/SPI.o obj/default/include/Usb.o obj/default/include/XBOXONE.o obj/default/include/audio_synth.o obj/default/include/hidboot.o obj/default/include/message.o obj/default/include/parsetools.o obj/default/include/sgtl5000.o obj/default/include/usbh_midi.o obj/default/include/usbhid.o obj/default/include/usbhost.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert USB_MIDI_AUDIO_SYNTH.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x4001270 --timestamp 1651451999 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name USB_MIDI_AUDIO_SYNTH --quartus_project_dir "C:/Users/dpipe/OneDrive/School/ECE385/Final" --jdi ../..//output_files/USB_MIDI_AUDIO_SYNTH.jdi --sopcinfo C:/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH_bsp/../../USB_MIDI_AUDIO_SYNTH.sopcinfo
+Info: (USB_MIDI_AUDIO_SYNTH.elf) 184 KBytes program size (code + initialized data).
+Info:                            65339 KBytes free for stack + heap.
+Info: Creating USB_MIDI_AUDIO_SYNTH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source USB_MIDI_AUDIO_SYNTH.elf >USB_MIDI_AUDIO_SYNTH.objdump
+[USB_MIDI_AUDIO_SYNTH build complete]
+20:34:28 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+20:34:29 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]
