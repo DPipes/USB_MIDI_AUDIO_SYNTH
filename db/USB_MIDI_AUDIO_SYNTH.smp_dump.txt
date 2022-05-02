@@ -105,3 +105,12 @@ mst_fsm_state.GEN_RESTART_7BIT 0 0 0 1 0 0 0 0 0 0 1
 mst_fsm_state.BUS_HOLD 0 0 1 0 0 0 0 0 0 0 1 
 mst_fsm_state.GEN_STOP 0 1 0 0 0 0 0 0 0 0 1 
 mst_fsm_state.PRE_IDLE 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |TOP|USB_MIDI_AUDIO_SYNTH:u0|synth_ip:audio_synthesizer_module_0|state
+Name state.write state.key_off state.key_on state.check_key state.start state.halted 
+state.halted 0 0 0 0 0 0 
+state.start 0 0 0 0 1 1 
+state.check_key 0 0 0 1 0 1 
+state.key_on 0 0 1 0 0 1 
+state.key_off 0 1 0 0 0 1 
+state.write 1 0 0 0 0 1 

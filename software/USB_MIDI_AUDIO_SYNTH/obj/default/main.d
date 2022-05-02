@@ -41,7 +41,7 @@ obj/default/main.o: main.cpp ../USB_MIDI_AUDIO_SYNTH_bsp/system.h \
  include/../include/../include/../include/../include/hexdump.h \
  include/../include/../include/Usb.h include/usbhub.h \
  include/../include/Usb.h include/sgtl5000.h include/usbh_midi.h \
- include/Usb.h include/SPI.h
+ include/Usb.h include/audio_synth.h include/SPI.h
 
 ../USB_MIDI_AUDIO_SYNTH_bsp/system.h:
 
@@ -140,5 +140,7 @@ include/sgtl5000.h:
 include/usbh_midi.h:
 
 include/Usb.h:
+
+include/audio_synth.h:
 
 include/SPI.h:

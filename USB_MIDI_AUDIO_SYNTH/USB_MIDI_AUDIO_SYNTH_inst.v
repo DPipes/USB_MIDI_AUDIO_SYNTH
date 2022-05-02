@@ -6,6 +6,9 @@
 		.i2c0_sda_oe                    (<connected-to-i2c0_sda_oe>),                    //                        .sda_oe
 		.i2c0_scl_oe                    (<connected-to-i2c0_scl_oe>),                    //                        .scl_oe
 		.i2s_clk_clk                    (<connected-to-i2s_clk_clk>),                    //                 i2s_clk.clk
+		.input_port_run                 (<connected-to-input_port_run>),                 //              input_port.run
+		.input_port_sw                  (<connected-to-input_port_sw>),                  //                        .sw
+		.input_port_new_signal          (<connected-to-input_port_new_signal>),          //                        .new_signal
 		.key_external_connection_export (<connected-to-key_external_connection_export>), // key_external_connection.export
 		.keycode_export                 (<connected-to-keycode_export>),                 //                 keycode.export
 		.leds_export                    (<connected-to-leds_export>),                    //                    leds.export
@@ -28,6 +31,8 @@
 		.sw_wire_export                 (<connected-to-sw_wire_export>),                 //                 sw_wire.export
 		.usb_gpx_export                 (<connected-to-usb_gpx_export>),                 //                 usb_gpx.export
 		.usb_irq_export                 (<connected-to-usb_irq_export>),                 //                 usb_irq.export
-		.usb_rst_export                 (<connected-to-usb_rst_export>)                  //                 usb_rst.export
+		.usb_rst_export                 (<connected-to-usb_rst_export>),                 //                 usb_rst.export
+		.output_port_ld_fifo            (<connected-to-output_port_ld_fifo>),            //             output_port.ld_fifo
+		.output_port_tone               (<connected-to-output_port_tone>)                //                        .tone
 	);
 

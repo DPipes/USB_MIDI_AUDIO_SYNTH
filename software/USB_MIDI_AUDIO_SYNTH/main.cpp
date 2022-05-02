@@ -11,6 +11,7 @@
 #include "include/usbhub.h"
 #include "include/sgtl5000.h"
 #include "include/usbh_midi.h"
+#include "include/audio_synth.h"
 
 // Satisfy the IDE, which needs to see the include statement in the ino too.
 #ifdef dobogusinclude
@@ -61,30 +62,26 @@ void MIDI_setup()
 // Poll USB MIDI Controller and send to serial MIDI
 void MIDI_poll()
 {
-  uint8_t note, vel, play, current;
+  uint8_t note, vel;
   uint8_t bufMidi[MIDI_EVENT_PACKET_SIZE];
   uint16_t  rcvd;
 
   if (Midi.RecvData( &rcvd,  bufMidi) == 0 ) {
     for (int i = 0; i < MIDI_EVENT_PACKET_SIZE; i++) {\
     	if (bufMidi[i] == 0x90) {
-
-    		current = IORD_ALTERA_AVALON_PIO_DATA(KEYCODE_BASE);
     		note = bufMidi[i+1];
     		vel = bufMidi[i+2];
     		i += 2;
 
+    		set_note(note, vel);
+
         	if(vel == 0) {
-        		if (current == note) {
-        			play = 0;
-        		}
         		printf("Note Off:	%d\n", note);
         	}
         	else {
-        		play = note;
         		printf("Note On:	%d\n", note);
         	}
-        	IOWR_ALTERA_AVALON_PIO_DATA(KEYCODE_BASE, play);
+
     	}
     }
   }
@@ -102,6 +99,10 @@ void control() {
 int main() {
 
 	uint8_t timer;
+	alt_u16 att_m_seconds = 250;
+	alt_u16 dec_m_seconds = 100;
+	alt_u16 rel_m_seconds = 300;
+	float peak_amp = 1.3;
 
 	printf("Initializing SGTL5000...\n");
 
@@ -128,26 +129,33 @@ int main() {
 
 	printf("Audio running\n");
 
+	printf("Initializing ADSR...\n");
+
+	calc_adsr(att_m_seconds, dec_m_seconds, rel_m_seconds, peak_amp);
+
+	printf("ADSR set\n");
+
 	MIDI_setup();
 
-	while (Usb.getUsbTaskState() != 0x90) {
+	printf("MIDI set\n");
+
+	while (Usb.getUsbTaskState() != USB_STATE_RUNNING) {
 		Usb.Task();
+        printf("%X\n", Usb.getUsbTaskState());
 	}
+
+	printf("USB running\n");
+
 	while(1) {
 		if ( Midi ) {
 			MIDI_poll();
 		}
-		timer ++;
-		if (timer & 0x70) {
-			control();
-			timer = 0;
-		}
+		//timer ++;
+		//if (timer & 0x70) {
+		//	control();
+		//	timer = 0;
+		//}
 	}
 
 	printf("Ended");
-	/*
-        test_setup();
-        while (1) {
-        	test_loop();
-        }*/
 }

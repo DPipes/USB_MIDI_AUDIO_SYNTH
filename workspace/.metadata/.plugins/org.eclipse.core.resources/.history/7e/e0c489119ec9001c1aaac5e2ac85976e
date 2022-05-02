@@ -1,0 +1,32 @@
+#include "system.h"
+#include <stdio.h>
+#include "audio_synth.h"
+
+void set_note(alt_u8 note, alt_u8 vel) {
+	alt_u32 set_val;
+
+	if(vel == 0) {
+		set_val = keys->NOTE[note];
+	}
+	else {
+		set_val = 0x80 + vel;
+	}
+
+	keys->NOTE[note] = set_val;
+}
+
+void set_adsr(alt_u8 par, alt_u32 val) {
+	adsr->VAL[par] = val;
+}
+
+void set_ATT_LEN(alt_u16 m_seconds) {
+
+	alt_u32 ATT_LEN;
+
+	if (m_seconds > 5000) {
+		printf("ERRROR: Requested attack length is too long.\n");
+		return;
+	}
+
+	ATT_LEN = 9;
+}

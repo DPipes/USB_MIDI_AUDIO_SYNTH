@@ -155,6 +155,7 @@ CXX_SRCS += include/usbhost.cpp
 CXX_SRCS += main.cpp
 CXX_SRCS += include/sgtl5000.cpp
 CXX_SRCS += include/usbh_midi.cpp
+CXX_SRCS += include/audio_synth.cpp
 ASM_SRCS :=
 
 

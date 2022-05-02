@@ -1,0 +1,2 @@
+module synth_ip(input logic CLK, RESET, AVL_WRITE, AVL_READ,
+					 input logic [:] AVL_WRITEDATA

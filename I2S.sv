@@ -3,7 +3,7 @@
 // Generates 64 * 44.1 kHz SCLK and 44.1 kHz LRCLK
 
 module i2s (input logic MCLK, RESET, DOUT, FIFO_EMPTY,
-				input logic [23:0] AUDIO,
+				input logic [31:0] AUDIO,
 				output logic LRCLK, SCLK, DIN, FIFO_READ
 				);
 
@@ -42,26 +42,20 @@ always_ff @ (posedge SCLK) begin
 	// The read clock of the FIFO is LRCLK so its write bit can be held high
 	//FIFO_READ <= 0;
 	
+	PHASE_COUNTER <= PHASE_COUNTER + 1;
+	
 	if (LRCLK != FLAG) begin
 		
-		TRANSMIT <= 1;
+		PHASE_COUNTER <= 5'h00;
 		
 		//if (!LRCLK && !FIFO_EMPTY) FIFO_READ <= 1;
 		
 	end
-	
-	if (TRANSMIT) PHASE_COUNTER <= (PHASE_COUNTER + 1);
-	
-	if (PHASE_COUNTER == 23) begin
-		TRANSMIT <= 0;
-		PHASE_COUNTER <= 0;
-	end
-	
 end
 
 always_ff @ (negedge SCLK) begin
 
-	if (TRANSMIT) DIN <= AUDIO[23-PHASE_COUNTER];
+	DIN <= AUDIO[~PHASE_COUNTER];
 	
 end
 

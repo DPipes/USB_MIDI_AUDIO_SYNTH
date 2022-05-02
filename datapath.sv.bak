@@ -1,0 +1,39 @@
+`define numKeys 128
+
+module datapath(input logic CLK, RESET, LD_PHASE,
+					 input logic [6:0] KEY,
+					 output logic [23:0] TONE
+					 );
+
+logic [6:0]		vel_reg [`numKeys];
+logic [23:0]	phase_reg [`numKeys];
+logic [6:0]		amp_reg [`numKeys];
+logic [12:0]	att_counter [`numKeys];
+
+logic [23:0]	F;
+logic [23:0]	PHASE_SUM;
+
+f_table F_TABLE(.KEY(KEY), .F(F));
+wave_table WAVE_TABLE(.CLK(CLK), .ADDR({SW[8], ADDR}), .SAMPLE(SAMPLE[15:0]));
+
+always_comb begin
+	
+	PHASE_SUM = PHASE[KEY] + F;
+	
+	case(AMP_MUX)
+		2'b0: AMP_MUX_O = ;
+		2'b1: AMP_MUX_O = ;
+		2'b2: AMP_MUX_O = ;
+		2'b3: AMP_MUX_O = ;
+	endcase
+
+end
+
+always_ff @ (posedge CLK) begin
+
+	if(LD_PHASE)	phase_reg[KEY] <= PHASE_SUM;
+	if(LD_AMP)		amp_reg[KEY] <= AMP_MUX_O;
+
+end
+
+endmodule

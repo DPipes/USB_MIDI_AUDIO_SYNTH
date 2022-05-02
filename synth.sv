@@ -4,7 +4,6 @@
 module synth (input logic RESET, CLK, LRCLK, SCLK, FIFO_FULL,
 				  input logic [7:0] KEYCODE,
 				  input logic [9:0] SW,
-				  //input logic PHASE [11:0],			WILL COME FROM CPU??
 				  output logic FIFO_WRITE,
 				  output logic [23:0] AUDIO_OUT
 				 );
@@ -14,10 +13,10 @@ logic [6:0] NOTE;
 logic [3:0] STATE;
 logic [11:0] ADDR;
 logic [19:0] SCALE_COUNTER; // Plays each note for ~1 second
-logic [23:0] PHASE, PHASE_2, PHASE_3, PHASE_4, TONE, INC, SAMPLE, SAMPLE_, SUM; // TEMPORARY
+logic [23:0] PHASE, PHASE_2, PHASE_3, PHASE_4, TONE, INC, SAMPLE, SAMPLE_, SUM;
 
 // Wavetable has sine and sawtooth data when SW[8] is high saw is selected
-wavetable WAVE(.CLK(CLK), .ADDR({SW[8], ADDR}), .SAMPLE(SAMPLE[15:0]));
+wave_table WAVE(.CLK(CLK), .ADDR({SW[8], ADDR}), .SAMPLE(SAMPLE[15:0]));
 
 
 always_comb begin
@@ -263,35 +262,6 @@ always_ff @ (posedge CLK) begin
 				SCALE_COUNTER <= (SCALE_COUNTER + 1);
 				if (SCALE_COUNTER[19:16] == 15) SCALE_COUNTER <= 0;
 				FIFO_WRITE <= 1;
-			
-				// Translate keycode to note
-				/*case (KEYCODE)					REMOVED FOR MIDI SETUP
-			
-					56: NOTE <= 0;
-				
-					57: NOTE <= 1;
-				
-					59: NOTE <= 2;
-
-					61: NOTE <= 3;
-				
-					62: NOTE <= 4;
-				
-					64: NOTE <= 5;
-				
-					66: NOTE <= 6;
-				
-					68: NOTE <= 7;
-				
-					69: NOTE <= 8;
-				
-					71: NOTE <= 9;
-				
-					73: NOTE <= 10;
-					
-					default: NOTE <= 15;
-				
-				endcase*/
 				
 			end
 			
@@ -302,17 +272,9 @@ always_ff @ (posedge CLK) begin
 	end
 	
 	// Select to automatically step through scale rather than take user input
-	//if (SW[7]) NOTE <= SCALE_COUNTER[19:16];	REMOVED FOR MIDI SETUP
+	if (SW[7]) NOTE <= SCALE_COUNTER[19:16];
 	else SCALE_COUNTER <= 0;
 	
-end
-
-always_ff @ (posedge SCLK) begin
-	;
-end
-
-always_ff @ (negedge LRCLK) begin
-	;
 end
 
 endmodule

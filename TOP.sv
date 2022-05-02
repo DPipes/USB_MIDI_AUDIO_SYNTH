@@ -65,7 +65,7 @@ logic Reset_h, vssig, blank, sync, VGA_Clk, CLK;
 	logic [9:0] drawxsig, drawysig, ballxsig, ballysig, ballsizesig;
 	logic [7:0] Red, Blue, Green;
 	logic [7:0] keycode;
-	logic [23:0] AUDIO_FIFO, AUDIO_OUT;	//Current sample to play
+	logic [31:0] AUDIO_FIFO, AUDIO_OUT;	//Current sample to play
 	logic AUDIO_EMPTY, AUDIO_FULL, AUDIO_READ, AUDIO_WRITE; //Audio FIFO signals
 
 //=======================================================
@@ -129,10 +129,6 @@ logic Reset_h, vssig, blank, sync, VGA_Clk, CLK;
 	assign VGA_B = Blue[7:4];
 	assign VGA_G = Green[7:4];
 	
-	
-	assign LEDR = keycode;
-	
-	
 	USB_MIDI_AUDIO_SYNTH u0 (
 		.clk_clk                           (MAX10_CLK1_50),  //clk.clk
 		.main_clk_clk							  (CLK),				  //synchronous to 100MHz CPU clock
@@ -173,19 +169,23 @@ logic Reset_h, vssig, blank, sync, VGA_Clk, CLK;
 		
 		.i2s_clk_clk(I2S_MCLK),
 		
+		//AUDIO SYNTHESIZER
+		.input_port_run(1'b1),
+		.input_port_sw(SW[0]),
+		.input_port_new_signal(AUDIO_FULL),
+		.output_port_ld_fifo(AUDIO_WRITE),
+		.output_port_tone(AUDIO_FIFO),
+		
 		//LEDs, HEX, KEYCODE, and SWITCHES
 		.hex_digits_export({hex_num_4, hex_num_3, hex_num_1, hex_num_0}),
-		//.leds_export({hundreds, signs, LEDR}),
-		.keycode_export(keycode)
-		//.sw_wire_export(SW)
+		.leds_export({hundreds, signs, LEDR}),
+		.keycode_export(keycode),
+		.sw_wire_export(SW)
 		
 	 );
 
 	// Generates I2S SCLK and LRCLK and transmits data to audio codec
 	i2s I2S(.MCLK(I2S_MCLK), .RESET(Reset_h), .AUDIO(AUDIO_OUT), .FIFO_EMPTY(AUDIO_EMPTY), .LRCLK(I2S_LRCLK), .SCLK(I2S_SCLK), .FIFO_READ(AUDIO_READ), .DIN(I2S_DIN), .DOUT(I2S_DOUT));
-	
-	// Generates audio samples and sends to FIFO
-	synth SYNTH(.RESET(Reset_h), .CLK(CLK), .LRCLK(I2S_LRCLK), .SCLK(I2S_SCLK), .SW(SW[9:0]), .KEYCODE(keycode), .FIFO_FULL(AUDIO_FULL), .AUDIO_OUT(AUDIO_FIFO), .FIFO_WRITE(AUDIO_WRITE));
 	
 	//	256 word FIFO to store samples. 256samples/44.1kHz means output delayed by 5.8ms
 	FIFO AUDIO_fifo(.data(AUDIO_FIFO), .rdclk(I2S_LRCLK), .rdreq(AUDIO_READ), .wrclk(CLK), .wrreq(AUDIO_WRITE), .q(AUDIO_OUT), .rdempty(AUDIO_EMPTY), .wrfull(AUDIO_FULL));

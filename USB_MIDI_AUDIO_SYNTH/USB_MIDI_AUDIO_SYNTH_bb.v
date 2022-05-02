@@ -7,6 +7,9 @@ module USB_MIDI_AUDIO_SYNTH (
 	i2c0_sda_oe,
 	i2c0_scl_oe,
 	i2s_clk_clk,
+	input_port_run,
+	input_port_sw,
+	input_port_new_signal,
 	key_external_connection_export,
 	keycode_export,
 	leds_export,
@@ -29,7 +32,9 @@ module USB_MIDI_AUDIO_SYNTH (
 	sw_wire_export,
 	usb_gpx_export,
 	usb_irq_export,
-	usb_rst_export);	
+	usb_rst_export,
+	output_port_ld_fifo,
+	output_port_tone);	
 
 	input		clk_clk;
 	output	[15:0]	hex_digits_export;
@@ -38,6 +43,9 @@ module USB_MIDI_AUDIO_SYNTH (
 	output		i2c0_sda_oe;
 	output		i2c0_scl_oe;
 	output		i2s_clk_clk;
+	input		input_port_run;
+	input		input_port_sw;
+	input		input_port_new_signal;
 	input	[3:0]	key_external_connection_export;
 	output	[7:0]	keycode_export;
 	output	[13:0]	leds_export;
@@ -61,4 +69,6 @@ module USB_MIDI_AUDIO_SYNTH (
 	input		usb_gpx_export;
 	input		usb_irq_export;
 	output		usb_rst_export;
+	output		output_port_ld_fifo;
+	output	[31:0]	output_port_tone;
 endmodule
