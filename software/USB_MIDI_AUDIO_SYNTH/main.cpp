@@ -67,7 +67,8 @@ void MIDI_poll()
 				vel = bufMidi[i+2];
 				i += 2;
 				set_note(note, vel);
-				printf("Note On\n");
+				if (vel) printf("Note On\n");
+				else printf("Note Off\n");
 				break;
 			case CONTROL_CHANGE:
 				//PEDAL CONTROLS HERE
@@ -98,10 +99,10 @@ int main() {
 	uint8_t timer;
 
 	//Initial ADSR values
-	alt_u16 att_m_seconds = 500;
-	alt_u16 dec_m_seconds = 500;
-	alt_u16 rel_m_seconds = 500;
-	float peak_amp = 1.8;
+	alt_u16 att_m_seconds = 10;
+	alt_u16 dec_m_seconds = 30;
+	alt_u16 rel_m_seconds = 80;
+	float peak_amp = 1.9;
 
 	printf("Initializing SGTL5000...\n");
 

@@ -69,17 +69,17 @@ always_comb begin
 	PHASE_INC = PHASE_MUX_O + F;
 	
 	// Calculate possible next amplification multipliers
-	ATT_MULT = ATT_STEP * COUNTER[19:0];
-	DEC_MULT = PEAK_ATT - (DEC_STEP * (COUNTER[19:0] - ATT_LEN));
-	REL_MULT = 20'h80000 - (REL_STEP * COUNTER[19:0]);
+	ATT_MULT = ATT_STEP * COUNTER_MUX_O[19:0];
+	DEC_MULT = PEAK_ATT - (DEC_STEP * (COUNTER_MUX_O[19:0] - ATT_LEN));
+	REL_MULT = 20'h80000 - (REL_STEP * COUNTER_MUX_O[19:0]);
 	
 	// Decide which amplification state depending on length of time note has been played
-	if(COUNTER < {1'b0, ATT_LEN}) begin
+	if(COUNTER_MUX_O < {1'b0, ATT_LEN}) begin
 		AMP_MUX = 2'b00;
 	end
-	else if ((COUNTER - ATT_LEN) < {1'b0, DEC_LEN}) begin
+	else if ((COUNTER_MUX_O - ATT_LEN) < {1'b0, DEC_LEN}) begin
 		AMP_MUX = 2'b01;
-		if ((COUNTER - ATT_LEN + 1) == {1'b0, DEC_LEN}) COUNTER_INC = 21'h100000;
+		if ((COUNTER_MUX_O - ATT_LEN + 1) == {1'b0, DEC_LEN}) COUNTER_INC = 21'h100000;
 	end
 	else if (NOTE_ON) begin
 		AMP_MUX = 2'b10;
@@ -102,7 +102,7 @@ always_comb begin
 	AMP = AMP_MUX_O * {13'h000, VELOCITY};
 	
 	// Tell FSM to turn note off when volume becomes low enough
-	if((AMP <= 27'h0000400) && COUNTER[20]) NOTE_END = 1'b1;
+	if((COUNTER_MUX_O[19:0] >= REL_LEN) && COUNTER_MUX_O[20]) NOTE_END = 1'b1;
 	
 	// Multiplying by 15 bit amplification to leave headroom for summing
 	//	Can extend up to ~16 bits
