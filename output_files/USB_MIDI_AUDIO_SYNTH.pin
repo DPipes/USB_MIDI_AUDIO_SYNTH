@@ -164,7 +164,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : C4        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : C5        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C7        :        :                   :         : 8         :                
-KEY[3]                       : C8        : input  : 2.5 V             :         : 8         : N              
+KEY[2]                       : C8        : input  : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 7         :                
 SW[0]                        : C10       : input  : 2.5 V             :         : 7         : Y              
 SW[1]                        : C11       : input  : 2.5 V             :         : 7         : Y              
@@ -210,8 +210,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : E6        :        :                   :      
 GND                          : E7        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E9        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :         : 8         :                
-KEY[2]                       : E11       : input  : 2.5 V             :         : 8         : N              
+KEY[3]                       : E10       : input  : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E11       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E12       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E13       :        :                   :         : 7         :                
 LEDR[6]                      : E14       : output : 2.5 V             :         : 7         : Y              
