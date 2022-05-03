@@ -4,7 +4,7 @@ module data_path(input logic CLK, RESET, SW,
 					  input logic LD_PHASE, LD_TONE, LD_COUNT, LD_VEL,
 					  input logic TONE_MUX, COUNTER_MUX, PHASE_MUX,
 					  input logic NOTE_ON,
-					  input logic [6:0] KEY, AVL_KEY, AVL_VEL,
+					  input logic [6:0] KEY, AVL_KEY, AVL_VEL, SUSTAIN_PEDAL,
 					  input logic [19:0] PEAK_ATT, ATT_LEN, ATT_STEP, DEC_LEN, DEC_STEP, REL_LEN, REL_STEP,
 					  output logic NOTE_END,
 					  output logic [6:0] AVL_READVEL,
@@ -81,7 +81,7 @@ always_comb begin
 		AMP_MUX = 2'b01;
 		if ((COUNTER_MUX_O - ATT_LEN + 1) == {1'b0, DEC_LEN}) COUNTER_INC = 21'h100000;
 	end
-	else if (NOTE_ON) begin
+	else if (NOTE_ON || ((SUSTAIN_PEDAL >= 21'h000028) && (COUNTER_MUX_O == 21'h100000))) begin
 		AMP_MUX = 2'b10;
 		COUNTER_INC = 21'h100000;
 	end

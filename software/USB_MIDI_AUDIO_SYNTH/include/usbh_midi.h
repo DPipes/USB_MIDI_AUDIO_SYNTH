@@ -41,6 +41,8 @@
 #define	PROGRAM_CHANGE				0xC0
 #define CHANNEL_PRESSURE			0xD0
 #define PITCH_BEND					0xE0
+#define	SUSTAIN_PEDAL				0x40
+#define	MOD_WHEEL					0x01
 
 
 namespace _ns_USBH_MIDI {

@@ -49,9 +49,10 @@ void MIDI_setup()
 // Poll USB MIDI Controller and send to synthesizer
 void MIDI_poll()
 {
-  uint8_t note, vel;
+  uint8_t note, vel, ctrl, par;
   uint8_t bufMidi[MIDI_EVENT_PACKET_SIZE];
   uint16_t  rcvd;
+  uint32_t long_par;
 
   if (Midi.RecvData( &rcvd,  bufMidi) == 0 ) {
     for (int i = 0; i < MIDI_EVENT_PACKET_SIZE; i++) {
@@ -60,23 +61,42 @@ void MIDI_poll()
 				note = bufMidi[i+1];
 				i += 2;
 				set_note(note, 0x00);
-				printf("Note Off\n");
+				//printf("Note Off\n");
 				break;
 			case NOTE_ON:
 				note = bufMidi[i+1];
 				vel = bufMidi[i+2];
 				i += 2;
 				set_note(note, vel);
-				if (vel) printf("Note On\n");
-				else printf("Note Off\n");
+				//if (vel) printf("Note On\n");
+				//else printf("Note Off\n");
 				break;
 			case CONTROL_CHANGE:
 				//PEDAL CONTROLS HERE
-				printf("Control Change\n");
+				ctrl = bufMidi[i+1];
+				par = bufMidi[i+2];
+				long_par = par;
+				switch(ctrl) {
+					case SUSTAIN_PEDAL:
+						set_adsr(SUS, long_par);
+						break;
+					case MOD_WHEEL:
+						printf("Mod Wheel\n");
+						break;
+					default:
+						printf("Other Control Change");
+						printf("%X\n", ctrl);
+						printf("%X\n", par);
+						break;
+				}
+				i += 2;
 				break;
 			case PITCH_BEND:
 				//PITCH WHEEL CONTROLS HERE
 				printf("Pitch Bend\n");
+				printf("%X\n", bufMidi[i]);
+				printf("%X\n", bufMidi[i+1]);
+				printf("%X\n", bufMidi[i+2]);
 				break;
 			default:
 				break;

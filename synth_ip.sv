@@ -1,5 +1,5 @@
 `define numKeys 128
-`define numCtrl 7
+`define numCtrl 8
 
 module synth_ip(input logic CLK, RESET, RUN, AVL_WRITE, AVL_READ, SW, FIFO_FULL,
 					 input logic [7:0] AVL_ADDR,
@@ -21,7 +21,7 @@ logic				LD_PHASE, LD_COUNT, LD_TONE, LD_VEL, LD_KEY, LD_PLAY, AVL_PLAY;
 logic				TONE_MUX, COUNTER_MUX, PHASE_MUX;
 logic				NOTE_END, NOTE_ON;
 logic [2:0]		PLAY;
-logic [6:0]		KEY, NEXT_KEY, AVL_KEY, AVL_VEL, AVL_READVEL;
+logic [6:0]		KEY, NEXT_KEY, AVL_KEY, AVL_VEL, AVL_READVEL, SUSTAIN_PEDAL;
 logic [19:0]	PEAK_ATT, ATT_LEN, ATT_STEP, DEC_LEN, DEC_STEP, REL_LEN, REL_STEP;
 
 data_path DATA_PATH(.*);
@@ -37,6 +37,7 @@ always_ff @ (posedge CLK or posedge RESET) begin
 		ctrl_reg[4] <= 20'h9;
 		ctrl_reg[5] <= 20'hAC44;
 		ctrl_reg[6] <= 20'hB;
+		ctrl_reg[7] <= 20'h0;
 		KEY <= 0;
 	end
 	else begin
@@ -71,6 +72,7 @@ always_comb begin
 	DEC_STEP = ctrl_reg[4];
 	REL_LEN = ctrl_reg[5];
 	REL_STEP = ctrl_reg[6];
+	SUSTAIN_PEDAL = ctrl_reg[7][6:0];
 	
 	LD_PHASE = 1'b0;
 	LD_COUNT = 1'b0;
@@ -138,7 +140,7 @@ always_comb begin
 			LD_TONE = 1'b1;
 			if (PLAY[0] == 1'b1) begin
 				COUNTER_MUX = PLAY[1];
-				PHASE_MUX = PLAY[1];
+				PHASE_MUX = PLAY[2];
 			end
 			LD_COUNT = 1'b1;
 			LD_PHASE = 1'b1;

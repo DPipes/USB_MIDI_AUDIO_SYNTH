@@ -12,6 +12,7 @@
 #define DEC_S		4
 #define REL_L		5
 #define REL_S		6
+#define SUS			7
 #define F_S			44100
 
 #include "system.h"
