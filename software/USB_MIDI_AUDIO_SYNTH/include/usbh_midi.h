@@ -28,11 +28,20 @@
 #define _USBH_MIDI_H_
 #include "Usb.h"
 
-#define USBH_MIDI_VERSION 601
-#define MIDI_MAX_ENDPOINTS 3 //endpoint 0, bulk_IN(MIDI), bulk_OUT(MIDI)
-#define USB_SUBCLASS_MIDISTREAMING 3
-#define MIDI_EVENT_PACKET_SIZE 64
-#define MIDI_MAX_SYSEX_SIZE   256
+#define USBH_MIDI_VERSION 			601
+#define MIDI_MAX_ENDPOINTS 			3 //endpoint 0, bulk_IN(MIDI), bulk_OUT(MIDI)
+#define USB_SUBCLASS_MIDISTREAMING	3
+#define MIDI_EVENT_PACKET_SIZE 		64
+#define MIDI_MAX_SYSEX_SIZE   		256
+#define MIDI_MASK					0xF0
+#define NOTE_OFF					0x80
+#define	NOTE_ON						0x90
+#define AFTER_TOUCH					0xA0
+#define CONTROL_CHANGE				0xB0
+#define	PROGRAM_CHANGE				0xC0
+#define CHANNEL_PRESSURE			0xD0
+#define PITCH_BEND					0xE0
+
 
 namespace _ns_USBH_MIDI {
 const uint8_t cin2len[] PROGMEM =  {0, 0, 2, 3, 3, 1, 2, 3, 3, 3, 3, 3, 2, 2, 3, 1};

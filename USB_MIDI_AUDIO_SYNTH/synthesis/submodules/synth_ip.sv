@@ -1,28 +1,11 @@
 `define numKeys 128
+`define numCtrl 7
 
 module synth_ip(input logic CLK, RESET, RUN, AVL_WRITE, AVL_READ, SW, FIFO_FULL,
 					 input logic [7:0] AVL_ADDR,
 					 input logic [31:0] AVL_WRITEDATA,
 					 output logic LD_FIFO,
-					 output logic [31:0] AVL_READDATA, TONE,
-					 
-
-output logic				LD_PHASE, LD_COUNT, LD_TONE, LD_VEL, LD_KEY, LD_PLAY, AVL_PLAY,
-output logic				TONE_MUX, COUNTER_MUX, PHASE_MUX,
-output logic				NOTE_END, NOTE_ON,
-output logic [2:0]		PLAY, state_, next_state_,
-output logic [6:0]		KEY, NEXT_KEY, AVL_KEY, AVL_VEL, AVL_READVEL,
-output logic [19:0]		PEAK_ATT, ATT_LEN, ATT_STEP, DEC_LEN, DEC_STEP, REL_LEN, REL_STEP,
-
-output logic [1:0]		AMP_MUX,
-output logic [6:0]		VELOCITY,
-output logic [15:0]	SAMPLE,
-output logic [19:0]	ATT_MULT, DEC_MULT, REL_MULT, AMP_MUX_O,
-output logic [20:0]	COUNTER, COUNTER_INC, COUNTER_MUX_O,
-output logic [23:0]	PHASE, PHASE_INC, PHASE_MUX_O, F,
-output logic [26:0]	AMP,
-output logic [30:0]	SEXT_SAMPLE, AMP_SAMPLE,
-output logic [31:0]	SEXT_AMP_SAMPLE, TONE_INC, TONE_MUX_O
+					 output logic [31:0] AVL_READDATA, TONE
 					);
 
 enum logic [2:0] {halted,
@@ -32,16 +15,14 @@ enum logic [2:0] {halted,
 						key_off,
 						write}   state, next_state;
 logic [2:0]		play_reg [`numKeys];
-//MOVED TO OUTPUT FOR TESTING
-/*
+logic [19:0]	ctrl_reg [`numCtrl];
+
 logic				LD_PHASE, LD_COUNT, LD_TONE, LD_VEL, LD_KEY, LD_PLAY, AVL_PLAY;
 logic				TONE_MUX, COUNTER_MUX, PHASE_MUX;
 logic				NOTE_END, NOTE_ON;
 logic [2:0]		PLAY;
 logic [6:0]		KEY, NEXT_KEY, AVL_KEY, AVL_VEL, AVL_READVEL;
-logic [19:0]	PEAK_ATT, ATT_LEN, ATT_STEP, DEC_LEN, DEC_STEP, REL_LEN, REL_STEP;*/
-assign state_ = state;
-assign next_state_ = next_state; //ALSO FOR TESTING
+logic [19:0]	PEAK_ATT, ATT_LEN, ATT_STEP, DEC_LEN, DEC_STEP, REL_LEN, REL_STEP;
 
 data_path DATA_PATH(.*);
 
@@ -49,17 +30,14 @@ always_ff @ (posedge CLK or posedge RESET) begin
 	
 	if (RESET) begin
 		state <= halted;
-		PEAK_ATT <= 0;
-		ATT_LEN <= 0;
-		ATT_STEP <= 0;
-		DEC_LEN <= 0;
-		DEC_STEP <= 0;
-		REL_LEN <= 0;
-		REL_STEP <= 0;
+		ctrl_reg[0] <= 20'hE2194;
+		ctrl_reg[1] <= 20'hAC44;
+		ctrl_reg[2] <= 20'h15;
+		ctrl_reg[3] <= 20'hAC44;
+		ctrl_reg[4] <= 20'h9;
+		ctrl_reg[5] <= 20'hAC44;
+		ctrl_reg[6] <= 20'hB;
 		KEY <= 0;
-		for (int i = 0; i < `numKeys; i++) begin
-			play_reg[i] <= 0;
-		end
 	end
 	else begin
 		state <= next_state;
@@ -70,16 +48,7 @@ always_ff @ (posedge CLK or posedge RESET) begin
 		if (AVL_WRITE) begin
 			
 			if (AVL_ADDR[7]) begin
-				case (AVL_ADDR[6:0])
-					0: PEAK_ATT <= AVL_WRITEDATA[19:0];
-					1: ATT_LEN <= AVL_WRITEDATA[19:0];
-					2: ATT_STEP <= AVL_WRITEDATA[19:0];
-					3: DEC_LEN <= AVL_WRITEDATA[19:0];
-					4: DEC_STEP <= AVL_WRITEDATA[19:0];
-					5: REL_LEN <= AVL_WRITEDATA[19:0];
-					6: REL_STEP <= AVL_WRITEDATA[19:0];
-					default: ;
-				endcase
+				ctrl_reg[AVL_ADDR[2:0]] <= AVL_WRITEDATA[19:0];
 			end
 			else begin
 				play_reg[AVL_KEY][0] <= AVL_PLAY;
@@ -93,7 +62,15 @@ always_comb begin
 	
 	next_state = state;
 	NEXT_KEY = KEY + 7'h01;
+	
 	PLAY = play_reg[KEY];
+	PEAK_ATT = ctrl_reg[0];
+	ATT_LEN = ctrl_reg[1];
+	ATT_STEP = ctrl_reg[2];
+	DEC_LEN = ctrl_reg[3];
+	DEC_STEP = ctrl_reg[4];
+	REL_LEN = ctrl_reg[5];
+	REL_STEP = ctrl_reg[6];
 	
 	LD_PHASE = 1'b0;
 	LD_COUNT = 1'b0;
@@ -112,8 +89,12 @@ always_comb begin
 	AVL_PLAY = AVL_WRITEDATA[7];
 	AVL_KEY = AVL_ADDR[6:0];
 	AVL_VEL = AVL_WRITEDATA[6:0];
-	AVL_READDATA = {25'h000000, AVL_READVEL};
-	if (AVL_WRITE && !AVL_ADDR[7]) LD_VEL = 1'b1;
+	
+	if (AVL_ADDR[7]) AVL_READDATA = {12'h000, ctrl_reg[AVL_ADDR[2:0]]};
+	else begin
+		AVL_READDATA = {25'h000000, AVL_READVEL};
+		if (AVL_WRITE && !AVL_ADDR[7]) LD_VEL = 1'b1;
+	end
 	
 	unique case (state)
 	

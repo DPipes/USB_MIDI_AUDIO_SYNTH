@@ -6,17 +6,17 @@ void set_note(alt_u8 note, alt_u8 vel) {
 	alt_u32 set_val;
 
 	if(vel == 0) {
-		set_val = keys->NOTE[note];
+		set_val = synth->KEY[note];
 	}
 	else {
 		set_val = 0x80 + vel;
 	}
 
-	keys->NOTE[note] = set_val;
+	synth->KEY[note] = set_val;
 }
 
 void set_adsr(alt_u8 par, alt_u32 val) {
-	adsr->VAL[par] = val;
+	synth->ADSR[par] = val;
 }
 
 void calc_adsr(alt_u16 att_m_seconds, alt_u16 dec_m_seconds, alt_u16 rel_m_seconds, float peak_amp) {
@@ -48,21 +48,27 @@ void calc_adsr(alt_u16 att_m_seconds, alt_u16 dec_m_seconds, alt_u16 rel_m_secon
 	REL_LEN = (rel_m_seconds * 44100) / 1000;
 	REL_STEP = ((alt_u32) 0x80000) / REL_LEN;
 
-	printf("ATT_LEN:  %X\n", ATT_LEN);
-	printf("ATT_STEP: %X\n", ATT_STEP);
-	printf("PEAK_ATT: %X\n", PEAK_ATT);
-	printf("DEC_LEN:  %X\n", DEC_LEN);
-	printf("DEC_STEP: %X\n", DEC_STEP);
-	printf("REL_LEN:  %X\n", REL_LEN);
-	printf("REL_STEP: %X\n", REL_STEP);
-
-	set_adsr(ATT_L, ATT_LEN);
-	set_adsr(ATT_S, ATT_STEP);
+	printf("PEAK_ATT Calc: %X\n", PEAK_ATT);
 	set_adsr(PEAK_A, PEAK_ATT);
+	printf("PEAK_ATT Set:  %X\n", synth->ADSR[PEAK_A]);
+	printf("ATT_LEN Calc:  %X\n", ATT_LEN);
+	set_adsr(ATT_L, ATT_LEN);
+	printf("ATT_LEN Set:   %X\n", synth->ADSR[ATT_L]);
+	printf("ATT_STEP Calc: %X\n", ATT_STEP);
+	set_adsr(ATT_S, ATT_STEP);
+	printf("ATT_STEP Set:  %X\n", synth->ADSR[ATT_S]);
+	printf("DEC_LEN Calc:  %X\n", DEC_LEN);
 	set_adsr(DEC_L, DEC_LEN);
+	printf("DEC_LEN Set:   %X\n", synth->ADSR[DEC_L]);
+	printf("DEC_STEP Calc: %X\n", DEC_STEP);
 	set_adsr(DEC_S, DEC_STEP);
+	printf("DEC_STEP Set:  %X\n", synth->ADSR[DEC_S]);
+	printf("REL_LEN Calc:  %X\n", REL_LEN);
 	set_adsr(REL_L, REL_LEN);
+	printf("REL_LEN Set:   %X\n", synth->ADSR[REL_L]);
+	printf("REL_STEP Calc: %X\n", REL_STEP);
 	set_adsr(REL_S, REL_STEP);
+	printf("REL_STEP Set:  %X\n", synth->ADSR[REL_S]);
 
 	return;
 }

@@ -57,6 +57,7 @@
 #define SCLK_INV		0x0040	//N Set data valid on falling edge of I2S_SCLK
 #define DLEN_16			0x0030	//S? Set I2S data length to 16 bits
 #define DLEN_24			0x0010	//S? Set I2S data length to 24 bits
+#define DLEN_32			0x0000
 #define LRALIGN			0x0002	//N Set data word to start after I2S_LRCLK transition
 #define LRPOL			0x0001	//N Set I2S_LRCLK polarity to 0-Right, 1-Left
 
@@ -72,7 +73,7 @@
 #define DAC_MUTE_LEFT	0x0004	//DP Mute left DAC
 
 // DAC_VOL	0.5dB steps
-#define DAC_VOL_INIT	0x70 	//S Initial DAC volume setting
+#define DAC_VOL_INIT	0x3C 	//S Initial DAC volume setting
 #define DAC_VOL_STEP	0x02	//	Step amount on volume button press
 #define DAC_MAX_VOL		0x3C	//	Max volume for either channel
 #define DAC_MIN_VOL		0xF0	//	Minimum volume for either channel

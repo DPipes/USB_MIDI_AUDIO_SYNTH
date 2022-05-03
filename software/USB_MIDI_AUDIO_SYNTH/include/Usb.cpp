@@ -535,25 +535,20 @@ void USB::Task(void) //USB state machine
                 case USB_ATTACHED_SUBSTATE_WAIT_RESET:
                         if((int32_t)((uint32_t)millis() - delay) >= 0L) usb_task_state = USB_STATE_CONFIGURING;
                         else break; // don't fall through
-                        printf("IN: %X\n", usb_task_state);
                 case USB_STATE_CONFIGURING:
 
                         //Serial.print("\r\nConf.LS: ");
                         //Serial.println(lowspeed, HEX);
-                	printf("CONFIGURING\n");
 
                         rcode = Configuring(0, 0, lowspeed);
-                        printf("RCODING\n");
 
                         if(rcode) {
                                 if(rcode != USB_DEV_CONFIG_ERROR_DEVICE_INIT_INCOMPLETE) {
                                         usb_error = rcode;
                                         usb_task_state = USB_STATE_ERROR;
-                                        printf("ERROR\n");
                                 }
                         } else
                                 usb_task_state = USB_STATE_RUNNING;
-                        printf("CONFIG\n");
                         break;
                 case USB_STATE_RUNNING:
                         break;
@@ -687,7 +682,7 @@ again:
  */
 uint8_t USB::Configuring(uint8_t parent, uint8_t port, bool lowspeed) {
         //uint8_t bAddress = 0;
-        printf("Configuring: parent = %i, port = %i\r\n", parent, port);
+        //printf("Configuring: parent = %i, port = %i\r\n", parent, port);
         uint8_t devConfigIndex;
         uint8_t rcode = 0;
         uint8_t buf[sizeof (USB_DEVICE_DESCRIPTOR)];
@@ -707,7 +702,7 @@ uint8_t USB::Configuring(uint8_t parent, uint8_t port, bool lowspeed) {
         // Get pointer to pseudo device with address 0 assigned
         p = addrPool.GetUsbDevicePtr(0);
         if(!p) {
-                printf("Configuring error: USB_ERROR_ADDRESS_NOT_FOUND_IN_POOL\r\n");
+                //printf("Configuring error: USB_ERROR_ADDRESS_NOT_FOUND_IN_POOL\r\n");
                 return USB_ERROR_ADDRESS_NOT_FOUND_IN_POOL;
         }
 
@@ -727,7 +722,7 @@ uint8_t USB::Configuring(uint8_t parent, uint8_t port, bool lowspeed) {
         p->epinfo = oldep_ptr;
 
         if(rcode) {
-                printf("Configuring error: Can't get USB_DEVICE_DESCRIPTOR\r\n");
+                //printf("Configuring error: Can't get USB_DEVICE_DESCRIPTOR\r\n");
                 return rcode;
         }
 
@@ -740,13 +735,18 @@ uint8_t USB::Configuring(uint8_t parent, uint8_t port, bool lowspeed) {
         uint8_t klass = udd->bDeviceClass;
         uint8_t subklass = udd->bDeviceSubClass;
 
+        devConfig[0]->GetAddress();
+        devConfig[0]->DEVSUBCLASSOK(subklass);
+        rcode = AttemptConfig(0, parent, port, lowspeed);
+        return rcode;
+
         // Attempt to configure if VID/PID or device class matches with a driver
         // Qualify with subclass too.
         //
         // VID/PID & class tests default to false for drivers not yet ported
         // subclass defaults to true, so you don't have to define it if you don't have to.
         //
-        /*for(devConfigIndex = 0; devConfigIndex < USB_NUMDEVICES; devConfigIndex++) {
+        for(devConfigIndex = 0; devConfigIndex < USB_NUMDEVICES; devConfigIndex++) {
             	printf("%d\n", devConfigIndex);
             	printf("%X\n", devConfig[devConfigIndex]);
                 if(!devConfig[devConfigIndex]) {
@@ -765,18 +765,7 @@ uint8_t USB::Configuring(uint8_t parent, uint8_t port, bool lowspeed) {
 
         if(devConfigIndex < USB_NUMDEVICES) {
                 return rcode;
-        }*/
-
-        printf("VID: %X\n", vid);
-        printf("PID: %X\n", pid);
-        printf("%X\n", devConfig[0]);
-        printf("%X\n", devConfig[0]->GetAddress());
-        printf("%X\n", devConfig[0]->DEVSUBCLASSOK(subklass));
-        //printf("%X\n", devConfig[0]->VIDPIDOK(vid, pid));
-        //printf("%X\n", devConfig[0]->DEVCLASSOK(klass));
-        rcode = AttemptConfig(0, parent, port, lowspeed);
-        return rcode;
-
+        }
 
         // blindly attempt to configure
         for(devConfigIndex = 0; devConfigIndex < USB_NUMDEVICES; devConfigIndex++) {
@@ -785,7 +774,7 @@ uint8_t USB::Configuring(uint8_t parent, uint8_t port, bool lowspeed) {
                 if(devConfig[devConfigIndex]->DEVSUBCLASSOK(subklass) && (devConfig[devConfigIndex]->VIDPIDOK(vid, pid) || devConfig[devConfigIndex]->DEVCLASSOK(klass))) continue; // If this is true it means it must have returned USB_DEV_CONFIG_ERROR_DEVICE_NOT_SUPPORTED above
                 rcode = AttemptConfig(devConfigIndex, parent, port, lowspeed);
 
-                printf("ERROR ENUMERATING %2.2x\r\n", rcode);
+                //printf("ERROR ENUMERATING %2.2x\r\n", rcode);
                 if(!(rcode == USB_DEV_CONFIG_ERROR_DEVICE_NOT_SUPPORTED || rcode == USB_ERROR_CLASS_INSTANCE_ALREADY_IN_USE)) {
                         // in case of an error dev_index should be reset to 0
                         //                in order to start from the very beginning the

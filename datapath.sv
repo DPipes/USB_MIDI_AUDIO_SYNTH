@@ -8,18 +8,7 @@ module data_path(input logic CLK, RESET, SW,
 					  input logic [19:0] PEAK_ATT, ATT_LEN, ATT_STEP, DEC_LEN, DEC_STEP, REL_LEN, REL_STEP,
 					  output logic NOTE_END,
 					  output logic [6:0] AVL_READVEL,
-					  output logic [31:0] TONE,
-					  
-					  
-output logic [1:0]		AMP_MUX,
-output logic [6:0]		VELOCITY,
-output logic [15:0]	SAMPLE,
-output logic [19:0]	ATT_MULT, DEC_MULT, REL_MULT, AMP_MUX_O,
-output logic [20:0]	COUNTER, COUNTER_INC, COUNTER_MUX_O,
-output logic [23:0]	PHASE, PHASE_INC, PHASE_MUX_O, F,
-output logic [26:0]	AMP,
-output logic [30:0]	SEXT_SAMPLE, AMP_SAMPLE,
-output logic [31:0]	SEXT_AMP_SAMPLE, TONE_INC, TONE_MUX_O
+					  output logic [31:0] TONE
 					 );
 
 // Registers to hold key velocity from NIOS II, current phase, amplitude, and play counter for each note
@@ -27,7 +16,6 @@ logic [6:0]		vel_reg [`numKeys];
 logic [20:0]	counter_reg [`numKeys];
 logic [23:0]	phase_reg [`numKeys];
 
-/* MOVED TO OUTPUTS FOR TESTING
 logic [1:0]		AMP_MUX;
 logic [6:0]		VELOCITY;
 logic [15:0]	SAMPLE;
@@ -36,22 +24,17 @@ logic [20:0]	COUNTER, COUNTER_INC, COUNTER_MUX_O;
 logic [23:0]	PHASE, PHASE_INC, PHASE_MUX_O, F;
 logic [26:0]	AMP;
 logic [30:0]	SEXT_SAMPLE, AMP_SAMPLE;
-logic [31:0]	SEXT_AMP_SAMPLE, TONE_INC, TONE_MUX_O;*/
+logic [31:0]	SEXT_AMP_SAMPLE, TONE_INC, TONE_MUX_O;
 
 // Tables that hold phase step for each note and wavetable to be played
 f_table F_TABLE(.*);
-wave_table_test WAVE_TABLE(.*, .ADDR({SW, PHASE_MUX_O[23:12]})); //THIS IS THE TESTBENCH WAVETABLE IT DOES NOT USE MEMORY
+wave_table WAVE_TABLE(.*, .ADDR({SW, PHASE_MUX_O[23:12]}));
 
 always_ff @ (posedge CLK) begin
 
 	if(RESET) begin
 		TONE <= 0;
 		AVL_READVEL <= 0;
-		for (int i = 0; i < `numKeys; i++) begin
-			vel_reg[i] <= 0;
-			phase_reg[i] <= 0;
-			counter_reg[i] <= 0;
-		end
 	end
 	else begin
 		if(LD_PHASE)	phase_reg[KEY] <= PHASE_INC;
@@ -119,7 +102,7 @@ always_comb begin
 	AMP = AMP_MUX_O * {13'h000, VELOCITY};
 	
 	// Tell FSM to turn note off when volume becomes low enough
-	if((AMP <= 27'h0001000) && COUNTER[20]) NOTE_END = 1'b1;
+	if((AMP <= 27'h0000400) && COUNTER[20]) NOTE_END = 1'b1;
 	
 	// Multiplying by 15 bit amplification to leave headroom for summing
 	//	Can extend up to ~16 bits

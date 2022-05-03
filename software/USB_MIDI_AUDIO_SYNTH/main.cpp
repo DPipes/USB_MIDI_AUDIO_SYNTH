@@ -19,24 +19,11 @@
 #endif
 #include "include/SPI.h"
 
-/*
- *******************************************************************************
- * USB-MIDI dump utility
- * Copyright (C) 2013-2021 Yuuichi Akagawa
- *
- * for use with USB Host Shield 2.0 from Circuitsathome.com
- * https://github.com/felis/USB_Host_Shield_2.0
- *
- * This is sample program. Do not expect perfect behavior.
- *******************************************************************************
- */
-
-
 USB Usb;
-//USBHub Hub(&Usb);
 USBH_MIDI  Midi(&Usb);
 
-ALT_AVALON_I2C_DEV_t *i2c_dev; //pointer to instance structure
+//pointer to instance structure
+ALT_AVALON_I2C_DEV_t *i2c_dev;
 
 void MIDI_poll();
 
@@ -59,7 +46,7 @@ void MIDI_setup()
 	Midi.attachOnInit(onInit);
 }
 
-// Poll USB MIDI Controller and send to serial MIDI
+// Poll USB MIDI Controller and send to synthesizer
 void MIDI_poll()
 {
   uint8_t note, vel;
@@ -67,21 +54,31 @@ void MIDI_poll()
   uint16_t  rcvd;
 
   if (Midi.RecvData( &rcvd,  bufMidi) == 0 ) {
-    for (int i = 0; i < MIDI_EVENT_PACKET_SIZE; i++) {\
-    	if (bufMidi[i] == 0x90) {
-    		note = bufMidi[i+1];
-    		vel = bufMidi[i+2];
-    		i += 2;
-
-    		set_note(note, vel);
-
-        	if(vel == 0) {
-        		printf("Note Off:	%d\n", note);
-        	}
-        	else {
-        		printf("Note On:	%d\n", note);
-        	}
-
+    for (int i = 0; i < MIDI_EVENT_PACKET_SIZE; i++) {
+    	switch (bufMidi[i] & MIDI_MASK) {
+			case NOTE_OFF:
+				note = bufMidi[i+1];
+				i += 2;
+				set_note(note, 0x00);
+				printf("Note Off\n");
+				break;
+			case NOTE_ON:
+				note = bufMidi[i+1];
+				vel = bufMidi[i+2];
+				i += 2;
+				set_note(note, vel);
+				printf("Note On\n");
+				break;
+			case CONTROL_CHANGE:
+				//PEDAL CONTROLS HERE
+				printf("Control Change\n");
+				break;
+			case PITCH_BEND:
+				//PITCH WHEEL CONTROLS HERE
+				printf("Pitch Bend\n");
+				break;
+			default:
+				break;
     	}
     }
   }
@@ -99,9 +96,11 @@ void control() {
 int main() {
 
 	uint8_t timer;
-	alt_u16 att_m_seconds = 4000;
-	alt_u16 dec_m_seconds = 4000;
-	alt_u16 rel_m_seconds = 4000;
+
+	//Initial ADSR values
+	alt_u16 att_m_seconds = 500;
+	alt_u16 dec_m_seconds = 500;
+	alt_u16 rel_m_seconds = 500;
 	float peak_amp = 1.8;
 
 	printf("Initializing SGTL5000...\n");
@@ -115,35 +114,19 @@ int main() {
 
 	printf("Starting audio...\n");
 	SGTL5000audio_on(i2c_dev);
-	//AUDIO TEST PATH MIC-ADC-DAC-HEADPHONE
-	/*
-	I2Creg_wr(i2c_dev, DIG_POWER, DAC_POWERUP_DIG | ADC_POWERUP_DIG);
-	I2Creg_wr(i2c_dev, SSS_CTRL, 0x0001);
-	I2Creg_wr(i2c_dev, ANA_CTRL, MUTE_LO | !MUTE_HP | !MUTE_ADC);
-	I2Creg_wr(i2c_dev, ANA_TEST1, TM_SELECT_MIC | TESTMODE);
-	I2Creg_wr(i2c_dev, ANA_POWER, DAC_MONO | LINREG_SIMPLE_POWERUP | STARTUP_POWERUP | VDDC_CHRGPMP_POWERUP | LINREG_D_POWERUP | ADC_MONO | REFTOP_POWERUP | HEADPHONE_POWERUP | VAG_POWERUP | DAC_POWERUP_ANA | CAPLESS_HEADPHONE_POWERUP | ADC_POWERUP_ANA);
-	I2Creg_wr(i2c_dev, ADCDAC_CTRL, VOL_RAMP_EN | !DAC_MUTE_RIGHT | !DAC_MUTE_LEFT);
-	*/
-
 	SGTL5000status(i2c_dev);
-
 	printf("Audio running\n");
 
 	printf("Initializing ADSR...\n");
-
 	calc_adsr(att_m_seconds, dec_m_seconds, rel_m_seconds, peak_amp);
-
 	printf("ADSR set\n");
 
 	MIDI_setup();
-
 	printf("MIDI set\n");
 
 	while (Usb.getUsbTaskState() != USB_STATE_RUNNING) {
 		Usb.Task();
-        printf("%X\n", Usb.getUsbTaskState());
 	}
-
 	printf("USB running\n");
 
 	while(1) {
@@ -151,11 +134,9 @@ int main() {
 			MIDI_poll();
 		}
 		timer ++;
-		if (timer & 0x70) {
+		if (timer & 0x40) {
 			control();
 			timer = 0;
 		}
 	}
-
-	printf("Ended");
 }
