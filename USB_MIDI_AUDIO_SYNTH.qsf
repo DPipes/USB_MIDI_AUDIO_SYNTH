@@ -263,14 +263,12 @@ set_location_assignment PIN_J4 -to ADC_IN[4]
 set_location_assignment PIN_H3 -to ADC_IN[5]
 set_global_assignment -name SYSTEMVERILOG_FILE f_table.sv
 set_global_assignment -name SYSTEMVERILOG_FILE datapath.sv
-set_global_assignment -name HEX_FILE wavetable.hex
 set_global_assignment -name SYSTEMVERILOG_FILE HexDriver.sv
 set_global_assignment -name SDC_FILE FINAL.sdc
 set_global_assignment -name QIP_FILE USB_MIDI_AUDIO_SYNTH/synthesis/USB_MIDI_AUDIO_SYNTH.qip
 set_global_assignment -name SYSTEMVERILOG_FILE TOP.sv
 set_global_assignment -name SYSTEMVERILOG_FILE I2S.sv
 set_global_assignment -name SYSTEMVERILOG_FILE wavetable.sv
-set_global_assignment -name SYSTEMVERILOG_FILE synth.sv
 set_global_assignment -name QIP_FILE FIFO.qip
 set_global_assignment -name SYSTEMVERILOG_FILE synth_ip.sv
 set_global_assignment -name SYSTEMVERILOG_FILE testbench.sv

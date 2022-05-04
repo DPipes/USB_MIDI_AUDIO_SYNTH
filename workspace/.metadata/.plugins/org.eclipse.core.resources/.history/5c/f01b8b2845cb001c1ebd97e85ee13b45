@@ -56,38 +56,46 @@ void MIDI_poll()
 
   if (Midi.RecvData( &rcvd,  bufMidi) == 0 ) {
     for (int i = 0; i < MIDI_EVENT_PACKET_SIZE; i++) {
-    	switch (bufMidi[i] & 0xF0) {
+    	printf("%X\n", bufMidi[i]);
+    	switch (bufMidi[i] & MIDI_MASK) {
 			case NOTE_OFF:
+				note = bufMidi[i+1];
+		    	printf("%X\n", bufMidi[i]);
+		    	printf("%X\n", bufMidi[i+1]);
+		    	printf("%X\n", bufMidi[i+2]);
+				i += 2;
+				set_note(note, 0x00);
+				//printf("Note Off\n");
+				break;
 			case NOTE_ON:
 				note = bufMidi[i+1];
 				vel = bufMidi[i+2];
-				if(!(bufMidi[i] & 0x0F)) {
-					if (vel) printf("Note On\t");
-					else printf("Note Off\t");
-					printf("%X\t", bufMidi[i]);
-					printf("%X\t", bufMidi[i+1]);
-					printf("%X\n", bufMidi[i+2]);
-					i += 2;
-					set_note(note, vel);
-				}
+		    	printf("%X\n", bufMidi[i]);
+		    	printf("%X\n", bufMidi[i+1]);
+		    	printf("%X\n", bufMidi[i+2]);
+				i += 2;
+				set_note(note, vel);
+				//if (vel) printf("Note On\n");
+				//else printf("Note Off\n");
 				break;
 			case CONTROL_CHANGE:
 				//PEDAL CONTROLS HERE
 				ctrl = bufMidi[i+1];
 				par = bufMidi[i+2];
+		    	printf("%X\n", bufMidi[i]);
+		    	printf("%X\n", bufMidi[i+1]);
+		    	printf("%X\n", bufMidi[i+2]);
 				long_par = par;
 				switch(ctrl) {
 					case SUSTAIN_PEDAL:
 						set_adsr(SUS, long_par);
 						break;
 					case MOD_WHEEL:
-						printf("Mod Wheel\t");
-						printf("%X\t", ctrl);
-						printf("%X\n", par);
+						printf("Mod Wheel\n");
 						break;
 					default:
-						printf("Other Control Change\t");
-						printf("%X\t", ctrl);
+						printf("Other Control Change\n");
+						printf("%X\n", ctrl);
 						printf("%X\n", par);
 						break;
 				}
@@ -95,16 +103,16 @@ void MIDI_poll()
 				break;
 			case PITCH_BEND:
 				//PITCH WHEEL CONTROLS HERE
-				printf("Pitch Bend\t");
-				printf("%X\t", bufMidi[i]);
-				printf("%X\t", bufMidi[i+1]);
+				printf("Pitch Bend\n");
+				printf("%X\n", bufMidi[i]);
+				printf("%X\n", bufMidi[i+1]);
 				printf("%X\n", bufMidi[i+2]);
 				break;
 			default:
+				printf("%X\n", bufMidi[1]);
 				break;
     	}
     }
-    printf("\n");
   }
 }
 
@@ -150,6 +158,7 @@ int main() {
 
 	while (Usb.getUsbTaskState() != USB_STATE_RUNNING) {
 		Usb.Task();
+		printf("%X\n", Usb.getUsbTaskState());
 	}
 	printf("USB running\n");
 

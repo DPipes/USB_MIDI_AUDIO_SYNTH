@@ -58,6 +58,16 @@ void MIDI_poll()
     for (int i = 0; i < MIDI_EVENT_PACKET_SIZE; i++) {
     	switch (bufMidi[i] & 0xF0) {
 			case NOTE_OFF:
+				note = bufMidi[i+1];
+				if(!(bufMidi[i] & 0x0F)) {
+					printf("Note Off\t");
+					printf("%X\t", bufMidi[i]);
+					printf("%X\t", bufMidi[i+1]);
+					printf("%X\n", bufMidi[i+2]);
+					i += 2;
+					set_note(note, 0x00);
+				}
+				break;
 			case NOTE_ON:
 				note = bufMidi[i+1];
 				vel = bufMidi[i+2];

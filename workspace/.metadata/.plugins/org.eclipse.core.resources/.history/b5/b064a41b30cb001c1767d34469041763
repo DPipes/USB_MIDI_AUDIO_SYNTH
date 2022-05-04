@@ -499,7 +499,7 @@ void USB::Task(void) //USB state machine
                                 if(devConfig[i])
                                         rcode = devConfig[i]->Release();
 
-                        usb_task_state = USB_DETACHED_SUBSTATE_WAIT_FOR_DEVICE;
+                        usb_task_state = USB_ATTACHED_SUBSTATE_RESET_DEVICE;
                         break;
                 case USB_DETACHED_SUBSTATE_WAIT_FOR_DEVICE: //just sit here
                         break;
@@ -735,10 +735,10 @@ uint8_t USB::Configuring(uint8_t parent, uint8_t port, bool lowspeed) {
         uint8_t klass = udd->bDeviceClass;
         uint8_t subklass = udd->bDeviceSubClass;
 
-        devConfig[0]->GetAddress();
-        devConfig[0]->DEVSUBCLASSOK(subklass);
-        rcode = AttemptConfig(0, parent, port, lowspeed);
-        return rcode;
+        //devConfig[0]->GetAddress();
+        //devConfig[0]->DEVSUBCLASSOK(subklass);
+        //rcode = AttemptConfig(0, parent, port, lowspeed);
+        //return rcode;
 
         // Attempt to configure if VID/PID or device class matches with a driver
         // Qualify with subclass too.

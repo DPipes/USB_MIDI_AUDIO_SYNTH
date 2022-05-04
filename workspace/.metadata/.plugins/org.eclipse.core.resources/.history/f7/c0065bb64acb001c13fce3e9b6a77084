@@ -5,7 +5,7 @@
 void set_note(alt_u8 note, alt_u8 vel) {
 	alt_u32 set_val;
 
-	if(vel == 0x00) {
+	if(vel == 0) {
 		set_val = synth->KEY[note];
 	}
 	else {

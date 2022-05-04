@@ -1,9 +1,9 @@
-14:14:56 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+20:50:55 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
 make all 
 Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
 [BSP build complete]
 [USB_MIDI_AUDIO_SYNTH build complete]
 
-14:14:58 Build Finished (took 1s.425ms)
+20:50:56 Build Finished (took 1s.407ms)
 
