@@ -1,5 +1,5 @@
 `define numKeys 128
-`define numCtrl 8
+`define numCtrl 7
 
 module synth_ip(input logic CLK, RESET, RUN, AVL_WRITE, AVL_READ, SW, FIFO_FULL,
 					 input logic [7:0] AVL_ADDR,
@@ -17,12 +17,13 @@ enum logic [2:0] {halted,
 logic [2:0]		play_reg [`numKeys];
 logic [19:0]	ctrl_reg [`numCtrl];
 
-logic				LD_PHASE, LD_COUNT, LD_TONE, LD_VEL, LD_KEY, LD_PLAY, AVL_PLAY;
-logic				TONE_MUX, COUNTER_MUX, PHASE_MUX;
-logic				NOTE_END, NOTE_ON;
+logic				LD_PHASE, LD_TONE, LD_AMP, LD_VEL, LD_KEY, LD_PLAY, AVL_PLAY;
+logic				TONE_MUX, PHASE_MUX, AMP_SEL;
+logic				NOTE_ON, NOTE_END, ATT_ON, ATT_OFF, SUS;
+logic [1:0]		NEXT_PLAY;
 logic [2:0]		PLAY;
-logic [6:0]		KEY, NEXT_KEY, AVL_KEY, AVL_VEL, AVL_READVEL, SUSTAIN_PEDAL;
-logic [19:0]	PEAK_ATT, ATT_LEN, ATT_STEP, DEC_LEN, DEC_STEP, REL_LEN, REL_STEP;
+logic [6:0]		KEY, NEXT_KEY, AVL_KEY, AVL_VEL, AVL_READVEL, SUS_PEDAL;
+logic [19:0]	PEAK_AMP, ATT_STEP, DEC_STEP, SUS_AMP, SUS_STEP, REL_STEP;
 
 data_path DATA_PATH(.*);
 
@@ -30,21 +31,13 @@ always_ff @ (posedge CLK or posedge RESET) begin
 	
 	if (RESET) begin
 		state <= halted;
-		ctrl_reg[0] <= 20'hE2194;
-		ctrl_reg[1] <= 20'hAC44;
-		ctrl_reg[2] <= 20'h15;
-		ctrl_reg[3] <= 20'hAC44;
-		ctrl_reg[4] <= 20'h9;
-		ctrl_reg[5] <= 20'hAC44;
-		ctrl_reg[6] <= 20'hB;
-		ctrl_reg[7] <= 20'h0;
 		KEY <= 0;
 	end
 	else begin
 		state <= next_state;
 		
 		if (LD_KEY) KEY <= NEXT_KEY;
-		if (LD_PLAY) play_reg[KEY][2:1] <= {!NOTE_END, PLAY[0]};
+		if (LD_PLAY) play_reg[KEY][2:1] <= NEXT_PLAY;
 		
 		if (AVL_WRITE) begin
 			
@@ -53,6 +46,7 @@ always_ff @ (posedge CLK or posedge RESET) begin
 			end
 			else begin
 				play_reg[AVL_KEY][0] <= AVL_PLAY;
+				if(AVL_PLAY) play_reg[AVL_KEY][1] <= 1'b1;
 			end
 		end
 	end
@@ -61,36 +55,38 @@ end
 
 always_comb begin
 	
+	
+	PLAY =		play_reg[KEY];
+	PEAK_AMP =	ctrl_reg[0];
+	ATT_STEP =	ctrl_reg[1];
+	DEC_STEP =	ctrl_reg[2];
+	SUS_AMP =	ctrl_reg[3]
+	SUS_STEP =	ctrl_reg[4];
+	REL_STEP =	ctrl_reg[5];
+	SUS_PEDAL = ctrl_reg[6][6:0];
+	AVL_PLAY =	AVL_WRITEDATA[7];
+	AVL_KEY =	AVL_ADDR[6:0];
+	AVL_VEL =	AVL_WRITEDATA[6:0];
+	
 	next_state = state;
 	NEXT_KEY = KEY + 7'h01;
 	
-	PLAY = play_reg[KEY];
-	PEAK_ATT = ctrl_reg[0];
-	ATT_LEN = ctrl_reg[1];
-	ATT_STEP = ctrl_reg[2];
-	DEC_LEN = ctrl_reg[3];
-	DEC_STEP = ctrl_reg[4];
-	REL_LEN = ctrl_reg[5];
-	REL_STEP = ctrl_reg[6];
-	SUSTAIN_PEDAL = ctrl_reg[7][6:0];
+	LD_PHASE =	1'b0;
+	LD_AMP =		1'b0;
+	LD_TONE =	1'b0;
+	LD_FIFO =	1'b0;
+	LD_KEY =		1'b0;
+	LD_PLAY =	1'b0;
+	LD_VEL =		1'b0;
 	
-	LD_PHASE = 1'b0;
-	LD_COUNT = 1'b0;
-	LD_TONE = 1'b0;
-	LD_FIFO = 1'b0;
-	LD_KEY = 1'b0;
-	LD_PLAY = 1'b0;
-	LD_VEL = 1'b0;
-	
-	TONE_MUX = 1'b1;
-	COUNTER_MUX = 1'b1;
-	PHASE_MUX = 1'b1;
-	
-	NOTE_ON = PLAY[0];
-	
-	AVL_PLAY = AVL_WRITEDATA[7];
-	AVL_KEY = AVL_ADDR[6:0];
-	AVL_VEL = AVL_WRITEDATA[6:0];
+	TONE_MUX =	1'b1;
+	PHASE_MUX =	1'b1;
+	AMP_SEL =	1'b0;
+	SUS =			1'b0;
+	if (SUS_PEDAL >= 7'h28) SUS = 1'b1;
+	NOTE_ON = (PLAY[0] || SUS);
+	ATT_ON =		PLAY[1];
+	NEXT_PLAY = {!NOTE_END, !ATT_OFF};
 	
 	if (AVL_ADDR[7]) AVL_READDATA = {12'h000, ctrl_reg[AVL_ADDR[2:0]]};
 	else begin
@@ -138,10 +134,8 @@ always_comb begin
 			LD_KEY = 1'b1;
 			TONE_MUX = 1'b1;
 			LD_TONE = 1'b1;
-			if (PLAY[0] == 1'b1) begin
-				COUNTER_MUX = PLAY[1];
-			end
-			LD_COUNT = 1'b1;
+			AMP_SEL = 1'b0;
+			LD_AMP = 1'b1;
 			LD_PHASE = 1'b1;
 			LD_PLAY = 1'b1;
 			PHASE_MUX = 1'b1;
@@ -152,6 +146,8 @@ always_comb begin
 			LD_KEY = 1'b1;
 			PHASE_MUX = 1'b0;
 			LD_PHASE = 1'b1;
+			AMP_SEL = 1'b1;
+			LD_AMP = 1'b1;
 			end
 		
 		write: 
