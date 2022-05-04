@@ -81,9 +81,10 @@ void MIDI_poll()
 						set_adsr(SUS, long_par);
 						break;
 					case MOD_WHEEL:
-						printf("Mod Wheel\t");
-						printf("%X\t", ctrl);
+						//printf("Mod Wheel\t");
+						//printf("%X\t", ctrl);
 						printf("%X\n", par);
+						SGTL5000vol_change(i2c_dev, par);
 						break;
 					default:
 						printf("Other Control Change\t");
@@ -108,24 +109,15 @@ void MIDI_poll()
   }
 }
 
-void control() {
-	uint8_t con;
-	con = IORD_ALTERA_AVALON_PIO_DATA(KEY_BASE);
-	if ((~con & 0x1) && (~con & 0x2)) {
-	}
-	else if (~con & 0x1) SGTL5000vol_up(i2c_dev);
-	else if (~con & 0x2) SGTL5000vol_down(i2c_dev);
-}
-
 int main() {
 
-	uint8_t timer;
-
 	//Initial ADSR values
-	alt_u16 att_m_seconds = /*10*/2000;
-	alt_u16 dec_m_seconds = /*30*/2000;
-	alt_u16 rel_m_seconds = /*80*/2000;
-	float peak_amp = 1.9;
+	alt_u16 att_m_seconds = 10;
+	alt_u16 dec_m_seconds = 30;
+	alt_u16 sus_m_seconds = 3000;
+	alt_u16 rel_m_seconds = 80;
+	float peak_att = 1.9;
+	float peak_sus = 0.9;
 
 	printf("Initializing SGTL5000...\n");
 
@@ -142,7 +134,7 @@ int main() {
 	printf("Audio running\n");
 
 	printf("Initializing ADSR...\n");
-	calc_adsr(att_m_seconds, dec_m_seconds, rel_m_seconds, peak_amp);
+	calc_adsr(att_m_seconds, dec_m_seconds, sus_m_seconds, rel_m_seconds, peak_att, peak_sus);
 	printf("ADSR set\n");
 
 	MIDI_setup();
@@ -156,11 +148,6 @@ int main() {
 	while(1) {
 		if ( Midi ) {
 			MIDI_poll();
-		}
-		timer ++;
-		if (timer & 0x40) {
-			control();
-			timer = 0;
 		}
 	}
 }

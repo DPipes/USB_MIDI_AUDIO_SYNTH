@@ -110,23 +110,10 @@ void SGTL5000status(ALT_AVALON_I2C_DEV_t* dev) {
 	printf("ANA_HP_CTRL:	%X\n", I2Creg_rd(dev, ANA_HP_CTRL));
 }
 
-void SGTL5000vol_up(ALT_AVALON_I2C_DEV_t* dev) {
-	alt_u16 current_vol = I2Creg_rd(dev, DAC_VOL);
-	alt_u16 new_vol = 0;
-	printf("Current:	%X\n", current_vol);
-	printf("Sum:		%X\n", (current_vol >> 8) + DAC_VOL_STEP);
-	printf("Max:		%X\n", DAC_MAX_VOL);
-	if (DAC_MAX_VOL >= ((current_vol >> 8) - DAC_VOL_STEP)) new_vol = (DAC_MAX_VOL << 8) | DAC_MAX_VOL;
-	else new_vol = current_vol - ((DAC_VOL_STEP << 8) | DAC_VOL_STEP);
-	printf("New:		%X\n", new_vol);
-	I2Creg_wr(dev, DAC_VOL, new_vol);
-}
-
-
-void SGTL5000vol_down(ALT_AVALON_I2C_DEV_t* dev) {
-	alt_u16 current_vol = I2Creg_rd(dev, DAC_VOL);
-	alt_u16 new_vol = 0;
-	if (DAC_MIN_VOL <= ((current_vol >> 8) + DAC_VOL_STEP)) new_vol = (DAC_MIN_VOL << 8) | DAC_MIN_VOL;
-	else new_vol = current_vol + ((DAC_VOL_STEP << 8) | DAC_VOL_STEP);
-	I2Creg_wr(dev, DAC_VOL, new_vol);
+void SGTL5000vol_change(ALT_AVALON_I2C_DEV_t* dev, alt_u8 vol) {
+	alt_u32 new_vol = DAC_MIN_VOL - ((vol * DAC_VOL_RANGE) / 0x7F);
+	alt_u16 set_vol = ((new_vol << 8) | new_vol);
+	I2Creg_wr(dev, DAC_VOL, set_vol);
+	printf("New Volume:\t%x\n", new_vol);
+	printf("Set Volume:\t%x\n", set_vol);
 }

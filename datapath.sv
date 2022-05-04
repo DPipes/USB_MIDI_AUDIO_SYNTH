@@ -5,7 +5,7 @@ module data_path(input logic CLK, RESET, SW,
 					  input logic TONE_MUX, PHASE_MUX, AMP_SEL,
 					  input logic NOTE_ON, ATT_ON,
 					  input logic [6:0] KEY, AVL_KEY, AVL_VEL,
-					  input logic [19:0] PEAK_AMP, ATT_STEP, DEC_STEP, SUS_AMP, SUS_STEP, REL_STEP,
+					  input logic [19:0] PEAK_ATT, ATT_STEP, DEC_STEP, PEAK_SUS, SUS_STEP, REL_STEP,
 					  output logic NOTE_END, ATT_OFF,
 					  output logic [6:0] AVL_READVEL,
 					  output logic [31:0] TONE
@@ -68,7 +68,7 @@ always_comb begin
 	REL_AMP = AMP_O - REL_STEP;
 	
 	if (ATT_ON) AMP_MUX[1:0] = 2'h0;
-	else if (AMP_O > SUS_AMP) AMP_MUX[1:0] = 2'h1;
+	else if (AMP_O > PEAK_SUS) AMP_MUX[1:0] = 2'h1;
 	else if (NOTE_ON) AMP_MUX[1:0] = 2'h2;
 	else AMP_MUX[1:0] = 2'h3;
 	AMP_MUX[2] = AMP_SEL;
@@ -86,8 +86,8 @@ always_comb begin
 	AMP = AMP_MUX_O * {14'h000, VELOCITY};
 	
 	// Signals to transition for attack and end of note
-	if ((ATT_AMP >= PEAK_AMP) || !ATT_ON) ATT_OFF = 1'b1;					// Could overshoot since it is checking if greater than or equal to
-	if (((AMP < REL_STEP) && !ATT_ON) NOTE_END = 1'b1;
+	if ((ATT_AMP >= PEAK_ATT) || !ATT_ON) ATT_OFF = 1'b1;					// Could overshoot since it is checking if greater than or equal to
+	if ((AMP_MUX_O < REL_STEP) && !ATT_ON) NOTE_END = 1'b1;
 	
 	AMP_SAMPLE = SEXT_SAMPLE * {16'h0000, AMP[27:12]};
 	

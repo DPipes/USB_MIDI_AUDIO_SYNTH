@@ -20,10 +20,9 @@ logic [19:0]	ctrl_reg [`numCtrl];
 logic				LD_PHASE, LD_TONE, LD_AMP, LD_VEL, LD_KEY, LD_PLAY, AVL_PLAY;
 logic				TONE_MUX, PHASE_MUX, AMP_SEL;
 logic				NOTE_ON, NOTE_END, ATT_ON, ATT_OFF, SUS;
-logic [1:0]		NEXT_PLAY;
-logic [2:0]		PLAY;
+logic [2:0]		PLAY, NEXT_PLAY;
 logic [6:0]		KEY, NEXT_KEY, AVL_KEY, AVL_VEL, AVL_READVEL, SUS_PEDAL;
-logic [19:0]	PEAK_AMP, ATT_STEP, DEC_STEP, SUS_AMP, SUS_STEP, REL_STEP;
+logic [19:0]	PEAK_ATT, ATT_STEP, DEC_STEP, PEAK_SUS, SUS_STEP, REL_STEP;
 
 data_path DATA_PATH(.*);
 
@@ -37,7 +36,7 @@ always_ff @ (posedge CLK or posedge RESET) begin
 		state <= next_state;
 		
 		if (LD_KEY) KEY <= NEXT_KEY;
-		if (LD_PLAY) play_reg[KEY][2:1] <= NEXT_PLAY;
+		if (LD_PLAY) play_reg[KEY] <= NEXT_PLAY;
 		
 		if (AVL_WRITE) begin
 			
@@ -57,10 +56,10 @@ always_comb begin
 	
 	
 	PLAY =		play_reg[KEY];
-	PEAK_AMP =	ctrl_reg[0];
+	PEAK_ATT =	ctrl_reg[0];
 	ATT_STEP =	ctrl_reg[1];
 	DEC_STEP =	ctrl_reg[2];
-	SUS_AMP =	ctrl_reg[3]
+	PEAK_SUS =	ctrl_reg[3];
 	SUS_STEP =	ctrl_reg[4];
 	REL_STEP =	ctrl_reg[5];
 	SUS_PEDAL = ctrl_reg[6][6:0];
@@ -86,7 +85,7 @@ always_comb begin
 	if (SUS_PEDAL >= 7'h28) SUS = 1'b1;
 	NOTE_ON = (PLAY[0] || SUS);
 	ATT_ON =		PLAY[1];
-	NEXT_PLAY = {!NOTE_END, !ATT_OFF};
+	NEXT_PLAY = {!NOTE_END, !ATT_OFF, PLAY[0] && !NOTE_END};
 	
 	if (AVL_ADDR[7]) AVL_READDATA = {12'h000, ctrl_reg[AVL_ADDR[2:0]]};
 	else begin

@@ -77,6 +77,7 @@
 #define DAC_VOL_STEP	0x02	//	Step amount on volume button press
 #define DAC_MAX_VOL		0x3C	//	Max volume for either channel
 #define DAC_MIN_VOL		0xF0	//	Minimum volume for either channel
+#define DAC_VOL_RANGE	0xB4	//	Total range of DAC volume control
 // [15:8] Sets right volume
 // [7:0] Sets left volume
 // Max 0x3C	0dB
@@ -149,8 +150,6 @@ void SGTL5000audio_on(ALT_AVALON_I2C_DEV_t*);
 
 void SGTL5000status(ALT_AVALON_I2C_DEV_t*);
 
-void SGTL5000vol_up(ALT_AVALON_I2C_DEV_t*);
-
-void SGTL5000vol_down(ALT_AVALON_I2C_DEV_t*);
+void SGTL5000vol_change(ALT_AVALON_I2C_DEV_t*, alt_u8 vol);
 
 #endif
