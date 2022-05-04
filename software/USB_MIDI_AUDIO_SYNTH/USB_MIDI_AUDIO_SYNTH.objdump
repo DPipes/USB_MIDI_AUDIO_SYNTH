@@ -77,7 +77,7 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  29 .jdi          00005487  00000000  00000000  000ff660  2**0
                   CONTENTS, READONLY
- 30 .sopcinfo     00094ca6  00000000  00000000  00104ae7  2**0
+ 30 .sopcinfo     0008fb7b  00000000  00000000  00104ae7  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00000000 l    d  .entry	00000000 .entry
@@ -18769,14 +18769,14 @@ int main() {
 	uint8_t timer;
 
 	//Initial ADSR values
-	alt_u16 att_m_seconds = 10;
-    a264:	00800284 	movi	r2,10
+	alt_u16 att_m_seconds = /*10*/2000;
+    a264:	0081f404 	movi	r2,2000
     a268:	e0bffd8d 	sth	r2,-10(fp)
-	alt_u16 dec_m_seconds = 30;
-    a26c:	00800784 	movi	r2,30
+	alt_u16 dec_m_seconds = /*30*/2000;
+    a26c:	0081f404 	movi	r2,2000
     a270:	e0bffe0d 	sth	r2,-8(fp)
-	alt_u16 rel_m_seconds = 80;
-    a274:	00801404 	movi	r2,80
+	alt_u16 rel_m_seconds = /*80*/2000;
+    a274:	0081f404 	movi	r2,2000
     a278:	e0bffe8d 	sth	r2,-6(fp)
 	float peak_amp = 1.9;
     a27c:	008ffcf4 	movhi	r2,16371

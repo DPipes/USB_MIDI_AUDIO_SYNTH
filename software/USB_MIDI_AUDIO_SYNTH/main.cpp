@@ -122,9 +122,9 @@ int main() {
 	uint8_t timer;
 
 	//Initial ADSR values
-	alt_u16 att_m_seconds = 10;
-	alt_u16 dec_m_seconds = 30;
-	alt_u16 rel_m_seconds = 80;
+	alt_u16 att_m_seconds = /*10*/2000;
+	alt_u16 dec_m_seconds = /*30*/2000;
+	alt_u16 rel_m_seconds = /*80*/2000;
 	float peak_amp = 1.9;
 
 	printf("Initializing SGTL5000...\n");

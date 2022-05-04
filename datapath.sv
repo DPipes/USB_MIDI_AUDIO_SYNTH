@@ -28,7 +28,7 @@ logic [31:0]	SEXT_AMP_SAMPLE, TONE_INC, TONE_MUX_O;
 
 // Tables that hold phase step for each note and wavetable to be played
 f_table F_TABLE(.*);
-wave_table WAVE_TABLE(.*, .ADDR({SW, PHASE_MUX_O[23:12]}));
+wave_table WAVE_TABLE(.*, .ADDR({SW, PHASE[23:12]}));
 
 always_ff @ (posedge CLK) begin
 
@@ -37,7 +37,7 @@ always_ff @ (posedge CLK) begin
 		AVL_READVEL <= 0;
 	end
 	else begin
-		if(LD_PHASE)	phase_reg[KEY] <= PHASE_INC;
+		if(LD_PHASE)	phase_reg[KEY] <= PHASE_MUX_O;
 		if(LD_COUNT)	counter_reg[KEY] <= COUNTER_INC;
 		if(LD_TONE)		TONE <= TONE_MUX_O;
 
@@ -55,6 +55,8 @@ always_comb begin
 	VELOCITY = vel_reg[KEY];
 	PHASE = phase_reg[KEY];
 	
+	PHASE_INC = PHASE + F;
+	
 	case(COUNTER_MUX)
 		1'b0: COUNTER_MUX_O = 21'h0;
 		1'b1: COUNTER_MUX_O = COUNTER;
@@ -62,11 +64,10 @@ always_comb begin
 	
 	case(PHASE_MUX)
 		1'b0: PHASE_MUX_O = 24'h000000;
-		1'b1: PHASE_MUX_O = PHASE;
+		1'b1: PHASE_MUX_O = PHASE_INC;
 	endcase
 	
 	COUNTER_INC = COUNTER_MUX_O + 21'h000001;
-	PHASE_INC = PHASE_MUX_O + F;
 	
 	// Calculate possible next amplification multipliers
 	ATT_MULT = ATT_STEP * COUNTER_MUX_O[19:0];
@@ -102,7 +103,7 @@ always_comb begin
 	AMP = AMP_MUX_O * {13'h000, VELOCITY};
 	
 	// Tell FSM to turn note off when volume becomes low enough
-	if((COUNTER_MUX_O[19:0] >= REL_LEN) && COUNTER_MUX_O[20]) NOTE_END = 1'b1;
+	if(((REL_STEP * COUNTER_INC[19:0]) > 20'h80000) && COUNTER_MUX_O[20]) NOTE_END = 1'b1;
 	
 	// Multiplying by 15 bit amplification to leave headroom for summing
 	//	Can extend up to ~16 bits

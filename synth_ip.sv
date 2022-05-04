@@ -140,16 +140,18 @@ always_comb begin
 			LD_TONE = 1'b1;
 			if (PLAY[0] == 1'b1) begin
 				COUNTER_MUX = PLAY[1];
-				PHASE_MUX = PLAY[2];
 			end
 			LD_COUNT = 1'b1;
 			LD_PHASE = 1'b1;
 			LD_PLAY = 1'b1;
+			PHASE_MUX = 1'b1;
 			end
 		
 		key_off: 
 			begin
 			LD_KEY = 1'b1;
+			PHASE_MUX = 1'b0;
+			LD_PHASE = 1'b1;
 			end
 		
 		write: 
