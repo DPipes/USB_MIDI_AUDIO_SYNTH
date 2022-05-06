@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/USB_MIDI_AUDIO_SYNTH/include/text_mode_vga_color.cpp" element2="/USB_MIDI_AUDIO_SYNTH/include/text_mode_vga_color.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1651864269672"/>
+</session>

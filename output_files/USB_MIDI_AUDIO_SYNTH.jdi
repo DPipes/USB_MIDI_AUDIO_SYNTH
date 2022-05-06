@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="592ffc7d0abb5a54f548"/>
+    <hash md5_digest_80b="62a7ae38091e61e4084a"/>
   </project>
   <file_info>
     <file device="10M50DAF484C7G" path="USB_MIDI_AUDIO_SYNTH.sof" usercode="0xFFFFFFFF"/>
@@ -139,7 +139,7 @@
   <sld_infos>
     <sld_info hpath="USB_MIDI_AUDIO_SYNTH:u0" name="u0">
       <assignment_values>
-        <assignment_value text="QSYS_NAME USB_MIDI_AUDIO_SYNTH HAS_SOPCINFO 1 GENERATION_ID 1651694758"/>
+        <assignment_value text="QSYS_NAME USB_MIDI_AUDIO_SYNTH HAS_SOPCINFO 1 GENERATION_ID 1651867480"/>
       </assignment_values>
       <parameters/>
     </sld_info>

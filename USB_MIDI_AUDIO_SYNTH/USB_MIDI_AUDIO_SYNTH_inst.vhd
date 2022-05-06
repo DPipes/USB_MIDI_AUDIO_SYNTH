@@ -8,7 +8,6 @@
 			i2c0_scl_oe                    : out   std_logic;                                        -- scl_oe
 			i2s_clk_clk                    : out   std_logic;                                        -- clk
 			input_port_run                 : in    std_logic                     := 'X';             -- run
-			input_port_sw                  : in    std_logic                     := 'X';             -- sw
 			input_port_fifo_full           : in    std_logic                     := 'X';             -- fifo_full
 			key_external_connection_export : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- export
 			keycode_export                 : out   std_logic_vector(7 downto 0);                     -- export
@@ -48,7 +47,6 @@
 			i2c0_scl_oe                    => CONNECTED_TO_i2c0_scl_oe,                    --                        .scl_oe
 			i2s_clk_clk                    => CONNECTED_TO_i2s_clk_clk,                    --                 i2s_clk.clk
 			input_port_run                 => CONNECTED_TO_input_port_run,                 --              input_port.run
-			input_port_sw                  => CONNECTED_TO_input_port_sw,                  --                        .sw
 			input_port_fifo_full           => CONNECTED_TO_input_port_fifo_full,           --                        .fifo_full
 			key_external_connection_export => CONNECTED_TO_key_external_connection_export, -- key_external_connection.export
 			keycode_export                 => CONNECTED_TO_keycode_export,                 --                 keycode.export

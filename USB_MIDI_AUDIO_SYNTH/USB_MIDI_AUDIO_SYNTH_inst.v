@@ -7,7 +7,6 @@
 		.i2c0_scl_oe                    (<connected-to-i2c0_scl_oe>),                    //                        .scl_oe
 		.i2s_clk_clk                    (<connected-to-i2s_clk_clk>),                    //                 i2s_clk.clk
 		.input_port_run                 (<connected-to-input_port_run>),                 //              input_port.run
-		.input_port_sw                  (<connected-to-input_port_sw>),                  //                        .sw
 		.input_port_fifo_full           (<connected-to-input_port_fifo_full>),           //                        .fifo_full
 		.key_external_connection_export (<connected-to-key_external_connection_export>), // key_external_connection.export
 		.keycode_export                 (<connected-to-keycode_export>),                 //                 keycode.export

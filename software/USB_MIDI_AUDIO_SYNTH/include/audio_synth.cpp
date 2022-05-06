@@ -90,14 +90,5 @@ void calc_adsr(alt_u16 att_h, alt_u16 att_l, alt_u16 dec_h, alt_u16 dec_l, alt_u
 	set_ctrl(0, PEAK_S, PEAK_SUS);
 	set_ctrl(0, SUS_S, SUS_STEP);
 	set_ctrl(0, REL_S, REL_STEP);
-
-	printf("Attack Time:\t%d\n", att_m_seconds);
-	printf("Decay Time:\t%d\n", dec_m_seconds);
-	printf("Sustain Time:\t%d\n", sus_m_seconds);
-	printf("Release Time:\t%d\n", rel_m_seconds);
-	printf("Peak Attack:\t%f\n", p_att);
-	printf("Peak Sustain:\t%f\n", peak_sus);
-	printf("PEAK_ATT:\t%X\n", PEAK_ATT);
-	printf("PEAK_SUS:\t%X\n\n", PEAK_SUS);
 	return;
 }

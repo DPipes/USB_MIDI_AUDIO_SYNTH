@@ -1,7 +1,7 @@
 `define numKeys 128
-`define numCtrl 7
+`define numCtrl 16
 
-module synth_ip(input logic CLK, RESET, RUN, AVL_WRITE, AVL_READ, SW, FIFO_FULL,
+module synth_ip(input logic CLK, RESET, RUN, AVL_WRITE, AVL_READ, FIFO_FULL,
 					 input logic [7:0] AVL_ADDR,
 					 input logic [31:0] AVL_WRITEDATA,
 					 output logic LD_FIFO,
@@ -19,9 +19,9 @@ logic [19:0]	ctrl_reg [`numCtrl];
 
 logic				LD_PHASE, LD_TONE, LD_AMP, LD_VEL, LD_KEY, LD_PLAY, AVL_PLAY;
 logic				TONE_MUX, PHASE_MUX, AMP_SEL;
-logic				NOTE_ON, NOTE_END, ATT_ON, ATT_OFF, SUS;
-logic [2:0]		PLAY, NEXT_PLAY;
-logic [6:0]		KEY, NEXT_KEY, AVL_KEY, AVL_VEL, AVL_READVEL, SUS_PEDAL;
+logic				NOTE_ON, NOTE_END, ATT_ON, ATT_OFF, SUS, MOD_MUX;
+logic [2:0]		PLAY, NEXT_PLAY, SAMPLE_MUX_1, SAMPLE_MUX_2;
+logic [6:0]		KEY, NEXT_KEY, AVL_KEY, AVL_VEL, AVL_READVEL, SUS_PEDAL, MOD;
 logic [19:0]	PEAK_ATT, ATT_STEP, DEC_STEP, PEAK_SUS, SUS_STEP, REL_STEP;
 
 data_path DATA_PATH(.*);
@@ -41,7 +41,7 @@ always_ff @ (posedge CLK or posedge RESET) begin
 		if (AVL_WRITE) begin
 			
 			if (AVL_ADDR[7]) begin
-				ctrl_reg[AVL_ADDR[2:0]] <= AVL_WRITEDATA[19:0];
+				ctrl_reg[AVL_ADDR[3:0]] <= AVL_WRITEDATA[19:0];
 			end
 			else begin
 				play_reg[AVL_KEY][0] <= AVL_PLAY;
@@ -63,6 +63,10 @@ always_comb begin
 	SUS_STEP =	ctrl_reg[4];
 	REL_STEP =	ctrl_reg[5];
 	SUS_PEDAL = ctrl_reg[6][6:0];
+	MOD_MUX = 	ctrl_reg[7][0];
+	MOD =			ctrl_reg[8][6:0];
+	SAMPLE_MUX_1 = ctrl_reg[9][6:4];
+	SAMPLE_MUX_2 = ctrl_reg[10][6:4];
 	AVL_PLAY =	AVL_WRITEDATA[7];
 	AVL_KEY =	AVL_ADDR[6:0];
 	AVL_VEL =	AVL_WRITEDATA[6:0];
@@ -87,7 +91,7 @@ always_comb begin
 	ATT_ON =		PLAY[1];
 	NEXT_PLAY = {!NOTE_END, !ATT_OFF, PLAY[0] && !NOTE_END};
 	
-	if (AVL_ADDR[7]) AVL_READDATA = {12'h000, ctrl_reg[AVL_ADDR[2:0]]};
+	if (AVL_ADDR[7]) AVL_READDATA = {12'h000, ctrl_reg[AVL_ADDR[3:0]]};
 	else begin
 		AVL_READDATA = {25'h000000, AVL_READVEL};
 		if (AVL_WRITE && !AVL_ADDR[7]) LD_VEL = 1'b1;

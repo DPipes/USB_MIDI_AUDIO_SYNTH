@@ -50,7 +50,7 @@ module TOP (
 
 
 
-logic Reset_h, vssig, blank, sync, VGA_Clk, CLK;
+logic Reset_h, CLK;
 
 
 //=======================================================
@@ -62,8 +62,6 @@ logic Reset_h, vssig, blank, sync, VGA_Clk, CLK;
 	logic [3:0] hex_num_4, hex_num_3, hex_num_1, hex_num_0; //4 bit input hex digits
 	logic [1:0] signs;
 	logic [1:0] hundreds;
-	logic [9:0] drawxsig, drawysig, ballxsig, ballysig, ballsizesig;
-	logic [7:0] Red, Blue, Green;
 	logic [7:0] keycode;
 	logic [31:0] AUDIO_FIFO, AUDIO_OUT;	//Current sample to play
 	logic AUDIO_EMPTY, AUDIO_FULL, AUDIO_READ, AUDIO_WRITE; //Audio FIFO signals
@@ -123,11 +121,6 @@ logic Reset_h, vssig, blank, sync, VGA_Clk, CLK;
 	
 	//Assign one button to reset
 	assign {Reset_h}= 1'b0;
-
-	//Our A/D converter is only 12 bit
-	assign VGA_R = Red[7:4];
-	assign VGA_B = Blue[7:4];
-	assign VGA_G = Green[7:4];
 	
 	USB_MIDI_AUDIO_SYNTH u0 (
 		.clk_clk                           (MAX10_CLK1_50),  //clk.clk
@@ -171,7 +164,6 @@ logic Reset_h, vssig, blank, sync, VGA_Clk, CLK;
 		
 		//AUDIO SYNTHESIZER
 		.input_port_run(1'b1),
-		.input_port_sw(SW[0]),
 		.input_port_fifo_full(AUDIO_FULL),
 		.output_port_ld_fifo(AUDIO_WRITE),
 		.output_port_tone(AUDIO_FIFO),

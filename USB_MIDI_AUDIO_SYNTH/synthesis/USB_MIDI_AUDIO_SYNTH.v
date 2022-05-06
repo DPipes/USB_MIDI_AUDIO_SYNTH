@@ -12,7 +12,6 @@ module USB_MIDI_AUDIO_SYNTH (
 		output wire        i2c0_scl_oe,                    //                        .scl_oe
 		output wire        i2s_clk_clk,                    //                 i2s_clk.clk
 		input  wire        input_port_run,                 //              input_port.run
-		input  wire        input_port_sw,                  //                        .sw
 		input  wire        input_port_fifo_full,           //                        .fifo_full
 		input  wire [3:0]  key_external_connection_export, // key_external_connection.export
 		output wire [7:0]  keycode_export,                 //                 keycode.export
@@ -153,7 +152,6 @@ module USB_MIDI_AUDIO_SYNTH (
 		.AVL_WRITE     (mm_interconnect_0_audio_synthesizer_module_0_avalon_slave_write),     //             .write
 		.AVL_WRITEDATA (mm_interconnect_0_audio_synthesizer_module_0_avalon_slave_writedata), //             .writedata
 		.RUN           (input_port_run),                                                      //       INPUTS.run
-		.SW            (input_port_sw),                                                       //             .sw
 		.FIFO_FULL     (input_port_fifo_full),                                                //             .fifo_full
 		.LD_FIFO       (output_port_ld_fifo),                                                 //      OUTPUTS.ld_fifo
 		.TONE          (output_port_tone)                                                     //             .tone

@@ -12,6 +12,10 @@
 #define SUS_S		4
 #define REL_S		5
 #define SUS			6
+#define MOD_ON		7
+#define MOD			8
+#define SAMPLE_1	9
+#define SAMPLE_2	10
 #define F_S			44100
 
 #include "system.h"

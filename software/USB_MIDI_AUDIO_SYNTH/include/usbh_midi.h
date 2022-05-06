@@ -53,13 +53,16 @@
 #define DATA_MSB					0x06
 #define CHAN_VOL					0x07
 #define BAL							0x08
+#define SAMPLE_1_SEL				0x09
 #define PAN							0x0A
 #define EXPRESS_CON					0x0B
+#define SAMPLE_2_SEL				0x0E
 #define	SUSTAIN_PEDAL				0x40
 #define REL_TIME_H					0x48
 #define ATT_TIME_H					0x49
 #define DEC_TIME_H					0x4B
 #define PEDAL_FLIP					0x52
+#define MOD_WHEEL_ON				0x55
 #define ATT_TIME_L					0x68
 #define DEC_TIME_L					0x69
 #define SUS_TIME_L					0x6A
