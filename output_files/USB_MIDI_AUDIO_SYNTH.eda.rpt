@@ -1,5 +1,5 @@
 EDA Netlist Writer report for USB_MIDI_AUDIO_SYNTH
-Fri May 06 15:08:08 2022
+Fri May 06 15:33:50 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri May 06 15:08:08 2022 ;
+; EDA Netlist Writer Status ; Successful - Fri May 06 15:33:50 2022 ;
 ; Revision Name             ; USB_MIDI_AUDIO_SYNTH                  ;
 ; Top-level Entity Name     ; TOP                                   ;
 ; Family                    ; MAX 10                                ;
@@ -81,14 +81,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 06 15:08:05 2022
+    Info: Processing started: Fri May 06 15:33:46 2022
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off USB_MIDI_AUDIO_SYNTH -c USB_MIDI_AUDIO_SYNTH
 Warning (10905): Generated the EDA functional simulation netlist because it is the only supported netlist type for this device.
 Info (204019): Generated file USB_MIDI_AUDIO_SYNTH.svo in folder "C:/Users/dpipe/OneDrive/School/ECE385/Final/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4769 megabytes
-    Info: Processing ended: Fri May 06 15:08:08 2022
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4771 megabytes
+    Info: Processing ended: Fri May 06 15:33:50 2022
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 

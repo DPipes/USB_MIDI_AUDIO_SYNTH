@@ -139,7 +139,7 @@
   <sld_infos>
     <sld_info hpath="USB_MIDI_AUDIO_SYNTH:u0" name="u0">
       <assignment_values>
-        <assignment_value text="QSYS_NAME USB_MIDI_AUDIO_SYNTH HAS_SOPCINFO 1 GENERATION_ID 1651867480"/>
+        <assignment_value text="QSYS_NAME USB_MIDI_AUDIO_SYNTH HAS_SOPCINFO 1 GENERATION_ID 1651868999"/>
       </assignment_values>
       <parameters/>
     </sld_info>

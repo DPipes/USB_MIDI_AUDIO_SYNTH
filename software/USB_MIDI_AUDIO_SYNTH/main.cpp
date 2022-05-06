@@ -101,6 +101,9 @@ void MIDI_poll()
 				case SAMPLE_2_SEL:
 					set_ctrl(channel, SAMPLE_2, long_par);
 					break;
+				case BEND_ON_:
+					set_ctrl(channel, BEND_ON, long_par);
+					break;
 				case ATT_TIME_H:
 					att_h= (par * 5000) / 0x7F;
 					calc_adsr(att_h, att_l, dec_h, dec_l, sus_h, sus_l, rel_h, rel_l, peak_att, peak_sus);
@@ -147,7 +150,7 @@ void MIDI_poll()
 			break;
 		case PITCH_BEND:
 			long_par = (par << 7) + ctrl;
-			printf("%X\n", long_par);
+			set_ctrl(channel, BEND, long_par);
 			break;
 		default:
 			break;

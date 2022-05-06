@@ -63,6 +63,7 @@
 #define DEC_TIME_H					0x4B
 #define PEDAL_FLIP					0x52
 #define MOD_WHEEL_ON				0x55
+#define BEND_ON_					0x56
 #define ATT_TIME_L					0x68
 #define DEC_TIME_L					0x69
 #define SUS_TIME_L					0x6A

@@ -18,10 +18,11 @@ logic [2:0]		play_reg [`numKeys];
 logic [19:0]	ctrl_reg [`numCtrl];
 
 logic				LD_PHASE, LD_TONE, LD_AMP, LD_VEL, LD_KEY, LD_PLAY, AVL_PLAY;
-logic				TONE_MUX, PHASE_MUX, AMP_SEL;
+logic				TONE_MUX, PHASE_MUX, AMP_SEL, BEND_MUX;
 logic				NOTE_ON, NOTE_END, ATT_ON, ATT_OFF, SUS, MOD_MUX;
 logic [2:0]		PLAY, NEXT_PLAY, SAMPLE_MUX_1, SAMPLE_MUX_2;
 logic [6:0]		KEY, NEXT_KEY, AVL_KEY, AVL_VEL, AVL_READVEL, SUS_PEDAL, MOD;
+logic [13:0]	BEND;
 logic [19:0]	PEAK_ATT, ATT_STEP, DEC_STEP, PEAK_SUS, SUS_STEP, REL_STEP;
 
 data_path DATA_PATH(.*);
@@ -67,6 +68,8 @@ always_comb begin
 	MOD =			ctrl_reg[8][6:0];
 	SAMPLE_MUX_1 = ctrl_reg[9][6:4];
 	SAMPLE_MUX_2 = ctrl_reg[10][6:4];
+	BEND_MUX = 	ctrl_reg[11][0];
+	BEND =		ctrl_reg[12][13:0];
 	AVL_PLAY =	AVL_WRITEDATA[7];
 	AVL_KEY =	AVL_ADDR[6:0];
 	AVL_VEL =	AVL_WRITEDATA[6:0];

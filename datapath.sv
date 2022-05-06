@@ -3,10 +3,11 @@
 
 module data_path(input logic CLK, RESET,
 					  input logic LD_PHASE, LD_TONE, LD_AMP, LD_VEL,
-					  input logic TONE_MUX, PHASE_MUX, AMP_SEL, MOD_MUX,
+					  input logic TONE_MUX, PHASE_MUX, AMP_SEL, MOD_MUX, BEND_MUX,
 					  input logic NOTE_ON, ATT_ON,
 					  input logic [2:0] SAMPLE_MUX_1, SAMPLE_MUX_2,
 					  input logic [6:0] KEY, AVL_KEY, AVL_VEL, MOD,
+					  input logic [13:0] BEND,
 					  input logic [19:0] PEAK_ATT, ATT_STEP, DEC_STEP, PEAK_SUS, SUS_STEP, REL_STEP,
 					  output logic NOTE_END, ATT_OFF,
 					  output logic [6:0] AVL_READVEL,
@@ -27,6 +28,7 @@ logic [22:0]	SEXT_SAMPLE_1, SEXT_SAMPLE_2, MOD_SAMPLE, PLAY_SAMPLE;
 logic [23:0]	PHASE, PHASE_INC, PHASE_MUX_O, F;
 logic [27:0]	AMP;
 logic [31:0]	SEXT_SAMPLE, AMP_SAMPLE, TONE_INC, TONE_MUX_O;
+logic [37:0]	F_B;
 
 // Tables that hold phase step for each note and wavetable to be played
 f_table F_TABLE(.*);
@@ -69,7 +71,13 @@ always_comb begin
 	SAMPLE_2 = SAMPLE[SAMPLE_MUX_2];
 	INV_MOD = 7'h7F - MOD;
 	
-	PHASE_INC = PHASE + F;
+	F_B = F * BEND;
+
+	case (BEND_MUX) 
+		1'b0: PHASE_INC = PHASE + F;
+		1'b1: PHASE_INC = PHASE + F_B[37:13];
+	endcase
+	
 	SEXT_SAMPLE_1 = {SAMPLE_1[15], SAMPLE_1[15], SAMPLE_1[15], SAMPLE_1[15], SAMPLE_1[15], SAMPLE_1[15], SAMPLE_1};
 	SEXT_SAMPLE_2 = {SAMPLE_2[15], SAMPLE_2[15], SAMPLE_2[15], SAMPLE_2[15], SAMPLE_2[15], SAMPLE_2[15], SAMPLE_2};
 	MOD_SAMPLE = (SEXT_SAMPLE_1 * MOD) + (SEXT_SAMPLE_2 * INV_MOD);

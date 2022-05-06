@@ -16,6 +16,8 @@
 #define MOD			8
 #define SAMPLE_1	9
 #define SAMPLE_2	10
+#define BEND_ON		11
+#define BEND		12
 #define F_S			44100
 
 #include "system.h"
