@@ -1,6 +1,6 @@
-15:32:36 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+01:47:39 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
 make all 
 [BSP build complete]
 
-15:32:37 Build Finished (took 925ms)
+01:47:40 Build Finished (took 799ms)
 

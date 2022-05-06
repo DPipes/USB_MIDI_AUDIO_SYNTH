@@ -25,6 +25,19 @@ USBH_MIDI  Midi(&Usb);
 //pointer to instance structure
 ALT_AVALON_I2C_DEV_t *i2c_dev;
 
+//Initial global values
+alt_u16 att_h = 0;
+alt_u16 dec_h = 0;
+alt_u16 sus_h = 0;
+alt_u16 rel_h = 0;
+alt_u16 att_l = 10;
+alt_u16 dec_l = 30;
+alt_u16 sus_l = 3000;
+alt_u16 rel_l = 80;
+float peak_att = 1.1;
+float peak_sus = 0.8;
+bool ped_flip = 0;
+
 void MIDI_poll();
 
 void onInit()
@@ -49,75 +62,99 @@ void MIDI_setup()
 // Poll USB MIDI Controller and send to synthesizer
 void MIDI_poll()
 {
-  uint8_t note, vel, ctrl, par;
+  uint8_t channel, ctrl, par;
   uint8_t bufMidi[MIDI_EVENT_PACKET_SIZE];
   uint16_t  rcvd;
   uint32_t long_par;
 
   if (Midi.RecvData( &rcvd,  bufMidi) == 0 ) {
-    for (int i = 0; i < MIDI_EVENT_PACKET_SIZE; i++) {
-    	switch (bufMidi[i] & 0xF0) {
-			case NOTE_OFF:
-			case NOTE_ON:
-				note = bufMidi[i+1];
-				vel = bufMidi[i+2];
-				if(!(bufMidi[i] & 0x0F)) {
-					if (vel) printf("Note On\t");
-					else printf("Note Off\t");
-					printf("%X\t", bufMidi[i]);
-					printf("%X\t", bufMidi[i+1]);
-					printf("%X\n", bufMidi[i+2]);
-					i += 2;
-					set_note(note, vel);
-				}
-				break;
-			case CONTROL_CHANGE:
-				//PEDAL CONTROLS HERE
-				ctrl = bufMidi[i+1];
-				par = bufMidi[i+2];
-				long_par = par;
-				switch(ctrl) {
-					case SUSTAIN_PEDAL:
-						set_adsr(SUS, long_par);
-						break;
-					case MOD_WHEEL:
-						//printf("Mod Wheel\t");
-						//printf("%X\t", ctrl);
-						printf("%X\n", par);
-						SGTL5000vol_change(i2c_dev, par);
-						break;
-					default:
-						printf("Other Control Change\t");
-						printf("%X\t", ctrl);
-						printf("%X\n", par);
-						break;
-				}
-				i += 2;
-				break;
-			case PITCH_BEND:
-				//PITCH WHEEL CONTROLS HERE
-				printf("Pitch Bend\t");
-				printf("%X\t", bufMidi[i]);
-				printf("%X\t", bufMidi[i+1]);
-				printf("%X\n", bufMidi[i+2]);
-				break;
-			default:
-				break;
-    	}
-    }
-    printf("\n");
+	    /*for (int i = 0; i < MIDI_EVENT_PACKET_SIZE; i++) {
+	    	printf("%X ", bufMidi[i]);
+	    }
+	    printf("\n");*/
+		channel = (bufMidi[1] & 0x0F);
+		ctrl = bufMidi[2];
+		par = bufMidi[3];
+	switch (bufMidi[1] & 0xF0) {
+		case NOTE_OFF:
+		case NOTE_ON:
+			//if (vel) printf("Note On\t");
+			//else printf("Note Off\t");
+			//printf("%X\t", bufMidi[1]);
+			//printf("%X\t", bufMidi[2]);
+			//printf("%X\n", bufMidi[3]);
+			set_note(channel, ctrl, par);
+			break;
+		case CONTROL_CHANGE:
+			long_par = par;
+			switch(ctrl) {
+				case MOD_WHEEL:
+					break;
+				case CHAN_VOL:
+					SGTL5000vol_change(i2c_dev, par);
+					break;
+				case SUSTAIN_PEDAL:
+					if(ped_flip) long_par = ~long_par;
+					set_ctrl(channel, SUS, long_par);
+					break;
+				case PEDAL_FLIP:
+					ped_flip = par;
+					break;
+				case ATT_TIME_H:
+					att_h= (par * 5000) / 0x7F;
+					calc_adsr(att_h, att_l, dec_h, dec_l, sus_h, sus_l, rel_h, rel_l, peak_att, peak_sus);
+					break;
+				case DEC_TIME_H:
+					dec_h = (par * 5000) / 0x7F;
+					calc_adsr(att_h, att_l, dec_h, dec_l, sus_h, sus_l, rel_h, rel_l, peak_att, peak_sus);
+					break;
+				case SUS_TIME_H:
+					sus_h = (par * 20000) / 0x7F;
+					calc_adsr(att_h, att_l, dec_h, dec_l, sus_h, sus_l, rel_h, rel_l, peak_att, peak_sus);
+					break;
+				case REL_TIME_H:
+					rel_h = (par * 10000) / 0x7F;
+					calc_adsr(att_h, att_l, dec_h, dec_l, sus_h, sus_l, rel_h, rel_l, peak_att, peak_sus);
+					break;
+				case ATT_TIME_L:
+					att_l = (par * 200) / 0x7F;
+					calc_adsr(att_h, att_l, dec_h, dec_l, sus_h, sus_l, rel_h, rel_l, peak_att, peak_sus);
+					break;
+				case DEC_TIME_L:
+					dec_l = (par * 200) / 0x7F;
+					calc_adsr(att_h, att_l, dec_h, dec_l, sus_h, sus_l, rel_h, rel_l, peak_att, peak_sus);
+					break;
+				case SUS_TIME_L:
+					sus_l = (par * 800) / 0x7F;
+					calc_adsr(att_h, att_l, dec_h, dec_l, sus_h, sus_l, rel_h, rel_l, peak_att, peak_sus);
+					break;
+				case REL_TIME_L:
+					rel_l = (par * 400) / 0x7F;
+					calc_adsr(att_h, att_l, dec_h, dec_l, sus_h, sus_l, rel_h, rel_l, peak_att, peak_sus);
+					break;
+				case PEAK_ATT:
+					peak_att = (float) (par * 2) / 0x7F;
+					calc_adsr(att_h, att_l, dec_h, dec_l, sus_h, sus_l, rel_h, rel_l, peak_att, peak_sus);
+					break;
+				case PEAK_SUS:
+					peak_sus = (float) par / 0x7F;
+					calc_adsr(att_h, att_l, dec_h, dec_l, sus_h, sus_l, rel_h, rel_l, peak_att, peak_sus);
+					break;
+				default:
+					break;
+			}
+			break;
+		case PITCH_BEND:
+			long_par = (par << 7) + ctrl;
+			printf("%X\n", long_par);
+			break;
+		default:
+			break;
+	}
   }
 }
 
 int main() {
-
-	//Initial ADSR values
-	alt_u16 att_m_seconds = 10;
-	alt_u16 dec_m_seconds = 30;
-	alt_u16 sus_m_seconds = 3000;
-	alt_u16 rel_m_seconds = 80;
-	float peak_att = 1.9;
-	float peak_sus = 0.9;
 
 	printf("Initializing SGTL5000...\n");
 
@@ -134,7 +171,7 @@ int main() {
 	printf("Audio running\n");
 
 	printf("Initializing ADSR...\n");
-	calc_adsr(att_m_seconds, dec_m_seconds, sus_m_seconds, rel_m_seconds, peak_att, peak_sus);
+	calc_adsr(att_h, att_l, dec_h, dec_l, sus_h, sus_l, rel_h, rel_l, peak_att, peak_sus);
 	printf("ADSR set\n");
 
 	MIDI_setup();

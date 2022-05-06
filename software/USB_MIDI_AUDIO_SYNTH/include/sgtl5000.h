@@ -85,7 +85,7 @@
 // Mute 0xFC or greater
 
 // ANA_HP_CTRL 0.5dB steps
-#define HP_VOL_INIT		0x40	//S	Initial volume setting, quite low
+#define HP_VOL_INIT		0x18	//S	Initial volume setting, quite low
 #define HP_VOL_STEP		0x02	//	Step amount on volume button press
 #define HP_MAX_VOL		0x00	//	Max volume for either channel
 #define HP_MIN_VOL		0x7F	//	Minimum volume for either channel

@@ -33,6 +33,8 @@
 #define USB_SUBCLASS_MIDISTREAMING	3
 #define MIDI_EVENT_PACKET_SIZE 		64
 #define MIDI_MAX_SYSEX_SIZE   		256
+
+//Data Types
 #define NOTE_OFF					0x80
 #define	NOTE_ON						0x90
 #define AFTER_TOUCH					0xA0
@@ -40,8 +42,30 @@
 #define	PROGRAM_CHANGE				0xC0
 #define CHANNEL_PRESSURE			0xD0
 #define PITCH_BEND					0xE0
-#define	SUSTAIN_PEDAL				0x40
+
+//Control Changes
+#define BANK_SEL					0x00
 #define	MOD_WHEEL					0x01
+#define BREATH_CON					0x02
+#define SUS_TIME_H					0x03
+#define FOOT_CON					0x04
+#define PORT_TIME					0x05
+#define DATA_MSB					0x06
+#define CHAN_VOL					0x07
+#define BAL							0x08
+#define PAN							0x0A
+#define EXPRESS_CON					0x0B
+#define	SUSTAIN_PEDAL				0x40
+#define REL_TIME_H					0x48
+#define ATT_TIME_H					0x49
+#define DEC_TIME_H					0x4B
+#define PEDAL_FLIP					0x52
+#define ATT_TIME_L					0x68
+#define DEC_TIME_L					0x69
+#define SUS_TIME_L					0x6A
+#define REL_TIME_L					0x6B
+#define PEAK_ATT					0x6C
+#define PEAK_SUS					0x6D
 
 
 namespace _ns_USBH_MIDI {

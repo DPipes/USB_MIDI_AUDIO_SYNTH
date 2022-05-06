@@ -114,6 +114,4 @@ void SGTL5000vol_change(ALT_AVALON_I2C_DEV_t* dev, alt_u8 vol) {
 	alt_u32 new_vol = DAC_MIN_VOL - ((vol * DAC_VOL_RANGE) / 0x7F);
 	alt_u16 set_vol = ((new_vol << 8) | new_vol);
 	I2Creg_wr(dev, DAC_VOL, set_vol);
-	printf("New Volume:\t%x\n", new_vol);
-	printf("Set Volume:\t%x\n", set_vol);
 }

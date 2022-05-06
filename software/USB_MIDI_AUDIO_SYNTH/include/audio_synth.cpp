@@ -2,27 +2,50 @@
 #include <stdio.h>
 #include "audio_synth.h"
 
-void set_note(alt_u8 note, alt_u8 vel) {
+void set_note(alt_u8 channel, alt_u8 note, alt_u8 vel) {
 	alt_u32 set_val;
 
-	if(vel == 0x00) {
-		set_val = synth->KEY[note];
-	}
-	else {
-		set_val = 0x80 + vel;
+	if(note > 0x7F) {
+		return;
 	}
 
-	synth->KEY[note] = set_val;
+	switch (channel) {
+		case 0:
+			if(vel == 0x00) {
+				set_val = synth->KEY[note];
+			}
+			else {
+				set_val = 0x80 + vel;
+			}
+			synth->KEY[note] = set_val;
+			break;
+		default:
+			break;
+	}
 }
 
-void set_adsr(alt_u8 par, alt_u32 val) {
-	synth->ADSR[par] = val;
+void set_ctrl(alt_u8 channel, alt_u8 par, alt_u32 val) {
+	switch (channel) {
+		case 0:
+			synth->CTRL[par] = val;
+			break;
+		default:
+			break;
+	}
 }
 
-void calc_adsr(alt_u16 att_m_seconds, alt_u16 dec_m_seconds, alt_u16 sus_m_seconds, alt_u16 rel_m_seconds, float peak_att, float peak_sus) {
+void calc_adsr(alt_u16 att_h, alt_u16 att_l, alt_u16 dec_h, alt_u16 dec_l, alt_u16 sus_h, alt_u16 sus_l, alt_u16 rel_h, alt_u16 rel_l, float peak_att, float peak_sus) {
 
+	alt_u16 att_m_seconds = att_h + att_l;
+	alt_u16 dec_m_seconds = dec_h + dec_l;
+	alt_u16 sus_m_seconds = sus_h + sus_l;
+	alt_u16 rel_m_seconds = rel_h + rel_l;
 	alt_u32 PEAK_ATT, PEAK_SUS, ATT_STEP, DEC_STEP, SUS_STEP, REL_STEP;
 	alt_u32 ATT_LEN, DEC_LEN, SUS_LEN, REL_LEN;
+
+	float p_att = peak_att + peak_sus;
+
+	if (p_att > 2) p_att = 2;
 
 	if (att_m_seconds > 5000) {
 		printf("ERROR: Requested attack length is too long.\n");
@@ -44,38 +67,37 @@ void calc_adsr(alt_u16 att_m_seconds, alt_u16 dec_m_seconds, alt_u16 sus_m_secon
 		printf("ERROR: Requested release length is too long.\n");
 		return;
 	}
-	if (peak_att > (float) 1.9) {
-		printf("ERROR: Requested peak attack amplitude is too large.\n");
-		return;
-	}
-	if (peak_sus >= peak_att) {
-		printf("ERROR: Requested sustain amplitude is too large.\n");
-		return;
-	}
 
-	PEAK_ATT = peak_att * (alt_u32) 0x80000;
+	PEAK_ATT = p_att * (alt_u32) 0x80000;
+	if(peak_att + peak_sus >= 2) PEAK_ATT = 0xFFFFF;
 	PEAK_SUS = peak_sus * (alt_u32) 0x80000;
 	ATT_LEN = (att_m_seconds * F_S) / 1000;
+	if(!ATT_LEN) ATT_LEN = 1;
 	ATT_STEP = PEAK_ATT / ATT_LEN;
 	DEC_LEN = (dec_m_seconds * F_S) / 1000;
+	if(!DEC_LEN) DEC_LEN = 1;
 	DEC_STEP = (PEAK_ATT - PEAK_SUS) / DEC_LEN;
 	SUS_LEN = (sus_m_seconds * F_S) / 1000;
+	if(!SUS_LEN) SUS_LEN = 1;
 	SUS_STEP = PEAK_SUS / SUS_LEN;
 	REL_LEN = (rel_m_seconds * F_S) / 1000;
+	if(!REL_LEN) REL_LEN = 1;
 	REL_STEP = PEAK_SUS / REL_LEN;
 
-	set_adsr(PEAK_A, PEAK_ATT);
-	printf("PEAK_ATT Set:  %X\n", synth->ADSR[PEAK_A]);
-	set_adsr(ATT_S, ATT_STEP);
-	printf("ATT_STEP Set:  %X\n", synth->ADSR[ATT_S]);
-	set_adsr(DEC_S, DEC_STEP);
-	printf("DEC_STEP Set:  %X\n", synth->ADSR[DEC_S]);
-	set_adsr(PEAK_S, PEAK_SUS);
-	printf("PEAK_S Set:  %X\n", synth->ADSR[PEAK_S]);
-	set_adsr(SUS_S, SUS_STEP);
-	printf("SUS_STEP Set:  %X\n", synth->ADSR[SUS_S]);
-	set_adsr(REL_S, REL_STEP);
-	printf("REL_STEP Set:  %X\n", synth->ADSR[REL_S]);
+	set_ctrl(0, PEAK_A, PEAK_ATT);
+	set_ctrl(0, ATT_S, ATT_STEP);
+	set_ctrl(0, DEC_S, DEC_STEP);
+	set_ctrl(0, PEAK_S, PEAK_SUS);
+	set_ctrl(0, SUS_S, SUS_STEP);
+	set_ctrl(0, REL_S, REL_STEP);
 
+	printf("Attack Time:\t%d\n", att_m_seconds);
+	printf("Decay Time:\t%d\n", dec_m_seconds);
+	printf("Sustain Time:\t%d\n", sus_m_seconds);
+	printf("Release Time:\t%d\n", rel_m_seconds);
+	printf("Peak Attack:\t%f\n", p_att);
+	printf("Peak Sustain:\t%f\n", peak_sus);
+	printf("PEAK_ATT:\t%X\n", PEAK_ATT);
+	printf("PEAK_SUS:\t%X\n\n", PEAK_SUS);
 	return;
 }

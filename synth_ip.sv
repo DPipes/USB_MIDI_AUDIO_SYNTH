@@ -82,7 +82,7 @@ always_comb begin
 	PHASE_MUX =	1'b1;
 	AMP_SEL =	1'b0;
 	SUS =			1'b0;
-	if (SUS_PEDAL >= 7'h28) SUS = 1'b1;
+	if (SUS_PEDAL >= 7'h40) SUS = 1'b1;
 	NOTE_ON = (PLAY[0] || SUS);
 	ATT_ON =		PLAY[1];
 	NEXT_PLAY = {!NOTE_END, !ATT_OFF, PLAY[0] && !NOTE_END};
