@@ -9,29 +9,63 @@ The audio synthesizer can handle playing all 128 MIDI notes simultaneously and i
 To run the design it needs to be connected to some sort of MIDI controller via the USB port. In its current configuration it cannot act as USB slave. Therefore, it cannot connect to a PC to recieve MIDI data, though an Android phone was successful intermittently. With an acceptable device connected, it only needs to be programmed through Quartus and Eclipse and after initializing it should be able to play notes as sent from the MIDI controller.
 
 MIDI Notes:
-	- The device is only configured to play notes on the channel indexed 0, commonly referred to as channel 1 in MIDI, any notes sent on other channels will not be played.
-	- Many of the controls (volume, pitch bend, ADSR settings, mod wheel, etc.) are mapped to specific MIDI control numbers that may be configured differently depending on the controller, even without these controls it should still be able to play properly after being programmed in Eclipse.
-	- The control numbers it uses are listed below.
+
+- The device is only configured to play notes on the channel indexed 0, commonly referred to as channel 1 in MIDI, any notes sent on other channels will not be played.
+	
+- Many of the controls (volume, pitch bend, ADSR settings, mod wheel, etc.) are mapped to specific MIDI control numbers that may be configured differently depending on the controller, even without these controls it should still be able to play properly after being programmed in Eclipse.
+	
+- The control numbers it uses are listed below.
 
 Control Changes:
 
-MODULATION WHEEL	0x01
-CHANNEL VOLUME		0x07	
-WAVETABLE 1 SEL		0x09	Selects from the upper byte of the control value which of the 8 wavetables is played when not using mod wheel.
-WAVETABLE 2 SEL		0x0E	Selects from the upper byte of the control value which of the 8 wavetables is used when mixing with mod wheel.
-SUSTAIN PEDAL		0x40	
-INVERT PEDAL		0x52*	When high, inverts pedal control. Depending on the devices used, some pedals will read high when off and this counters that. 
-MODULATION WHEEL ACTIVE	0x55*	Allows the mod wheel to be used to mix 2 wavetable outputs together.
-BEND ACTIVE		0x56*	Allows pitch bend wheel to be used.
-ATTACK TIME HIGH	0x49	
-ATTACK TIME LOW		0x68	In order to allow finer control of ADSR times, there is both a high and low control for each parameter.
-DECAY TIME HIGH		0x4B	These are not high and low bytes, rather the HIGH control has a total range 25 times that of the LOW control.
-DECAY TIME LOW		0x69	The attack and decay times do not have as great of a range as the release time which is also less than the sustain time.
-SUSTAIN TIME HIGH	0x03	This is so that the user has very fine control of attack and decay, which will generally be shorter, and it is possible to
-SUSTAIN TIME LOW	0x6A	have prolonged sustain and release times.
-RELEASE TIME HIGH	0x48
-RELEASE TIME LOW	0x6B	
-ATTACK AMPLITUDE	0x6C	The attack amplitude control is relative to the sustain amplitude. At 0 the attack amplitude will equal the sustain amplitude and
-SUSTAIN AMPLITUDE	0x6D	at a maximum it will be double
+<b>0x07: CHANNEL VOLUME</b>
 
-*These parameters read the least significant bit of the control value so they should be connected to a switch that only outputs either 0x00 or 0x7F.
+<b>0x09: WAVETABLE 1</b>
+
+- Selects which of the 8 wavetables is played when not using mod wheel. Selection is based on upper byte of the control value.
+
+<b>0x0E: WAVETABLE 2</b>
+
+- Selects which of the 8 wavetables is used when mixing with mod wheel. Selection is based on upper byte of the control value.
+
+<b>0x55: MODULATION WHEEL ACTIVE</b>	*
+
+- Allows the mod wheel to be used to mix 2 wavetable outputs together.
+
+<b>0x01: MODULATION WHEEL</b>
+
+<b>0x40: SUSTAIN PEDAL</b>
+
+<b>0x52: INVERT PEDAL</b>	*
+
+- When high, inverts pedal control. Depending on the devices used, some pedals will read high when off and this counters that. 
+
+<b>0x56: BEND ACTIVE</b>	*
+
+- Allows pitch bend wheel to be used.
+
+<em>In order to allow finer control of ADSR times, there is both a high and low control for each parameter. These are not high and low bytes, rather the HIGH control has a total range 25 times that of the LOW control. The attack and decay times do not have as great of a range as the release time which is also less than the sustain time. This is so that the user has very fine control of attack and decay, which will generally be shorter, and it is possible to have prolonged sustain and release times.</em>
+
+<b>0x49: ATTACK TIME HIGH</b>
+
+<b>0x68: ATTACK TIME LOW</b>
+
+<b>0x4B: DECAY TIME HIGH</b>
+
+<b>0x69: DECAY TIME LOW</b>
+
+<b>0x03: SUSTAIN TIME HIGH</b>
+
+<b>0x6A: SUSTAIN TIME LOW</b>
+
+<b>0x48: RELEASE TIME HIGH</b>
+
+<b>0x6B: RELEASE TIME LOW</b>	
+
+<em>The attack amplitude control is relative to the sustain amplitude. At 0 the attack amplitude will equal the sustain amplitude and at a maximum it will be double</em>
+
+<b>0x6C: ATTACK AMPLITUDE</b>	
+
+<b>0x6D: SUSTAIN AMPLITUDE</b>
+
+*<em> These parameters read the least significant bit of the control value so they should be connected to a switch that only outputs either 0x00 or 0x7F.</em>
