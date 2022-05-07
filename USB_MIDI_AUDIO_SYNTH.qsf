@@ -268,7 +268,6 @@ set_global_assignment -name SDC_FILE FINAL.sdc
 set_global_assignment -name QIP_FILE USB_MIDI_AUDIO_SYNTH/synthesis/USB_MIDI_AUDIO_SYNTH.qip
 set_global_assignment -name SYSTEMVERILOG_FILE TOP.sv
 set_global_assignment -name SYSTEMVERILOG_FILE I2S.sv
-set_global_assignment -name SYSTEMVERILOG_FILE wavetable.sv
 set_global_assignment -name QIP_FILE FIFO.qip
 set_global_assignment -name SYSTEMVERILOG_FILE synth_ip.sv
 set_global_assignment -name SYSTEMVERILOG_FILE testbench.sv
