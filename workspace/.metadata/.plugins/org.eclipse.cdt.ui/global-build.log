@@ -11337,3 +11337,243 @@ Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
 [BSP build complete]
 [USB_MIDI_AUDIO_SYNTH build complete]
+15:40:04 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]
+16:06:11 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]
+16:24:36 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+Info: Compiling include/sgtl5000.cpp to obj/default/include/sgtl5000.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/sgtl5000.o include/sgtl5000.cpp
+Info: Compiling main.cpp to obj/default/main.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.cpp
+In file included from main.cpp:13:0:
+include/usbh_midi.h:179:37: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+Info: Linking USB_MIDI_AUDIO_SYNTH.elf
+         void (*pFuncOnInit)(void) = 0; // Pointer to function called in onInit()
+nios2-elf-g++  -T'../USB_MIDI_AUDIO_SYNTH_bsp//linker.x' -msys-crt0='../USB_MIDI_AUDIO_SYNTH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../USB_MIDI_AUDIO_SYNTH_bsp/   -Wl,-Map=USB_MIDI_AUDIO_SYNTH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o USB_MIDI_AUDIO_SYNTH.elf obj/default/include/Port.o obj/default/include/SPI.o obj/default/include/Usb.o obj/default/include/XBOXONE.o obj/default/include/audio_synth.o obj/default/include/hidboot.o obj/default/include/message.o obj/default/include/parsetools.o obj/default/include/sgtl5000.o obj/default/include/usbh_midi.o obj/default/include/usbhid.o obj/default/include/usbhost.o obj/default/main.o -lm -msys-lib=m
+                                     ^
+In file included from main.cpp:14:0:
+include/audio_synth.h:31:44: warning: 'synth' defined but not used [-Wunused-variable]
+ static volatile struct AUDIO_SYNTH_STRUCT* synth = (AUDIO_SYNTH_STRUCT *) AUDIO_BASE;
+                                            ^
+nios2-elf-insert USB_MIDI_AUDIO_SYNTH.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x4001270 --timestamp 1651868999 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name USB_MIDI_AUDIO_SYNTH --quartus_project_dir "C:/Users/dpipe/OneDrive/School/ECE385/Final" --jdi ../..//output_files/USB_MIDI_AUDIO_SYNTH.jdi --sopcinfo C:/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH_bsp/../../USB_MIDI_AUDIO_SYNTH.sopcinfo
+Info: (USB_MIDI_AUDIO_SYNTH.elf) 188 KBytes program size (code + initialized data).
+Info:                            65335 KBytes free for stack + heap.
+Info: Creating USB_MIDI_AUDIO_SYNTH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source USB_MIDI_AUDIO_SYNTH.elf >USB_MIDI_AUDIO_SYNTH.objdump
+[USB_MIDI_AUDIO_SYNTH build complete]
+16:24:42 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+16:24:44 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]
+16:25:19 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+Info: Compiling include/sgtl5000.cpp to obj/default/include/sgtl5000.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/sgtl5000.o include/sgtl5000.cpp
+Info: Compiling main.cpp to obj/default/main.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.cpp
+In file included from main.cpp:13:0:
+include/usbh_midi.h:179:37: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+         void (*pFuncOnInit)(void) = 0; // Pointer to function called in onInit()
+                                     ^
+In file included from main.cpp:14:0:
+include/audio_synth.h:31:44: warning: 'synth' defined but not used [-Wunused-variable]
+ static volatile struct AUDIO_SYNTH_STRUCT* synth = (AUDIO_SYNTH_STRUCT *) AUDIO_BASE;
+                                            ^
+Info: Linking USB_MIDI_AUDIO_SYNTH.elf
+nios2-elf-g++  -T'../USB_MIDI_AUDIO_SYNTH_bsp//linker.x' -msys-crt0='../USB_MIDI_AUDIO_SYNTH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../USB_MIDI_AUDIO_SYNTH_bsp/   -Wl,-Map=USB_MIDI_AUDIO_SYNTH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o USB_MIDI_AUDIO_SYNTH.elf obj/default/include/Port.o obj/default/include/SPI.o obj/default/include/Usb.o obj/default/include/XBOXONE.o obj/default/include/audio_synth.o obj/default/include/hidboot.o obj/default/include/message.o obj/default/include/parsetools.o obj/default/include/sgtl5000.o obj/default/include/usbh_midi.o obj/default/include/usbhid.o obj/default/include/usbhost.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert USB_MIDI_AUDIO_SYNTH.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x4001270 --timestamp 1651868999 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name USB_MIDI_AUDIO_SYNTH --quartus_project_dir "C:/Users/dpipe/OneDrive/School/ECE385/Final" --jdi ../..//output_files/USB_MIDI_AUDIO_SYNTH.jdi --sopcinfo C:/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH_bsp/../../USB_MIDI_AUDIO_SYNTH.sopcinfo
+Info: (USB_MIDI_AUDIO_SYNTH.elf) 188 KBytes program size (code + initialized data).
+Info:                            65335 KBytes free for stack + heap.
+Info: Creating USB_MIDI_AUDIO_SYNTH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source USB_MIDI_AUDIO_SYNTH.elf >USB_MIDI_AUDIO_SYNTH.objdump
+[USB_MIDI_AUDIO_SYNTH build complete]
+16:25:22 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+16:25:24 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]
+16:26:51 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+Info: Compiling include/sgtl5000.cpp to obj/default/include/sgtl5000.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/sgtl5000.o include/sgtl5000.cpp
+Info: Compiling main.cpp to obj/default/main.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.cpp
+In file included from main.cpp:13:0:
+include/usbh_midi.h:179:37: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+         void (*pFuncOnInit)(void) = 0; // Pointer to function called in onInit()
+                                     ^
+In file included from main.cpp:14:0:
+include/audio_synth.h:31:44: warning: 'synth' defined but not used [-Wunused-variable]
+ static volatile struct AUDIO_SYNTH_STRUCT* synth = (AUDIO_SYNTH_STRUCT *) AUDIO_BASE;
+                                            ^
+Info: Linking USB_MIDI_AUDIO_SYNTH.elf
+nios2-elf-g++  -T'../USB_MIDI_AUDIO_SYNTH_bsp//linker.x' -msys-crt0='../USB_MIDI_AUDIO_SYNTH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../USB_MIDI_AUDIO_SYNTH_bsp/   -Wl,-Map=USB_MIDI_AUDIO_SYNTH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o USB_MIDI_AUDIO_SYNTH.elf obj/default/include/Port.o obj/default/include/SPI.o obj/default/include/Usb.o obj/default/include/XBOXONE.o obj/default/include/audio_synth.o obj/default/include/hidboot.o obj/default/include/message.o obj/default/include/parsetools.o obj/default/include/sgtl5000.o obj/default/include/usbh_midi.o obj/default/include/usbhid.o obj/default/include/usbhost.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert USB_MIDI_AUDIO_SYNTH.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x4001270 --timestamp 1651868999 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name USB_MIDI_AUDIO_SYNTH --quartus_project_dir "C:/Users/dpipe/OneDrive/School/ECE385/Final" --jdi ../..//output_files/USB_MIDI_AUDIO_SYNTH.jdi --sopcinfo C:/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH_bsp/../../USB_MIDI_AUDIO_SYNTH.sopcinfo
+Info: (USB_MIDI_AUDIO_SYNTH.elf) 188 KBytes program size (code + initialized data).
+Info:                            65335 KBytes free for stack + heap.
+Info: Creating USB_MIDI_AUDIO_SYNTH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source USB_MIDI_AUDIO_SYNTH.elf >USB_MIDI_AUDIO_SYNTH.objdump
+[USB_MIDI_AUDIO_SYNTH build complete]
+16:26:54 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+16:27:23 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+Info: Compiling include/sgtl5000.cpp to obj/default/include/sgtl5000.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/sgtl5000.o include/sgtl5000.cpp
+Info: Compiling main.cpp to obj/default/main.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.cpp
+In file included from main.cpp:13:0:
+include/usbh_midi.h:179:37: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+         void (*pFuncOnInit)(void) = 0; // Pointer to function called in onInit()
+                                     ^
+In file included from main.cpp:14:0:
+include/audio_synth.h:31:44: warning: 'synth' defined but not used [-Wunused-variable]
+ static volatile struct AUDIO_SYNTH_STRUCT* synth = (AUDIO_SYNTH_STRUCT *) AUDIO_BASE;
+                                            ^
+Info: Linking USB_MIDI_AUDIO_SYNTH.elf
+nios2-elf-g++  -T'../USB_MIDI_AUDIO_SYNTH_bsp//linker.x' -msys-crt0='../USB_MIDI_AUDIO_SYNTH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../USB_MIDI_AUDIO_SYNTH_bsp/   -Wl,-Map=USB_MIDI_AUDIO_SYNTH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o USB_MIDI_AUDIO_SYNTH.elf obj/default/include/Port.o obj/default/include/SPI.o obj/default/include/Usb.o obj/default/include/XBOXONE.o obj/default/include/audio_synth.o obj/default/include/hidboot.o obj/default/include/message.o obj/default/include/parsetools.o obj/default/include/sgtl5000.o obj/default/include/usbh_midi.o obj/default/include/usbhid.o obj/default/include/usbhost.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert USB_MIDI_AUDIO_SYNTH.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x4001270 --timestamp 1651868999 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name USB_MIDI_AUDIO_SYNTH --quartus_project_dir "C:/Users/dpipe/OneDrive/School/ECE385/Final" --jdi ../..//output_files/USB_MIDI_AUDIO_SYNTH.jdi --sopcinfo C:/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH_bsp/../../USB_MIDI_AUDIO_SYNTH.sopcinfo
+Info: (USB_MIDI_AUDIO_SYNTH.elf) 188 KBytes program size (code + initialized data).
+Info:                            65335 KBytes free for stack + heap.
+Info: Creating USB_MIDI_AUDIO_SYNTH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source USB_MIDI_AUDIO_SYNTH.elf >USB_MIDI_AUDIO_SYNTH.objdump
+[USB_MIDI_AUDIO_SYNTH build complete]
+16:27:27 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+16:28:00 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+Info: Compiling include/sgtl5000.cpp to obj/default/include/sgtl5000.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/sgtl5000.o include/sgtl5000.cpp
+Info: Compiling main.cpp to obj/default/main.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.cpp
+In file included from main.cpp:13:0:
+include/usbh_midi.h:179:37: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+         void (*pFuncOnInit)(void) = 0; // Pointer to function called in onInit()
+                                     ^
+In file included from main.cpp:14:0:
+include/audio_synth.h:31:44: warning: 'synth' defined but not used [-Wunused-variable]
+ static volatile struct AUDIO_SYNTH_STRUCT* synth = (AUDIO_SYNTH_STRUCT *) AUDIO_BASE;
+                                            ^
+Info: Linking USB_MIDI_AUDIO_SYNTH.elf
+nios2-elf-g++  -T'../USB_MIDI_AUDIO_SYNTH_bsp//linker.x' -msys-crt0='../USB_MIDI_AUDIO_SYNTH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../USB_MIDI_AUDIO_SYNTH_bsp/   -Wl,-Map=USB_MIDI_AUDIO_SYNTH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o USB_MIDI_AUDIO_SYNTH.elf obj/default/include/Port.o obj/default/include/SPI.o obj/default/include/Usb.o obj/default/include/XBOXONE.o obj/default/include/audio_synth.o obj/default/include/hidboot.o obj/default/include/message.o obj/default/include/parsetools.o obj/default/include/sgtl5000.o obj/default/include/usbh_midi.o obj/default/include/usbhid.o obj/default/include/usbhost.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert USB_MIDI_AUDIO_SYNTH.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x4001270 --timestamp 1651868999 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name USB_MIDI_AUDIO_SYNTH --quartus_project_dir "C:/Users/dpipe/OneDrive/School/ECE385/Final" --jdi ../..//output_files/USB_MIDI_AUDIO_SYNTH.jdi --sopcinfo C:/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH_bsp/../../USB_MIDI_AUDIO_SYNTH.sopcinfo
+Info: (USB_MIDI_AUDIO_SYNTH.elf) 188 KBytes program size (code + initialized data).
+Info:                            65335 KBytes free for stack + heap.
+Info: Creating USB_MIDI_AUDIO_SYNTH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source USB_MIDI_AUDIO_SYNTH.elf >USB_MIDI_AUDIO_SYNTH.objdump
+[USB_MIDI_AUDIO_SYNTH build complete]
+16:28:04 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+16:39:24 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+Info: Compiling include/audio_synth.cpp to obj/default/include/audio_synth.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/audio_synth.o include/audio_synth.cpp
+Info: Linking USB_MIDI_AUDIO_SYNTH.elf
+nios2-elf-g++  -T'../USB_MIDI_AUDIO_SYNTH_bsp//linker.x' -msys-crt0='../USB_MIDI_AUDIO_SYNTH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../USB_MIDI_AUDIO_SYNTH_bsp/   -Wl,-Map=USB_MIDI_AUDIO_SYNTH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o USB_MIDI_AUDIO_SYNTH.elf obj/default/include/Port.o obj/default/include/SPI.o obj/default/include/Usb.o obj/default/include/XBOXONE.o obj/default/include/audio_synth.o obj/default/include/hidboot.o obj/default/include/message.o obj/default/include/parsetools.o obj/default/include/sgtl5000.o obj/default/include/usbh_midi.o obj/default/include/usbhid.o obj/default/include/usbhost.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert USB_MIDI_AUDIO_SYNTH.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x4001270 --timestamp 1651868999 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name USB_MIDI_AUDIO_SYNTH --quartus_project_dir "C:/Users/dpipe/OneDrive/School/ECE385/Final" --jdi ../..//output_files/USB_MIDI_AUDIO_SYNTH.jdi --sopcinfo C:/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH_bsp/../../USB_MIDI_AUDIO_SYNTH.sopcinfo
+Info: (USB_MIDI_AUDIO_SYNTH.elf) 187 KBytes program size (code + initialized data).
+Info:                            65335 KBytes free for stack + heap.
+Info: Creating USB_MIDI_AUDIO_SYNTH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source USB_MIDI_AUDIO_SYNTH.elf >USB_MIDI_AUDIO_SYNTH.objdump
+[USB_MIDI_AUDIO_SYNTH build complete]
+16:39:28 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+16:39:45 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]
+19:03:49 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+Info: Compiling include/sgtl5000.cpp to obj/default/include/sgtl5000.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/include/sgtl5000.o include/sgtl5000.cpp
+Info: Compiling main.cpp to obj/default/main.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../USB_MIDI_AUDIO_SYNTH_bsp//HAL/inc -I../USB_MIDI_AUDIO_SYNTH_bsp/ -I../USB_MIDI_AUDIO_SYNTH_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.cpp
+In file included from main.cpp:13:0:
+include/usbh_midi.h:179:37: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+         void (*pFuncOnInit)(void) = 0; // Pointer to function called in onInit()
+                                     ^
+In file included from main.cpp:14:0:
+include/audio_synth.h:31:44: warning: 'synth' defined but not used [-Wunused-variable]
+ static volatile struct AUDIO_SYNTH_STRUCT* synth = (AUDIO_SYNTH_STRUCT *) AUDIO_BASE;
+                                            ^
+Info: Linking USB_MIDI_AUDIO_SYNTH.elf
+nios2-elf-g++  -T'../USB_MIDI_AUDIO_SYNTH_bsp//linker.x' -msys-crt0='../USB_MIDI_AUDIO_SYNTH_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../USB_MIDI_AUDIO_SYNTH_bsp/   -Wl,-Map=USB_MIDI_AUDIO_SYNTH.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o USB_MIDI_AUDIO_SYNTH.elf obj/default/include/Port.o obj/default/include/SPI.o obj/default/include/Usb.o obj/default/include/XBOXONE.o obj/default/include/audio_synth.o obj/default/include/hidboot.o obj/default/include/message.o obj/default/include/parsetools.o obj/default/include/sgtl5000.o obj/default/include/usbh_midi.o obj/default/include/usbhid.o obj/default/include/usbhost.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert USB_MIDI_AUDIO_SYNTH.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x4001270 --timestamp 1651868999 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name USB_MIDI_AUDIO_SYNTH --quartus_project_dir "C:/Users/dpipe/OneDrive/School/ECE385/Final" --jdi ../..//output_files/USB_MIDI_AUDIO_SYNTH.jdi --sopcinfo C:/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH_bsp/../../USB_MIDI_AUDIO_SYNTH.sopcinfo
+Info: (USB_MIDI_AUDIO_SYNTH.elf) 187 KBytes program size (code + initialized data).
+Info:                            65335 KBytes free for stack + heap.
+Info: Creating USB_MIDI_AUDIO_SYNTH.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source USB_MIDI_AUDIO_SYNTH.elf >USB_MIDI_AUDIO_SYNTH.objdump
+[USB_MIDI_AUDIO_SYNTH build complete]
+19:03:53 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+19:05:57 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]
+19:05:58 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+19:07:45 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]
+19:07:47 **** Incremental Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH_bsp ****
+make all 
+[BSP build complete]
+19:14:00 **** Build of configuration Nios II for project USB_MIDI_AUDIO_SYNTH ****
+make all 
+Info: Building ../USB_MIDI_AUDIO_SYNTH_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../USB_MIDI_AUDIO_SYNTH_bsp/
+[BSP build complete]
+[USB_MIDI_AUDIO_SYNTH build complete]

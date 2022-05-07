@@ -48,23 +48,23 @@ void calc_adsr(alt_u16 att_h, alt_u16 att_l, alt_u16 dec_h, alt_u16 dec_l, alt_u
 	if (p_att > 2) p_att = 2;
 
 	if (att_m_seconds > 5000) {
-		//printf("ERROR: Requested attack length is too long.\n");
+		printf("ERROR: Requested attack length is too long.\n");
 		return;
 	}
 	if (dec_m_seconds > 5000) {
-		//printf("ERROR: Requested decay length is too long.\n");
+		printf("ERROR: Requested decay length is too long.\n");
 		return;
 	}
 	if (sus_m_seconds > 20000) {
-		//printf("ERROR: Requested sustain length is too long.\n");
+		printf("ERROR: Requested sustain length is too long.\n");
 		return;
 	}
 	if (sus_m_seconds < rel_m_seconds) {
-		//printf("ERROR: Requested sustain length must be longer than release length.\n");
+		printf("ERROR: Requested sustain length must be longer than release length.\n");
 		return;
 	}
 	if (rel_m_seconds > 10000) {
-		//printf("ERROR: Requested release length is too long.\n");
+		printf("ERROR: Requested release length is too long.\n");
 		return;
 	}
 
