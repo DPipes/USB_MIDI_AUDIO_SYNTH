@@ -62,7 +62,7 @@ Control Changes:
 
 <b>0x6B: RELEASE TIME LOW</b>	
 
-<em>The attack amplitude control is relative to the sustain amplitude. At 0 the attack amplitude will equal the sustain amplitude and at a maximum it will be double</em>
+<em>The attack amplitude control is relative to the sustain amplitude. At 0 the attack amplitude will equal the sustain amplitude and at a maximum it will be double. I would not recommend setting either amplitude exactly to 0 though because it gets funky and will beat you up.</em>
 
 <b>0x6C: ATTACK AMPLITUDE</b>	
 
