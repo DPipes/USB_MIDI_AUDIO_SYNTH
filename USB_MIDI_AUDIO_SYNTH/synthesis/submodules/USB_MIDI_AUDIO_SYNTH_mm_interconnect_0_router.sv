@@ -301,13 +301,13 @@ module USB_MIDI_AUDIO_SYNTH_mm_interconnect_0_router
 
     // ( 0x4001278 .. 0x4001280 )
     if ( {address[RG:PAD15],{PAD15{1'b0}}} == 27'h4001278   ) begin
-            src_channel = 17'b00000000000000001;
+            src_channel = 17'b00000000000000010;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
     // ( 0x4001400 .. 0x4001800 )
     if ( {address[RG:PAD16],{PAD16{1'b0}}} == 27'h4001400   ) begin
-            src_channel = 17'b00000000000000010;
+            src_channel = 17'b00000000000000001;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end
 
