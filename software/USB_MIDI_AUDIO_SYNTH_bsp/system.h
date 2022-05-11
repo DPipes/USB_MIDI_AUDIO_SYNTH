@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2' in SOPC Builder design 'USB_MIDI_AUDIO_SYNTH'
  * SOPC Builder design path: ../../USB_MIDI_AUDIO_SYNTH.sopcinfo
  *
- * Generated: Fri May 06 21:29:44 CDT 2022
+ * Generated: Sat May 07 00:59:55 CDT 2022
  */
 
 /*

@@ -66,8 +66,8 @@ always_comb begin
 	SUS_PEDAL = ctrl_reg[6][6:0];
 	MOD_MUX = 	ctrl_reg[7][0];
 	MOD =			ctrl_reg[8][6:0];
-	SAMPLE_MUX_1 = ctrl_reg[9][6:4];
-	SAMPLE_MUX_2 = ctrl_reg[10][6:4];
+	SAMPLE_MUX = ctrl_reg[9][6:4];
+	LFO_SAMPLE_MUX = ctrl_reg[10][6:4];
 	BEND_MUX = 	ctrl_reg[11][0];
 	BEND =		ctrl_reg[12][13:0];
 	AVL_PLAY =	AVL_WRITEDATA[7];

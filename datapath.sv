@@ -2,11 +2,12 @@
 `define numSamples 8
 
 module data_path(input logic CLK, RESET,
-					  input logic LD_PHASE, LD_TONE, LD_AMP, LD_VEL,
-					  input logic TONE_MUX, PHASE_MUX, AMP_SEL, MOD_MUX, BEND_MUX,
+					  input logic LD_PHASE, LD_TONE, LD_AMP, LD_VEL, LD_LFO,
+					  input logic TONE_MUX, AMP_SEL, MOD_MUX, BEND_MUX,
 					  input logic NOTE_ON, ATT_ON,
-					  input logic [2:0] SAMPLE_MUX_1, SAMPLE_MUX_2,
-					  input logic [6:0] KEY, AVL_KEY, AVL_VEL, MOD,
+					  input logic [1:0] PHASE_MUX,
+					  input logic [2:0] SAMPLE_MUX,
+					  input logic [6:0] KEY, AVL_KEY, AVL_VEL, LFO_F,
 					  input logic [13:0] BEND,
 					  input logic [19:0] PEAK_ATT, ATT_STEP, DEC_STEP, PEAK_SUS, SUS_STEP, REL_STEP,
 					  output logic NOTE_END, ATT_OFF,
@@ -18,13 +19,14 @@ module data_path(input logic CLK, RESET,
 logic [6:0]		vel_reg [`numKeys];
 logic [20:0]	amp_reg [`numKeys];
 logic [23:0]	phase_reg [`numKeys];
+logic [17:0]	LFO_reg;
 
 logic [2:0]		AMP_MUX;
-logic [6:0]		VELOCITY, INV_MOD;
+logic [6:0]		VELOCITY;
 logic [15:0]	SAMPLE [`numSamples];
-logic [15:0]	SAMPLE_1, SAMPLE_2;
+logic [15:0]	PLAY_SAMPLE, SAMPLE_A, SAMPLE_B;
 logic [20:0]	AMP_O, ATT_AMP, DEC_AMP, SUS_AMP, REL_AMP, AMP_MUX_O;
-logic [22:0]	SEXT_SAMPLE_1, SEXT_SAMPLE_2, MOD_SAMPLE, PLAY_SAMPLE;
+logic [22:0]	SEXT_SAMPLE_1, SEXT_SAMPLE_2;
 logic [23:0]	PHASE, PHASE_INC, PHASE_MUX_O, F;
 logic [27:0]	AMP;
 logic [31:0]	SEXT_SAMPLE, AMP_SAMPLE, TONE_INC, TONE_MUX_O;
@@ -40,6 +42,7 @@ strange2_table STRANGE2_TABLE(.*, .SAMPLE(SAMPLE[4]), .ADDR(PHASE[23:12]));
 strange3_table STRANGE3_TABLE(.*, .SAMPLE(SAMPLE[5]), .ADDR(PHASE[23:12]));
 strange4_table STRANGE4_TABLE(.*, .SAMPLE(SAMPLE[6]), .ADDR(PHASE[23:12]));
 strange5_table STRANGE5_TABLE(.*, .SAMPLE(SAMPLE[7]), .ADDR(PHASE[23:12]));
+interpolater_64 INTERP(.*, .VAL(LFO_reg[5:0]), SAMPLE_A, SAMPLE_B, INT_SAMPLE);
 
 always_ff @ (posedge CLK) begin
 
@@ -51,6 +54,7 @@ always_ff @ (posedge CLK) begin
 		if(LD_PHASE)	phase_reg[KEY] <= PHASE_MUX_O;
 		if(LD_AMP)		amp_reg[KEY] <= AMP_MUX_O;
 		if(LD_TONE)		TONE <= TONE_MUX_O;
+		if(LD_LFO)		LFO_reg <= (LFO_reg + LFO_F);
 
 		if(LD_VEL)		vel_reg[AVL_KEY] <= AVL_VEL;
 		
@@ -67,9 +71,7 @@ always_comb begin
 	VELOCITY =	vel_reg[KEY];
 	PHASE =		phase_reg[KEY];
 	
-	SAMPLE_1 = SAMPLE[SAMPLE_MUX_1];
-	SAMPLE_2 = SAMPLE[SAMPLE_MUX_2];
-	INV_MOD = 7'h7F - MOD;
+	PLAY_SAMPLE = SAMPLE[SAMPLE_MUX];
 	
 	F_B = F * BEND;
 
@@ -78,18 +80,15 @@ always_comb begin
 		1'b1: PHASE_INC = PHASE + F_B[37:13];
 	endcase
 	
-	SEXT_SAMPLE_1 = {SAMPLE_1[15], SAMPLE_1[15], SAMPLE_1[15], SAMPLE_1[15], SAMPLE_1[15], SAMPLE_1[15], SAMPLE_1};
-	SEXT_SAMPLE_2 = {SAMPLE_2[15], SAMPLE_2[15], SAMPLE_2[15], SAMPLE_2[15], SAMPLE_2[15], SAMPLE_2[15], SAMPLE_2};
-	MOD_SAMPLE = (SEXT_SAMPLE_1 * MOD) + (SEXT_SAMPLE_2 * INV_MOD);
-	
 	case (MOD_MUX)
-		1'b0: PLAY_SAMPLE = {SAMPLE_1, 7'h00};
-		1'b1: PLAY_SAMPLE = MOD_SAMPLE;
+		// ADD IN FUNCTION
 	endcase
 	
 	case (PHASE_MUX)
-		1'b0: PHASE_MUX_O = 24'h000000;
-		1'b1: PHASE_MUX_O = PHASE_INC;
+		2'b00: PHASE_MUX_O = 24'h000000;
+		2'b01: PHASE_MUX_O = PHASE_INC;
+		2'b10: PHASE_MUX_O = LFO_reg[17:6];
+		2'b11: PHASE_MUX_O = LFO_reg[17:6] + 12'h001;
 	endcase
 	
 	// Calculate possible next amplification multipliers
@@ -112,7 +111,7 @@ always_comb begin
 		default: AMP_MUX_O = 21'b0;
 	endcase
 	
-	SEXT_SAMPLE = {PLAY_SAMPLE[22], PLAY_SAMPLE[22], PLAY_SAMPLE[22], PLAY_SAMPLE[22], PLAY_SAMPLE[22], PLAY_SAMPLE[22], PLAY_SAMPLE[22], PLAY_SAMPLE[22], PLAY_SAMPLE[22], PLAY_SAMPLE[22], PLAY_SAMPLE[22], PLAY_SAMPLE[22], PLAY_SAMPLE[22], PLAY_SAMPLE[22], PLAY_SAMPLE[22], PLAY_SAMPLE[22], PLAY_SAMPLE[22:7]};
+	SEXT_SAMPLE = {PLAY_SAMPLE[15], PLAY_SAMPLE[15], PLAY_SAMPLE[15], PLAY_SAMPLE[15], PLAY_SAMPLE[15], PLAY_SAMPLE[15], PLAY_SAMPLE[15], PLAY_SAMPLE[15], PLAY_SAMPLE[15], PLAY_SAMPLE[15], PLAY_SAMPLE[15], PLAY_SAMPLE[15], PLAY_SAMPLE[15], PLAY_SAMPLE[15], PLAY_SAMPLE[15], PLAY_SAMPLE[15], PLAY_SAMPLE};
 	
 	AMP = AMP_MUX_O * {14'h000, VELOCITY};
 	

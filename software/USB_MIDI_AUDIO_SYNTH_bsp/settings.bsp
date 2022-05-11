@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>May 6, 2022 9:29:42 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1651890582932</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>May 7, 2022 12:59:54 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1651903194485</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\dpipe\OneDrive\School\ECE385\Final\software\USB_MIDI_AUDIO_SYNTH_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\USB_MIDI_AUDIO_SYNTH.sopcinfo</SopcDesignFile>

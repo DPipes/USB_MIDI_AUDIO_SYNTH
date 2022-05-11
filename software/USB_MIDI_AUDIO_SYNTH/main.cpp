@@ -28,11 +28,11 @@ ALT_AVALON_I2C_DEV_t *i2c_dev;
 //Initial global values
 alt_u16 att_h = 0;
 alt_u16 dec_h = 0;
-alt_u16 sus_h = 0;
+alt_u16 sus_h = 3000;
 alt_u16 rel_h = 0;
 alt_u16 att_l = 10;
 alt_u16 dec_l = 30;
-alt_u16 sus_l = 3000;
+alt_u16 sus_l = 0;
 alt_u16 rel_l = 80;
 float peak_att = 1.1;
 float peak_sus = 0.8;

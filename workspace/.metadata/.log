@@ -6702,3 +6702,324 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
 
 !ENTRY com.altera.sbtgui.launch 1 0 2022-05-06 21:30:58.099
 !MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+!SESSION 2022-05-07 00:58:37.134 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2022-05-07 00:58:48.770
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Received fatal alert: handshake_failure. ; version: 1.100.0.v20160217-0435
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Unknown Source)
+	at sun.security.ssl.Alerts.getSSLException(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:290)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:259)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:125)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:205)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 01:00:31.467
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 01:00:34.407
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 01:01:59.877
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 01:02:00.807
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 01:02:04.025
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 01:09:23.628
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 01:09:24.650
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 01:09:27.752
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 10:37:07.723
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 10:37:08.886
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 10:37:12.107
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 10:41:32.978
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 10:41:33.915
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 10:41:37.041
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 10:43:10.777
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 10:43:11.768
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 10:43:14.528
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 10:45:37.094
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 10:45:38.131
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 10:45:40.945
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 14:18:34.546
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 14:18:35.809
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 14:18:38.566
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 14:39:42.116
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 14:39:42.844
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-07 14:39:45.062
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-08 15:54:37.511
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-08 15:54:38.466
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-08 15:54:40.773
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-08 15:57:00.498
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-08 15:57:01.492
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-08 15:57:04.736
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-08 19:09:46.951
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-08 19:09:48.301
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-08 19:09:51.299
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-08 19:10:47.040
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-08 19:10:48.011
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-08 19:10:51.011
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-08 19:11:42.522
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-08 19:11:43.394
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-08 19:11:46.477
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+!SESSION 2022-05-09 01:49:57.131 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2022-05-09 01:50:34.399
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Received fatal alert: handshake_failure. ; version: 1.100.0.v20160217-0435
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Unknown Source)
+	at sun.security.ssl.Alerts.getSSLException(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:290)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:259)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:125)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:205)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2022-05-11 12:56:13.250
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:555)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2022-05-11 12:56:13.380
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:555)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 12:56:39.752
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 12:56:43.788
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 13:07:34.446
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 13:07:35.748
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 13:07:39.096
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 13:09:07.229
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 13:09:08.550
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 13:09:12.017
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 13:09:55.716
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 13:09:56.973
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 13:10:00.266
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 14:24:35.905
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 14:24:36.954
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 14:24:39.753
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 14:25:56.950
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 14:25:58.143
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 14:26:01.372
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 14:44:56.623
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 14:44:57.755
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 14:45:01.033
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 14:47:20.735
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 14:47:22.059
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 14:47:25.327
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 14:48:34.523
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 14:48:35.900
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 14:48:39.446
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 15:36:21.827
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 15:36:23.178
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 15:36:26.610
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 15:50:32.948
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 15:50:34.351
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4001270 --id=0x0 --timestamp=1651890265]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-05-11 15:50:37.982
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4001270 --id=0x0 --timestamp=1651890265 /cygdrive/c/Users/dpipe/OneDrive/School/ECE385/Final/software/USB_MIDI_AUDIO_SYNTH/USB_MIDI_AUDIO_SYNTH.elf]
