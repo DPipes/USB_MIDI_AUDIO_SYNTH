@@ -90,6 +90,7 @@ void SGTL5000audio_on(ALT_AVALON_I2C_DEV_t* dev) {
 			!DAC_MUTE_LEFT);
 	I2Creg_wr(dev, ANA_CTRL,
 			MUTE_LO |
+			EN_ZCD_HP |
 			!MUTE_HP |
 			MUTE_ADC);
 
@@ -111,7 +112,7 @@ void SGTL5000status(ALT_AVALON_I2C_DEV_t* dev) {
 }
 
 void SGTL5000vol_change(ALT_AVALON_I2C_DEV_t* dev, alt_u8 vol) {
-	alt_u32 new_vol = DAC_MIN_VOL - ((vol * DAC_VOL_RANGE) / 0x7F);
+	alt_u32 new_vol = HP_MIN_VOL - vol;
 	alt_u16 set_vol = ((new_vol << 8) | new_vol);
-	I2Creg_wr(dev, DAC_VOL, set_vol);
+	I2Creg_wr(dev, ANA_HP_CTRL, set_vol);
 }

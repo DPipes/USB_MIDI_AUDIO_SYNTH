@@ -73,7 +73,7 @@
 #define DAC_MUTE_LEFT	0x0004	//DP Mute left DAC
 
 // DAC_VOL	0.5dB steps
-#define DAC_VOL_INIT	0x70 	//S Initial DAC volume setting
+#define DAC_VOL_INIT	0x3C 	//S Initial DAC volume setting
 #define DAC_VOL_STEP	0x02	//	Step amount on volume button press
 #define DAC_MAX_VOL		0x3C	//	Max volume for either channel
 #define DAC_MIN_VOL		0xF0	//	Minimum volume for either channel

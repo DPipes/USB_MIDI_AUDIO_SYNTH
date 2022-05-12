@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2' in SOPC Builder design 'USB_MIDI_AUDIO_SYNTH'
  * SOPC Builder design path: ../../USB_MIDI_AUDIO_SYNTH.sopcinfo
  *
- * Generated: Fri May 06 21:29:44 CDT 2022
+ * Generated: Wed May 11 17:59:08 CDT 2022
  */
 
 /*
@@ -472,7 +472,7 @@
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1651890265
+#define SYSID_QSYS_0_TIMESTAMP 1652309611
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 

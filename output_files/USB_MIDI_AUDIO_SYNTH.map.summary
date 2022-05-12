@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri May 06 21:27:10 2022
+Analysis & Synthesis Status : Successful - Wed May 11 17:56:15 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : USB_MIDI_AUDIO_SYNTH
 Top-level Entity Name : TOP
 Family : MAX 10
-Total logic elements : 8,977
-    Total combinational functions : 6,832
+Total logic elements : 8,985
+    Total combinational functions : 6,840
     Dedicated logic registers : 4,407
 Total registers : 4407
 Total pins : 143
