@@ -12,11 +12,11 @@
 #define SUS_S		4
 #define REL_S		5
 #define SUS			6
-#define MOD_ON		7
-#define MOD			8
-#define SAMPLE_1	9
-#define SAMPLE_2	10
-#define BEND		11
+#define MIX			7
+#define SAMPLE_1	8
+#define SAMPLE_2	9
+#define BEND		10
+#define	PED_INV		11
 #define F_S			44100
 
 #include "system.h"

@@ -134,8 +134,8 @@ module Audio_Synthesizer_SoC_mm_interconnect_0_router
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h1000 - 64'h800); 
-    localparam PAD1 = log2ceil(64'h1800 - 64'h1400); 
+    localparam PAD0 = log2ceil(64'h400 - 64'h0); 
+    localparam PAD1 = log2ceil(64'h1000 - 64'h800); 
     localparam PAD2 = log2ceil(64'h18c0 - 64'h1880); 
     localparam PAD3 = log2ceil(64'h1900 - 64'h18c0); 
     localparam PAD4 = log2ceil(64'h1940 - 64'h1920); 
@@ -205,16 +205,16 @@ module Audio_Synthesizer_SoC_mm_interconnect_0_router
         // Sets the channel and destination ID based on the address
         // --------------------------------------------------
 
-    // ( 0x800 .. 0x1000 )
-    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 19'h800   ) begin
-            src_channel = 13'b0000000010000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
-    end
-
-    // ( 0x1400 .. 0x1800 )
-    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 19'h1400   ) begin
+    // ( 0x0 .. 0x400 )
+    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 19'h0   ) begin
             src_channel = 13'b0000000000001;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 12;
+    end
+
+    // ( 0x800 .. 0x1000 )
+    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 19'h800   ) begin
+            src_channel = 13'b0000000010000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
     // ( 0x1880 .. 0x18c0 )

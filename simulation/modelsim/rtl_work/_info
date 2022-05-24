@@ -1,0 +1,135 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/dpipe/OneDrive/Audio_Synthesizer/simulation/modelsim
+vFIFO
+!s110 1653398759
+!i10b 1
+!s100 R4g5:??IX>b6:gB27FSO41
+I?PJRTVabYhE1_GSjFkjbJ3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1652417467
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/FIFO.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/FIFO.v
+L0 40
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1653398759.000000
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/FIFO.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer|C:/Users/dpipe/OneDrive/Audio_Synthesizer/FIFO.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer
+Z3 tCvgOpt 0
+n@f@i@f@o
+vHexDriver
+Z4 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z5 !s110 1653398760
+!i10b 1
+!s100 hKBo4zbCRmY3[Ac9JZP;<0
+IGOPKHf7;g[e[mOPn_`@kd1
+R1
+!s105 HexDriver_sv_unit
+S1
+R0
+w1652416985
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/HexDriver.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/HexDriver.sv
+L0 1
+R2
+r1
+!s85 0
+31
+Z6 !s108 1653398760.000000
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/HexDriver.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer|C:/Users/dpipe/OneDrive/Audio_Synthesizer/HexDriver.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer
+R3
+n@hex@driver
+vi2s
+R4
+R5
+!i10b 1
+!s100 VIaYc7`Zcl_17@6cW^a343
+I47kJn;0[G8Ff?kde?MYc:0
+R1
+!s105 I2S_sv_unit
+S1
+R0
+w1652417009
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/I2S.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/I2S.sv
+L0 5
+R2
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/I2S.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer|C:/Users/dpipe/OneDrive/Audio_Synthesizer/I2S.sv|
+!i113 1
+R7
+R8
+R3
+vtestbench
+R4
+!s110 1653398761
+!i10b 1
+!s100 KH@DNaWo<O?IGF4=jmIk?1
+I0kKhCNORAX<l@mGIG<TnI1
+R1
+!s105 testbench_sv_unit
+S1
+R0
+w1653398072
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/testbench.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/testbench.sv
+L0 2
+R2
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer|C:/Users/dpipe/OneDrive/Audio_Synthesizer/testbench.sv|
+!i113 1
+R7
+R8
+R3
+vTOP
+R4
+R5
+!i10b 1
+!s100 M6UUo;V7i7c_1HQ50k>Q_0
+ITO@59F91Eb6d?=;9[D41h2
+R1
+!s105 TOP_sv_unit
+S1
+R0
+w1652731171
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/TOP.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/TOP.sv
+L0 1
+R2
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/TOP.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer|C:/Users/dpipe/OneDrive/Audio_Synthesizer/TOP.sv|
+!i113 1
+R7
+R8
+R3
+n@t@o@p

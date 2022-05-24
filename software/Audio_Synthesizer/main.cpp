@@ -80,7 +80,7 @@ void MIDI_poll()
 			long_par = par;
 			switch(ctrl) {
 				case MOD_WHEEL:
-					set_ctrl(channel, MOD, long_par);
+					set_ctrl(channel, MIX, long_par);
 					break;
 				case CHAN_VOL:
 					SGTL5000vol_change(i2c_dev, par);
@@ -90,11 +90,11 @@ void MIDI_poll()
 					set_ctrl(channel, SUS, long_par);
 					break;
 				case PEDAL_FLIP:
-					ped_flip = par;
+					set_ctrl(channel, PED_INV, long_par);
 					break;
-				case MOD_WHEEL_ON:
+				/*case MOD_WHEEL_ON:
 					set_ctrl(channel, MOD_ON, long_par);
-					break;
+					break;*/
 				case SAMPLE_1_SEL:
 					set_ctrl(channel, SAMPLE_1, long_par);
 					break;

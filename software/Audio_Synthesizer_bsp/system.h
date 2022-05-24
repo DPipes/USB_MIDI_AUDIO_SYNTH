@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'Audio_Synthesizer_SoC'
  * SOPC Builder design path: ../../Audio_Synthesizer_SoC.sopcinfo
  *
- * Generated: Fri May 20 17:41:20 CDT 2022
+ * Generated: Tue May 24 09:59:28 CDT 2022
  */
 
 /*
@@ -352,7 +352,7 @@
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1653086271
+#define SYSID_QSYS_0_TIMESTAMP 1653404162
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 
@@ -469,7 +469,7 @@
  */
 
 #define ALT_MODULE_CLASS_wavetable_audio_synthesizer_0 wavetable_audio_synthesizer
-#define WAVETABLE_AUDIO_SYNTHESIZER_0_BASE 0x1400
+#define WAVETABLE_AUDIO_SYNTHESIZER_0_BASE 0x0
 #define WAVETABLE_AUDIO_SYNTHESIZER_0_IRQ -1
 #define WAVETABLE_AUDIO_SYNTHESIZER_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define WAVETABLE_AUDIO_SYNTHESIZER_0_NAME "/dev/wavetable_audio_synthesizer_0"

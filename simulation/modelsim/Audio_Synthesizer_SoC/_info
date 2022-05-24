@@ -1,0 +1,2243 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/dpipe/OneDrive/Audio_Synthesizer/simulation/modelsim
+valtera_avalon_i2c
+Z1 !s110 1653398758
+!i10b 1
+!s100 i;I80YB`l0<cOH0Mh0OXC2
+I3HTaNdHb8z`^kfDMA:^@20
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1653398686
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c.v
+Z4 L0 18
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1653398758.000000
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c.v|
+!i113 1
+Z7 o-vlog01compat -work Audio_Synthesizer_SoC
+Z8 !s92 -vlog01compat -work Audio_Synthesizer_SoC +incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules
+Z9 tCvgOpt 0
+valtera_avalon_i2c_clk_cnt
+R1
+!i10b 1
+!s100 CAQU3PEJGHFhmUSJ9nV@02
+I45;6Z^zDQ@F^G@^LNZ:<92
+R2
+R0
+R3
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_clk_cnt.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_clk_cnt.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_clk_cnt.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_clk_cnt.v|
+!i113 1
+R7
+R8
+R9
+valtera_avalon_i2c_condt_det
+Z10 !s110 1653398759
+!i10b 1
+!s100 NWHS0:R1WP@@17W[f`AJI0
+I>lk5foF37ICmG5h47[Oj@1
+R2
+R0
+R3
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_condt_det.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_condt_det.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_condt_det.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_condt_det.v|
+!i113 1
+R7
+R8
+R9
+valtera_avalon_i2c_condt_gen
+R10
+!i10b 1
+!s100 F?IU54?<EV_ITzfFeG@`Z2
+I<5ZWb^`E2>EhoYj[UjOn:1
+R2
+R0
+R3
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_condt_gen.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_condt_gen.v
+R4
+R5
+r1
+!s85 0
+31
+Z11 !s108 1653398759.000000
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_condt_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_condt_gen.v|
+!i113 1
+R7
+R8
+R9
+valtera_avalon_i2c_csr
+R1
+!i10b 1
+!s100 _=XDE5_WWD1FP8Djl72V@1
+IBQ]I4QNE=jW8RKK[n3_Pg0
+R2
+R0
+R3
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_csr.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_csr.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_csr.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_csr.v|
+!i113 1
+R7
+R8
+R9
+valtera_avalon_i2c_fifo
+R10
+!i10b 1
+!s100 K6:GE0kJz4H;LzVG[N3Ao2
+IkZeJMULg7C^bUD2k`@AAh3
+R2
+R0
+R3
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_fifo.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_fifo.v
+R4
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_fifo.v|
+!i113 1
+R7
+R8
+R9
+valtera_avalon_i2c_mstfsm
+R10
+!i10b 1
+!s100 EoIZ@gjk[7@:RNMP??jE51
+I;0Q=ojf3?Th>N]9j800DE1
+R2
+R0
+R3
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_mstfsm.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_mstfsm.v
+R4
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_mstfsm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_mstfsm.v|
+!i113 1
+R7
+R8
+R9
+valtera_avalon_i2c_rxshifter
+R10
+!i10b 1
+!s100 NH?j7@d_^5gIg43`l^N`W3
+IN<W0cQXOL54cPj8fekHhL1
+R2
+R0
+R3
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_rxshifter.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_rxshifter.v
+R4
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_rxshifter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_rxshifter.v|
+!i113 1
+R7
+R8
+R9
+valtera_avalon_i2c_spksupp
+R10
+!i10b 1
+!s100 L4Jc3zDI^<U>:e]oA=kFJ0
+I@OcBZEclPO[SLe0N03^eJ0
+R2
+R0
+R3
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_spksupp.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_spksupp.v
+R4
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_spksupp.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_spksupp.v|
+!i113 1
+R7
+R8
+R9
+valtera_avalon_i2c_txout
+R10
+!i10b 1
+!s100 :0U7=ZbJ=6_9QSWgb9VmM1
+I_l@T;YX0?caHWJfZE]5Q[0
+R2
+R0
+R3
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_txout.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_txout.v
+R4
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_txout.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_txout.v|
+!i113 1
+R7
+R8
+R9
+valtera_avalon_i2c_txshifter
+R10
+!i10b 1
+!s100 ceW5>`_l>2G>TjfE>=9`60
+IW7jk:Ql19l8Y0SLUTk`9D2
+R2
+R0
+R3
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_txshifter.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_txshifter.v
+R4
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_txshifter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_i2c_txshifter.v|
+!i113 1
+R7
+R8
+R9
+valtera_avalon_sc_fifo
+R1
+!i10b 1
+!s100 4mK@em][G=j]om3zJIhOc0
+I_WdmbO?f]H1eFhAQkV9?E3
+R2
+R0
+Z12 w1653398699
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_sc_fifo.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_sc_fifo.v
+Z13 L0 21
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_sc_fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_avalon_sc_fifo.v|
+!i113 1
+R7
+R8
+R9
+valtera_merlin_arb_adder
+Z14 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R10
+!i10b 1
+!s100 1Jn[a;@5nZmTN?DFKQNzj2
+Ic:icDRWV=lG4lOBV9hjX31
+R2
+Z15 !s105 altera_merlin_arbitrator_sv_unit
+S1
+R0
+R12
+Z16 8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_arbitrator.sv
+Z17 FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_arbitrator.sv
+L0 228
+R5
+r1
+!s85 0
+31
+R11
+Z18 !s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_arbitrator.sv|
+Z19 !s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_arbitrator.sv|
+!i113 1
+Z20 o-sv -work Audio_Synthesizer_SoC
+Z21 !s92 -sv -work Audio_Synthesizer_SoC +incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules
+R9
+valtera_merlin_arbitrator
+R14
+R10
+!i10b 1
+!s100 NQTehjm2fNQROUMUzShGa1
+I7@ediKJ;bJkd>:1Cd_g@e1
+R2
+R15
+S1
+R0
+R12
+R16
+R17
+L0 103
+R5
+r1
+!s85 0
+31
+R11
+R18
+R19
+!i113 1
+R20
+R21
+R9
+valtera_merlin_burst_adapter
+R14
+R10
+!i10b 1
+!s100 OCc70X^k:B?GW6i71n`L_3
+IN?6h4o_A_RRl@jFf:172P0
+R2
+!s105 altera_merlin_burst_adapter_sv_unit
+S1
+R0
+R12
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_burst_adapter.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_burst_adapter.sv
+R13
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_burst_adapter.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_burst_adapter.sv|
+!i113 1
+R20
+R21
+R9
+valtera_merlin_burst_adapter_uncompressed_only
+R14
+R10
+!i10b 1
+!s100 STH]BdUM[JDMJZNJGXCd>0
+IEFgCRLS[go`=H0^PdC:Se3
+R2
+!s105 altera_merlin_burst_adapter_uncmpr_sv_unit
+S1
+R0
+R12
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv
+L0 39
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv|
+!i113 1
+R20
+R21
+R9
+valtera_merlin_burst_uncompressor
+R14
+R10
+!i10b 1
+!s100 f1?Rb<=9U?R9LJoHl;7>T3
+Io:LnGD0eU:ozc>;P`m_2S0
+R2
+!s105 altera_merlin_burst_uncompressor_sv_unit
+S1
+R0
+R12
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+L0 40
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_burst_uncompressor.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_burst_uncompressor.sv|
+!i113 1
+R20
+R21
+R9
+valtera_merlin_master_agent
+R14
+Z22 !s110 1653398760
+!i10b 1
+!s100 _CJm:YX=>U2LQKH;8=@cb0
+ITk1o@Y<BP?:MkWZRAnR:H0
+R2
+!s105 altera_merlin_master_agent_sv_unit
+S1
+R0
+R12
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_master_agent.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_master_agent.sv
+L0 28
+R5
+r1
+!s85 0
+31
+Z23 !s108 1653398760.000000
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_master_agent.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_master_agent.sv|
+!i113 1
+R20
+R21
+R9
+valtera_merlin_master_translator
+R14
+R22
+!i10b 1
+!s100 NdRk@]3fC2C@V7Rm;dQM31
+I=1kLCY3]8c?X1R_zHNj5l3
+R2
+!s105 altera_merlin_master_translator_sv_unit
+S1
+R0
+R12
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_master_translator.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_master_translator.sv
+L0 32
+R5
+r1
+!s85 0
+31
+R23
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_master_translator.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_master_translator.sv|
+!i113 1
+R20
+R21
+R9
+valtera_merlin_slave_agent
+R14
+R22
+!i10b 1
+!s100 ePZN1d?B062J`OBb?blff3
+I>7EHa?cBCUF1=z`JE9_E?1
+R2
+!s105 altera_merlin_slave_agent_sv_unit
+S1
+R0
+R12
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_slave_agent.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_slave_agent.sv
+Z24 L0 34
+R5
+r1
+!s85 0
+31
+R23
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_slave_agent.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_slave_agent.sv|
+!i113 1
+R20
+R21
+R9
+valtera_merlin_slave_translator
+R14
+R22
+!i10b 1
+!s100 k`9[YAn_dLTkg;GE`mOb61
+IojmhaSRm?Wn;hhWYM]l0N1
+R2
+!s105 altera_merlin_slave_translator_sv_unit
+S1
+R0
+R12
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_slave_translator.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_slave_translator.sv
+L0 35
+R5
+r1
+!s85 0
+31
+R23
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_slave_translator.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_slave_translator.sv|
+!i113 1
+R20
+R21
+R9
+valtera_merlin_width_adapter
+R14
+R10
+!i10b 1
+!s100 QzdA5DP6CReOTH<9QzODa3
+IChdOQG9Xgl2b[PDG`S@a<1
+R2
+!s105 altera_merlin_width_adapter_sv_unit
+S1
+R0
+R12
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_width_adapter.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_width_adapter.sv
+L0 25
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_width_adapter.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_merlin_width_adapter.sv|
+!i113 1
+R20
+R21
+R9
+valtera_reset_controller
+Z25 !s110 1653398757
+!i10b 1
+!s100 z[H_hRO9gO=:^2E3_jWH03
+Ied5b<D8d6VQe7mFG?o<Ll3
+R2
+R0
+Z26 w1653398697
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_reset_controller.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_reset_controller.v
+L0 42
+R5
+r1
+!s85 0
+31
+Z27 !s108 1653398757.000000
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_reset_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_reset_controller.v|
+!i113 1
+R7
+R8
+R9
+valtera_reset_synchronizer
+R25
+!i10b 1
+!s100 oWLYmSO[EOX[G0PgQhZ2=0
+IH;zPoVjTfnTL40719MjPK0
+R2
+R0
+R26
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_reset_synchronizer.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_reset_synchronizer.v
+L0 24
+R5
+r1
+!s85 0
+31
+R27
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_reset_synchronizer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/altera_reset_synchronizer.v|
+!i113 1
+R7
+R8
+R9
+vAudio_Synthesizer_SoC
+R25
+!i10b 1
+!s100 7D6c;=35<HAW`Y^LSgola1
+Ik4hg9`LU=XOAHXA^=CM8?1
+R2
+R0
+w1653398685
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/Audio_Synthesizer_SoC.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/Audio_Synthesizer_SoC.v
+L0 6
+R5
+r1
+!s85 0
+31
+R27
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/Audio_Synthesizer_SoC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/Audio_Synthesizer_SoC.v|
+!i113 1
+R7
+!s92 -vlog01compat -work Audio_Synthesizer_SoC +incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis
+R9
+n@audio_@synthesizer_@so@c
+vAudio_Synthesizer_SoC_hex_digits_pio
+R10
+!i10b 1
+!s100 JVdC7OD:[DSMYNHbNj=^g1
+IE5XT0M_a4EOX0NYc:ZoIP3
+R2
+R0
+R3
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_hex_digits_pio.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_hex_digits_pio.v
+R13
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_hex_digits_pio.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_hex_digits_pio.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_hex_digits_pio
+vAudio_Synthesizer_SoC_irq_mapper
+R14
+R10
+!i10b 1
+!s100 8YnV3i9U1aVR=3Xl?WIUT3
+IVEFjf6aV58BNWm61_kSk`3
+R2
+!s105 Audio_Synthesizer_SoC_irq_mapper_sv_unit
+S1
+R0
+R26
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_irq_mapper.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_irq_mapper.sv
+L0 31
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_irq_mapper.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_irq_mapper.sv|
+!i113 1
+R20
+R21
+R9
+n@audio_@synthesizer_@so@c_irq_mapper
+vAudio_Synthesizer_SoC_jtag_uart_0
+R1
+!i10b 1
+!s100 GmhAKDBPcnXn1NLE9l0I10
+INTE[oTX8J^bdGGcVNb[z<2
+R2
+R0
+R3
+Z28 8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_jtag_uart_0.v
+Z29 FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_jtag_uart_0.v
+L0 331
+R5
+r1
+!s85 0
+31
+R6
+Z30 !s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_jtag_uart_0.v|
+Z31 !s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_jtag_uart_0.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_jtag_uart_0
+vAudio_Synthesizer_SoC_jtag_uart_0_scfifo_r
+R1
+!i10b 1
+!s100 9Z0Ca?SM@BJ@TE3Cl0dHY2
+Ih^Dai1Wmi]cOnNi0zK_<53
+R2
+R0
+R3
+R28
+R29
+L0 243
+R5
+r1
+!s85 0
+31
+R6
+R30
+R31
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_jtag_uart_0_scfifo_r
+vAudio_Synthesizer_SoC_jtag_uart_0_scfifo_w
+R1
+!i10b 1
+!s100 RKFN5kknD7>TCR^fZ?n5G1
+IkG6BJL7hVadSzHA?Bi^bC2
+R2
+R0
+R3
+R28
+R29
+L0 78
+R5
+r1
+!s85 0
+31
+R6
+R30
+R31
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_jtag_uart_0_scfifo_w
+vAudio_Synthesizer_SoC_jtag_uart_0_sim_scfifo_r
+R1
+!i10b 1
+!s100 54SYUg`iKa@6TzMX23GVl1
+Ii9zlL^b3LFg9^I^=GdOa`1
+R2
+R0
+R3
+R28
+R29
+L0 164
+R5
+r1
+!s85 0
+31
+R6
+R30
+R31
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_jtag_uart_0_sim_scfifo_r
+vAudio_Synthesizer_SoC_jtag_uart_0_sim_scfifo_w
+R1
+!i10b 1
+!s100 3^dzOd45fP6=8[C[5JhFC1
+I8JAn>GUQ91nD7UkGz64Xj2
+R2
+R0
+R3
+R28
+R29
+R13
+R5
+r1
+!s85 0
+31
+R6
+R30
+R31
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_jtag_uart_0_sim_scfifo_w
+vAudio_Synthesizer_SoC_leds_pio
+R1
+!i10b 1
+!s100 fOLGQMm05E0_M:bEglH_J2
+I94OIefb^VDc?M:?jieni]2
+R2
+R0
+R3
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_leds_pio.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_leds_pio.v
+R13
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_leds_pio.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_leds_pio.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_leds_pio
+vAudio_Synthesizer_SoC_mm_interconnect_0
+R1
+!i10b 1
+!s100 ^;5IDjD43E@QKm2@<@AnB0
+IP7QBIV]M<haaX7:QCnlOL2
+R2
+R0
+R26
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0.v
+L0 9
+R5
+r1
+!s85 0
+31
+R27
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_mm_interconnect_0
+vAudio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter
+R1
+!i10b 1
+!s100 [=@9gA`Mzm3PP4Q1N9_Ri2
+I5NCj4a;3Sa12K_ojRKX8L0
+R2
+R0
+R12
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter.v
+L0 9
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_mm_interconnect_0_avalon_st_adapter
+vAudio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter_005
+R1
+!i10b 1
+!s100 dm]RzX:[66h9<XlX^oO7P2
+I[agLlb0^<<A6aVYIgA=<63
+R2
+R0
+Z32 w1653398700
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter_005.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter_005.v
+L0 9
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter_005.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter_005.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_mm_interconnect_0_avalon_st_adapter_005
+vAudio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter_005_error_adapter_0
+R14
+R10
+!i10b 1
+!s100 1h`PC0AE3OCX07;dX2K]?3
+IkaF7E0z`27WJ6?[?Vlmd32
+R2
+!s105 Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter_005_error_adapter_0_sv_unit
+S1
+R0
+R32
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter_005_error_adapter_0.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter_005_error_adapter_0.sv
+Z33 L0 66
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter_005_error_adapter_0.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter_005_error_adapter_0.sv|
+!i113 1
+R20
+R21
+R9
+n@audio_@synthesizer_@so@c_mm_interconnect_0_avalon_st_adapter_005_error_adapter_0
+vAudio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter_error_adapter_0
+R14
+R10
+!i10b 1
+!s100 j3n8Ubzml_Lhoz:LgLo9X0
+IT9D[zLcQCA@dJcQIEU6TC1
+R2
+!s105 Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter_error_adapter_0_sv_unit
+S1
+R0
+R32
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+R33
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv|
+!i113 1
+R20
+R21
+R9
+n@audio_@synthesizer_@so@c_mm_interconnect_0_avalon_st_adapter_error_adapter_0
+vAudio_Synthesizer_SoC_mm_interconnect_0_cmd_demux
+R14
+R10
+!i10b 1
+!s100 V]05Uam`^WPjZlTIofMHA2
+ICimZ>`D23d2mNd`l;_VDK1
+R2
+!s105 Audio_Synthesizer_SoC_mm_interconnect_0_cmd_demux_sv_unit
+S1
+R0
+R12
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_cmd_demux.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_cmd_demux.sv
+Z34 L0 43
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_cmd_demux.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_cmd_demux.sv|
+!i113 1
+R20
+R21
+R9
+n@audio_@synthesizer_@so@c_mm_interconnect_0_cmd_demux
+vAudio_Synthesizer_SoC_mm_interconnect_0_cmd_mux
+R14
+R10
+!i10b 1
+!s100 _`;EKBZiUcfEePfojG??`0
+I_`OHcJJfmnKnHkgMRFoNd3
+R2
+!s105 Audio_Synthesizer_SoC_mm_interconnect_0_cmd_mux_sv_unit
+S1
+R0
+R12
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_cmd_mux.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_cmd_mux.sv
+Z35 L0 51
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_cmd_mux.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_cmd_mux.sv|
+!i113 1
+R20
+R21
+R9
+n@audio_@synthesizer_@so@c_mm_interconnect_0_cmd_mux
+vAudio_Synthesizer_SoC_mm_interconnect_0_router
+R14
+R22
+!i10b 1
+!s100 ABJ[M0lDCMc^2Cn4XBc0;3
+I_L]IR4k2<H5m`XVM`iGLl2
+R2
+Z36 !s105 Audio_Synthesizer_SoC_mm_interconnect_0_router_sv_unit
+S1
+R0
+R12
+Z37 8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_router.sv
+Z38 FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_router.sv
+Z39 L0 84
+R5
+r1
+!s85 0
+31
+R11
+Z40 !s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_router.sv|
+Z41 !s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_router.sv|
+!i113 1
+R20
+R21
+R9
+n@audio_@synthesizer_@so@c_mm_interconnect_0_router
+vAudio_Synthesizer_SoC_mm_interconnect_0_router_002
+R14
+R10
+!i10b 1
+!s100 7b_F_f5ooWhXYN`PQGZ940
+ITj`_oCElQ_mM5LZ5CQ;E^3
+R2
+Z42 !s105 Audio_Synthesizer_SoC_mm_interconnect_0_router_002_sv_unit
+S1
+R0
+R12
+Z43 8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_router_002.sv
+Z44 FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_router_002.sv
+R39
+R5
+r1
+!s85 0
+31
+R11
+Z45 !s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_router_002.sv|
+Z46 !s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_router_002.sv|
+!i113 1
+R20
+R21
+R9
+n@audio_@synthesizer_@so@c_mm_interconnect_0_router_002
+vAudio_Synthesizer_SoC_mm_interconnect_0_router_002_default_decode
+R14
+R10
+!i10b 1
+!s100 m@T<N[1=MknE3KbTE;5UT0
+ID^lU@Thk7`GSF?oo^Y74?3
+R2
+R42
+S1
+R0
+R12
+R43
+R44
+Z47 L0 45
+R5
+r1
+!s85 0
+31
+R11
+R45
+R46
+!i113 1
+R20
+R21
+R9
+n@audio_@synthesizer_@so@c_mm_interconnect_0_router_002_default_decode
+vAudio_Synthesizer_SoC_mm_interconnect_0_router_007
+R14
+R10
+!i10b 1
+!s100 oN@ih<X?zf71U7hLziPYf1
+Ic4Aif:?RReVFhMfLQL@Qf3
+R2
+Z48 !s105 Audio_Synthesizer_SoC_mm_interconnect_0_router_007_sv_unit
+S1
+R0
+R12
+Z49 8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_router_007.sv
+Z50 FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_router_007.sv
+R39
+R5
+r1
+!s85 0
+31
+R11
+Z51 !s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_router_007.sv|
+Z52 !s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_router_007.sv|
+!i113 1
+R20
+R21
+R9
+n@audio_@synthesizer_@so@c_mm_interconnect_0_router_007
+vAudio_Synthesizer_SoC_mm_interconnect_0_router_007_default_decode
+R14
+R10
+!i10b 1
+!s100 gi]zWl^1NX_BQbfDV>iQe0
+I<Qm2QYS4a_YV6z[^3=8Rm1
+R2
+R48
+S1
+R0
+R12
+R49
+R50
+R47
+R5
+r1
+!s85 0
+31
+R11
+R51
+R52
+!i113 1
+R20
+R21
+R9
+n@audio_@synthesizer_@so@c_mm_interconnect_0_router_007_default_decode
+vAudio_Synthesizer_SoC_mm_interconnect_0_router_default_decode
+R14
+R22
+!i10b 1
+!s100 JJclmB`inWiZCJf<T3cLD0
+I73Q0=;f>Cnb=^_RjPNK<A0
+R2
+R36
+S1
+R0
+R12
+R37
+R38
+R47
+R5
+r1
+!s85 0
+31
+R11
+R40
+R41
+!i113 1
+R20
+R21
+R9
+n@audio_@synthesizer_@so@c_mm_interconnect_0_router_default_decode
+vAudio_Synthesizer_SoC_mm_interconnect_0_rsp_demux
+R14
+R10
+!i10b 1
+!s100 Qio>@DDQ1_Z_<K@]`hh5z2
+IOMkG;Yz3=?ea2BiYaC`aS1
+R2
+!s105 Audio_Synthesizer_SoC_mm_interconnect_0_rsp_demux_sv_unit
+S1
+R0
+R12
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_rsp_demux.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_rsp_demux.sv
+R34
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_rsp_demux.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_rsp_demux.sv|
+!i113 1
+R20
+R21
+R9
+n@audio_@synthesizer_@so@c_mm_interconnect_0_rsp_demux
+vAudio_Synthesizer_SoC_mm_interconnect_0_rsp_mux
+R14
+R10
+!i10b 1
+!s100 hND];h:IihAUfJ_Pka_HS1
+I`JJg@C3Jf]^BK3L`_;hho1
+R2
+!s105 Audio_Synthesizer_SoC_mm_interconnect_0_rsp_mux_sv_unit
+S1
+R0
+R12
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_rsp_mux.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_rsp_mux.sv
+R35
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_rsp_mux.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_mm_interconnect_0_rsp_mux.sv|
+!i113 1
+R20
+R21
+R9
+n@audio_@synthesizer_@so@c_mm_interconnect_0_rsp_mux
+vAudio_Synthesizer_SoC_nios2_gen2_0
+R1
+!i10b 1
+!s100 fn6W;i6oV>V6lMhS110lA1
+Ij:OX]=KJLQ008CRo0XI>Z2
+R2
+R0
+R3
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0.v
+L0 9
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu
+R1
+!i10b 1
+!s100 ]hF8FY?hab9G[K[PMnN>D1
+IZA>ibeR4_gCd]z9VU>ToC0
+R2
+R0
+R12
+Z53 8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu.v
+Z54 FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu.v
+L0 2834
+R5
+r1
+!s85 0
+31
+R6
+Z55 !s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu.v|
+Z56 !s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_debug_slave_sysclk
+R1
+!i10b 1
+!s100 gD_T2D:4jK8:eZkE9Q9Ao0
+IFE;7SI[?>cRRh43C[Cm2G1
+R2
+R0
+R12
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu_debug_slave_sysclk.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu_debug_slave_sysclk.v
+R13
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu_debug_slave_sysclk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu_debug_slave_sysclk.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_debug_slave_sysclk
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_debug_slave_tck
+R1
+!i10b 1
+!s100 EW56HnP6eXCH3fW18V`7H3
+IaVomDUY^5o>mS]_2O^9n30
+R2
+R0
+R12
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu_debug_slave_tck.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu_debug_slave_tck.v
+R13
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu_debug_slave_tck.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu_debug_slave_tck.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_debug_slave_tck
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_debug_slave_wrapper
+R1
+!i10b 1
+!s100 H<:`e<L_z?od^FD:6P4`20
+IdICoJQRMW_TA0E`PbO<GT0
+R2
+R0
+R12
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu_debug_slave_wrapper.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu_debug_slave_wrapper.v
+R13
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu_debug_slave_wrapper.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu_debug_slave_wrapper.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_debug_slave_wrapper
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_nios2_avalon_reg
+R1
+!i10b 1
+!s100 jgOn<mgDcJhjM4i`ScW7O0
+Iz6S>HFP4k9`2AeOB2>2]E2
+R2
+R0
+R12
+R53
+R54
+L0 2023
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_nios2_avalon_reg
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_nios2_oci
+R1
+!i10b 1
+!s100 ^jQQ=jU9WOhHY8]LcllZ60
+I9W;Y]=WEN;m2KPa^2OFhB3
+R2
+R0
+R12
+R53
+R54
+L0 2362
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_nios2_oci
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_nios2_oci_break
+R1
+!i10b 1
+!s100 F=ZYO>=X3QV=;6BcQh8e83
+Id]dVjWHhO^5YE@Z@Tl?jC3
+R2
+R0
+R12
+R53
+R54
+L0 295
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_nios2_oci_break
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt
+R1
+!i10b 1
+!s100 LkOJn9OY:jZKgXWYMVzoY2
+I=X6h[j[hi1CC6eS1RO=I52
+R2
+R0
+R12
+R53
+R54
+L0 1265
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_nios2_oci_dbrk
+R1
+!i10b 1
+!s100 cg5?ZJ?Z8oVI0@GnDgg0G1
+I[MgOgl?jb<M_NjfQ94If71
+R2
+R0
+R12
+R53
+R54
+L0 795
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_nios2_oci_dbrk
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_nios2_oci_debug
+R1
+!i10b 1
+!s100 JV?o0D<N9jZ6;l4hk2PVb1
+IjH3LM?3SjXL:geMhB7mHW0
+R2
+R0
+R12
+R53
+R54
+L0 153
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_nios2_oci_debug
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_nios2_oci_dtrace
+R1
+!i10b 1
+!s100 oW?AN@PNd9SfUGbYok9e20
+ILRd]0TlUJ=7FQP=`?cQFS3
+R2
+R0
+R12
+R53
+R54
+L0 1183
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_nios2_oci_dtrace
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_nios2_oci_fifo
+R1
+!i10b 1
+!s100 0FSaNz<3d=RH[Be1z6R=X2
+I<FZO^@dU?iDIb772m6b4g3
+R2
+R0
+R12
+R53
+R54
+L0 1427
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_nios2_oci_fifo
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc
+R1
+!i10b 1
+!s100 ]25<JGJW_gZIzKYUjc3f[3
+IdC:Y0YzVhg?LEl433ZD:G0
+R2
+R0
+R12
+R53
+R54
+L0 1380
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc
+R1
+!i10b 1
+!s100 c::H1NZ>0F<7@eiYmhez10
+I_YHgf_T@SI0G]Wgnl<h_E1
+R2
+R0
+R12
+R53
+R54
+L0 1337
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_nios2_oci_im
+R1
+!i10b 1
+!s100 mI@KffMJaTA<FagYzKnJ32
+I6`Ka[Vnh_o@Jn0M5KEB@m0
+R2
+R0
+R12
+R53
+R54
+L0 1936
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_nios2_oci_im
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_nios2_oci_itrace
+R1
+!i10b 1
+!s100 5oXJZ0TI^M4gVK]Afj<SV1
+I2he@eRW;>Tbb62=ee^6T`0
+R2
+R0
+R12
+R53
+R54
+L0 982
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_nios2_oci_itrace
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_nios2_oci_pib
+R1
+!i10b 1
+!s100 TlPW_JWTY0@;iXbG[^5OV3
+I<@78QP<Kb5Y<8f1E[8`4i3
+R2
+R0
+R12
+R53
+R54
+L0 1913
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_nios2_oci_pib
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_nios2_oci_td_mode
+R1
+!i10b 1
+!s100 <9XBD8c2e`9PSb0ZjO1H^0
+I=9dRS=2bV:CJk_KOca^<a2
+R2
+R0
+R12
+R53
+R54
+L0 1115
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_nios2_oci_td_mode
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_nios2_oci_xbrk
+R1
+!i10b 1
+!s100 >ZhVzNN4L922ZbSD45FDn2
+I3i@TQkzfMg4;X[HDH5SO93
+R2
+R0
+R12
+R53
+R54
+L0 588
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_nios2_oci_xbrk
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_nios2_ocimem
+R1
+!i10b 1
+!s100 X2anb5]k<^bJ5IC8`Ai2N1
+I]7R>=`f8R7@k7cd`eGlhf3
+R2
+R0
+R12
+R53
+R54
+L0 2181
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_nios2_ocimem
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_nios2_performance_monitors
+R1
+!i10b 1
+!s100 7hBL3:DEGzNJeTHYeOmzD1
+Ij_aOcd;35TBJX1g>W;EiG3
+R2
+R0
+R12
+R53
+R54
+L0 2006
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_nios2_performance_monitors
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_ociram_sp_ram_module
+R1
+!i10b 1
+!s100 W`]cb:5;@]fHn_VLem90O3
+In4OS56[FQ2WR<Y:?<ch[80
+R2
+R0
+R12
+R53
+R54
+L0 2116
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_ociram_sp_ram_module
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_register_bank_a_module
+R1
+!i10b 1
+!s100 Y[lMh;Bc<AjlaU_9f>=fR2
+I7WXW4G;e7W0aUnlH<46L83
+R2
+R0
+R12
+R53
+R54
+R13
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_register_bank_a_module
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_register_bank_b_module
+R1
+!i10b 1
+!s100 A[YKZB^ZkkB`V0Eg_`O0n0
+Id:>^F]W2iA23mZ;l1U?jM3
+R2
+R0
+R12
+R53
+R54
+L0 87
+R5
+r1
+!s85 0
+31
+R6
+R55
+R56
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_register_bank_b_module
+vAudio_Synthesizer_SoC_nios2_gen2_0_cpu_test_bench
+R1
+!i10b 1
+!s100 Cc=LBW?AP_n6:N_BAM6HA3
+Imaj^_E>NVS0:]jNi`zhlh0
+R2
+R0
+R12
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu_test_bench.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu_test_bench.v
+R13
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu_test_bench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_nios2_gen2_0_cpu_test_bench.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_nios2_gen2_0_cpu_test_bench
+vAudio_Synthesizer_SoC_onchip_memory2_0
+R1
+!i10b 1
+!s100 :AAHei02^fzdKLk:IPOGK1
+INOlc[_NZz23hO`l9l`8kB0
+R2
+R0
+Z57 w1653398687
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_onchip_memory2_0.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_onchip_memory2_0.v
+R13
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_onchip_memory2_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_onchip_memory2_0.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_onchip_memory2_0
+vAudio_Synthesizer_SoC_pll_0
+R1
+!i10b 1
+!s100 9fRPYn=X]THh`UfGQ^aI]2
+IC4o0Q7PN1CR8iL9zcM:9_1
+R2
+R0
+R57
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_pll_0.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_pll_0.v
+L0 2
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_pll_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_pll_0.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_pll_0
+vAudio_Synthesizer_SoC_spi_0
+R1
+!i10b 1
+!s100 _6:QR_60O8eHT@_Q?H<:T1
+Iecm5j=LXcAE3aRBl3mzHF3
+R2
+R0
+R57
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_spi_0.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_spi_0.v
+L0 41
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_spi_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_spi_0.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_spi_0
+vAudio_Synthesizer_SoC_sysid_qsys_0
+R1
+!i10b 1
+!s100 zO>;PBTmO6XE[`0n3jPa>0
+IZ_0c`GFbj5Z002bH]8bCc1
+R2
+R0
+R57
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_sysid_qsys_0.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_sysid_qsys_0.v
+R24
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_sysid_qsys_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_sysid_qsys_0.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_sysid_qsys_0
+vAudio_Synthesizer_SoC_timer_0
+R1
+!i10b 1
+!s100 :h7@gEUiRH2<EnWBZEJce1
+I7o6o?fe@Xf:abBJ]=_?ao2
+R2
+R0
+R57
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_timer_0.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_timer_0.v
+R13
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_timer_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_timer_0.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_timer_0
+vAudio_Synthesizer_SoC_usb_gpx
+R1
+!i10b 1
+!s100 dAOMc9>ci:WY74ENb57;F3
+I579[;LoAQgIIE9zZIN<jQ1
+R2
+R0
+R57
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_usb_gpx.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_usb_gpx.v
+R13
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_usb_gpx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_usb_gpx.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_usb_gpx
+vAudio_Synthesizer_SoC_usb_rst
+R1
+!i10b 1
+!s100 Y]YcdnC]O4>K5zG6DE^iP2
+IVIEznJoRQVW0B];k[Sn8V0
+R2
+R0
+R57
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_usb_rst.v
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_usb_rst.v
+R13
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_usb_rst.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/Audio_Synthesizer_SoC_usb_rst.v|
+!i113 1
+R7
+R8
+R9
+n@audio_@synthesizer_@so@c_usb_rst
+vdata_path
+R14
+R22
+!i10b 1
+!s100 K<PTfU2_MUZB@I7?:]YDm1
+IlA76URm]MKFIOFOD2jnjQ1
+R2
+!s105 datapath_sv_unit
+S1
+R0
+R57
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/datapath.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/datapath.sv
+L0 4
+R5
+r1
+!s85 0
+31
+R23
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/datapath.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/datapath.sv|
+!i113 1
+R20
+R21
+R9
+vf_table
+R14
+R22
+!i10b 1
+!s100 ;1<3eOLL9LgknenGl?lGn0
+IFd;L;6Bd?4<BLiY_nR_Q52
+R2
+!s105 f_table_sv_unit
+S1
+R0
+R57
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/f_table.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/f_table.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R23
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/f_table.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/f_table.sv|
+!i113 1
+R20
+R21
+R9
+vlin_interp_64
+R14
+R22
+!i10b 1
+!s100 WLRCB40j4Lz>H96LRLSHI2
+ITPbGHBNiOzg=G_FIU4>?j0
+R2
+!s105 lin_interp_64_sv_unit
+S1
+R0
+R57
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/lin_interp_64.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/lin_interp_64.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R23
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/lin_interp_64.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/lin_interp_64.sv|
+!i113 1
+R20
+R21
+R9
+vsaw_table
+R14
+!s110 1653398145
+!i10b 1
+!s100 WC7D=ean48No?^^b6geJI3
+IETjfWGM6jHzzd[YjokH^M0
+R2
+!s105 saw_table_sv_unit
+S1
+R0
+Z58 w1653199697
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/saw_table.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/saw_table.sv
+L0 3
+R5
+r1
+!s85 0
+31
+!s108 1653398145.000000
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/saw_table.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/saw_table.sv|
+!i113 1
+R20
+R21
+R9
+vsine_table
+R14
+Z59 !s110 1653398146
+!i10b 1
+!s100 g>ZdJfjMkQefn79<nJ[@z0
+IoJScTXan8zTf_OGcD:]md2
+R2
+!s105 sine_table_sv_unit
+S1
+R0
+R58
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/sine_table.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/sine_table.sv
+L0 3
+R5
+r1
+!s85 0
+31
+Z60 !s108 1653398146.000000
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/sine_table.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/sine_table.sv|
+!i113 1
+R20
+R21
+R9
+vsquare_table
+R14
+R59
+!i10b 1
+!s100 5`;lIYRm]iJIDaR:T^d;13
+I_[iNbADKPQhb`BkHg1LNf0
+R2
+!s105 square_table_sv_unit
+S1
+R0
+R58
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/square_table.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/square_table.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R60
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/square_table.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/square_table.sv|
+!i113 1
+R20
+R21
+R9
+vstrange1_table
+R14
+R59
+!i10b 1
+!s100 U1mU^XHdN4NlWElOUc_RJ0
+IRgIV]QGmglDD4k<HKUVI:2
+R2
+!s105 strange1_table_sv_unit
+S1
+R0
+R58
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange1_table.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange1_table.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R60
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange1_table.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange1_table.sv|
+!i113 1
+R20
+R21
+R9
+vstrange2_table
+R14
+R59
+!i10b 1
+!s100 CXnmTU1cc@o8`HeY=db<W3
+If9Pn16fF3FKP^ABLaSbC>1
+R2
+!s105 strange2_table_sv_unit
+S1
+R0
+R58
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange2_table.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange2_table.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R60
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange2_table.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange2_table.sv|
+!i113 1
+R20
+R21
+R9
+vstrange3_table
+R14
+R59
+!i10b 1
+!s100 =GNTj>7c5EjPRMEIiFi7b0
+IbQY6EbEc79E>=3i[PTNVJ2
+R2
+!s105 strange3_table_sv_unit
+S1
+R0
+R58
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange3_table.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange3_table.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R60
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange3_table.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange3_table.sv|
+!i113 1
+R20
+R21
+R9
+vstrange4_table
+R14
+R59
+!i10b 1
+!s100 FcE`4LdW;kQgb[LnRl1`M0
+I11DO5]9>Yj3A_z_UAmg@i3
+R2
+!s105 strange4_table_sv_unit
+S1
+R0
+R58
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange4_table.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange4_table.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R60
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange4_table.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange4_table.sv|
+!i113 1
+R20
+R21
+R9
+vstrange5_table
+R14
+R59
+!i10b 1
+!s100 _5J7HlOlQl]dEj`R^i>;03
+I4AETUK9<mXFTo:2YGjIEJ1
+R2
+!s105 strange5_table_sv_unit
+S1
+R0
+R58
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange5_table.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange5_table.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R60
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange5_table.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/strange5_table.sv|
+!i113 1
+R20
+R21
+R9
+vsynth_ip
+R14
+R22
+!i10b 1
+!s100 [AV;UfMedXJXKdlcl=gVd2
+I8hRzo>a6[^]3cA^95W;Z[1
+R2
+!s105 synth_ip_sv_unit
+S1
+R0
+R57
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/synth_ip.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/synth_ip.sv
+L0 4
+R5
+r1
+!s85 0
+31
+R23
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/synth_ip.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/synth_ip.sv|
+!i113 1
+R20
+R21
+R9
+vtest_wave_table
+R14
+R22
+!i10b 1
+!s100 l2OI_9><I853kOcnNNOOV2
+Ia=b<ZH1kR52k_2kKo<UzB3
+R2
+!s105 test_wave_table_sv_unit
+S1
+R0
+R57
+8C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/test_wave_table.sv
+FC:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/test_wave_table.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R23
+!s107 C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/test_wave_table.sv|
+!s90 -reportprogress|300|-sv|-work|Audio_Synthesizer_SoC|+incdir+C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules|C:/Users/dpipe/OneDrive/Audio_Synthesizer/Audio_Synthesizer_SoC/synthesis/submodules/test_wave_table.sv|
+!i113 1
+R20
+R21
+R9

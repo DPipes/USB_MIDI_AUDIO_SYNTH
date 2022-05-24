@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>May 20, 2022 5:41:19 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1653086479895</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>May 24, 2022 9:59:28 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1653404368737</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\dpipe\OneDrive\Audio_Synthesizer\software\Audio_Synthesizer_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\Audio_Synthesizer_SoC.sopcinfo</SopcDesignFile>
@@ -900,7 +900,7 @@
         </Setting>
         <MemoryMap>
                 <slaveDescriptor>wavetable_audio_synthesizer_0</slaveDescriptor>
-                <addressRange>0x00001400 - 0x000017FF</addressRange>
+                <addressRange>0x00000000 - 0x000003FF</addressRange>
                 <addressSpan>1024</addressSpan>
                 <attributes/>
         </MemoryMap>
